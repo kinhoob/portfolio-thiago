@@ -37,10 +37,10 @@ body.cursor-hover .cursor-ring::before,body.cursor-hover .cursor-ring::after{con
 body.cursor-hover .cursor-ring::before{width:1px;height:8px;left:50%;top:-12px;transform:translateX(-50%)}
 body.cursor-hover .cursor-ring::after{width:8px;height:1px;top:50%;left:-12px;transform:translateY(-50%)}
 
-/* PAGE TRANSITION — fade suave */
-#page-transition{position:fixed;inset:0;z-index:9000;pointer-events:none;background:var(--bg);opacity:0;transition:opacity .3s ease}
-#page-transition.entering{opacity:.92;pointer-events:all}
-#page-transition.leaving{opacity:0}
+/* PAGE TRANSITION — wipe lateral */
+#page-transition{position:fixed;inset:0;z-index:9000;pointer-events:none;background:var(--accent);clip-path:polygon(0 0,0 0,0 100%,0 100%);transition:clip-path .45s cubic-bezier(.77,0,.18,1)}
+#page-transition.entering{clip-path:polygon(0 0,100% 0,100% 100%,0 100%);pointer-events:all}
+#page-transition.leaving{clip-path:polygon(100% 0,100% 0,100% 100%,100% 100%)}
 
 /* NAV */
 nav{position:fixed;top:0;left:0;right:0;z-index:500;padding:24px 48px;display:flex;align-items:center;justify-content:space-between;transition:background .4s,padding .4s}
@@ -123,7 +123,8 @@ nav.scrolled{background:var(--nav-bg);backdrop-filter:blur(24px);padding:14px 48
 .scroll-line{width:1px;height:52px;background:linear-gradient(180deg,transparent,var(--accent-light));animation:scrollPulse 2s ease-in-out infinite}
 .scroll-text{font-family:'DM Mono',monospace;font-size:.54rem;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);writing-mode:vertical-lr}
 @keyframes scrollPulse{0%,100%{opacity:.3}50%{opacity:1}}
-.hero-status{position:absolute;bottom:36px;left:48px;z-index:2;display:flex;align-items:center;gap:7px;font-family:'DM Mono',monospace;font-size:.52rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.22);opacity:0;animation:fadeIn 1s 1.6s forwards}
+.hero-status{position:absolute;bottom:36px;left:48px;z-index:2;display:flex;align-items:center;gap:7px;font-family:'DM Mono',monospace;font-size:.52rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.28);opacity:0;animation:fadeIn 1s 1.6s forwards}
+[data-theme="light"] .hero-status{color:rgba(0,0,0,.32)}
 .status-dot{width:6px;height:6px;border-radius:50%;background:#22c55e;flex-shrink:0;animation:statusPulse 2s ease-in-out infinite}
 @keyframes statusPulse{0%,100%{box-shadow:0 0 0 0 rgba(34,197,94,.5)}50%{box-shadow:0 0 0 6px rgba(34,197,94,0)}}
 
@@ -162,9 +163,10 @@ section{position:relative;z-index:2}
 /* PROJETOS */
 #projects{padding:96px 48px}
 .projects-header{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:48px}
-.filter-tabs{display:flex;gap:8px;flex-wrap:wrap}
-.filter-btn{font-family:'DM Mono',monospace;font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;padding:7px 14px;background:transparent;border:1px solid var(--border);color:var(--muted);border-radius:3px;cursor:none;transition:all .25s}
-.filter-btn.active,.filter-btn:hover{background:var(--accent-dim);border-color:rgba(149,6,6,.35);color:var(--accent-light)}
+.filter-tabs{display:flex;gap:0;background:var(--surface);border:1px solid var(--border);border-radius:6px;padding:4px;flex-wrap:wrap}
+.filter-btn{font-family:'DM Mono',monospace;font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;padding:8px 18px;background:transparent;border:none;color:var(--muted);border-radius:4px;cursor:none;transition:background .2s,color .2s,box-shadow .2s}
+.filter-btn.active{background:var(--accent);color:#fff;box-shadow:0 2px 12px rgba(149,6,6,.35)}
+.filter-btn:not(.active):hover{background:var(--accent-dim);color:var(--accent-light)}
 .projects-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:18px}
 .project-card{position:relative;border-radius:5px;overflow:hidden;background:var(--surface);border:1px solid var(--border);cursor:none;transition:transform .4s cubic-bezier(.16,1,.3,1),box-shadow .4s,border-color .3s}
 .project-card:hover{transform:translateY(-6px);box-shadow:0 24px 60px var(--shadow-card);border-color:rgba(149,6,6,.2)}
@@ -420,7 +422,6 @@ footer{padding:32px 48px;border-top:1px solid var(--border);display:grid;grid-te
     </div>
     <div class="filter-tabs reveal">
       <button class="filter-btn active" data-filter="all" data-i18n="filter.all">Todos</button>
-      <button class="filter-btn" data-filter="ads" data-i18n="filter.ads">Anúncios</button>
       <button class="filter-btn" data-filter="social" data-i18n="filter.social">Social</button>
       <button class="filter-btn" data-filter="youtube" data-i18n="filter.youtube">YouTube</button>
       <button class="filter-btn" data-filter="reels" data-i18n="filter.reels">Reels</button>
@@ -529,13 +530,8 @@ function applyT(l,anim=false){
 function switchLang(l){
   if(l===lang)return;
   const pt=document.getElementById('page-transition');
-  pt.classList.add('entering');
-  setTimeout(()=>{
-    applyT(l,false);
-    pt.classList.remove('entering');
-    pt.classList.add('leaving');
-    setTimeout(()=>pt.classList.remove('leaving'),320);
-  },200);
+  pt.classList.remove('leaving');pt.classList.add('entering');
+  setTimeout(()=>{applyT(l,false);pt.classList.add('leaving');setTimeout(()=>pt.classList.remove('entering','leaving'),460)},280);
 }
 
 /* headline — garante que nunca some após animação */
