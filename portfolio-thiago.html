@@ -7,6 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
+
   
 [data-theme="dark"]{
   --bg:#080808;--deep:#0c0c0c;--surface:#111111;--surface2:#161616;
@@ -16,6 +17,7 @@
   --text-stroke:rgba(255,255,255,0.2);--nav-bg:rgba(8,8,8,0.94);
   --shadow-card:rgba(0,0,0,0.6);--scan-color:rgba(149,6,6,0.03);
 }
+
   
 [data-theme="light"]{
   --bg:#f2f2f0;--deep:#e8e8e6;--surface:#ffffff;--surface2:#ededeb;
@@ -40,11 +42,13 @@ body.cursor-hover .cursor-ring::before,body.cursor-hover .cursor-ring::after{con
 body.cursor-hover .cursor-ring::before{width:1px;height:8px;left:50%;top:-12px;transform:translateX(-50%)}
 body.cursor-hover .cursor-ring::after{width:8px;height:1px;top:50%;left:-12px;transform:translateY(-50%)}
 
+  
 /* PAGE TRANSITION — wipe lateral */
 #page-transition{position:fixed;inset:0;z-index:9000;pointer-events:none;background:var(--accent);clip-path:polygon(0 0,0 0,0 100%,0 100%);transition:clip-path .45s cubic-bezier(.77,0,.18,1)}
 #page-transition.entering{clip-path:polygon(0 0,100% 0,100% 100%,0 100%);pointer-events:all}
 #page-transition.leaving{clip-path:polygon(100% 0,100% 0,100% 100%,100% 100%)}
 
+  
 /* NAV */
 nav{position:fixed;top:0;left:0;right:0;z-index:500;padding:24px 48px;display:flex;align-items:center;justify-content:space-between;transition:background .4s,padding .4s}
 nav.scrolled{background:var(--nav-bg);backdrop-filter:blur(24px);padding:14px 48px;border-bottom:1px solid var(--border)}
@@ -82,6 +86,7 @@ nav.scrolled{background:var(--nav-bg);backdrop-filter:blur(24px);padding:14px 48
 .hamburger.open span:nth-child(2){opacity:0;width:0}
 .hamburger.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
 
+  
 /* MOBILE DRAWER */
 .mobile-menu{display:none;position:fixed;inset:0;z-index:490;background:rgba(8,8,8,.98);backdrop-filter:blur(24px);flex-direction:column;align-items:center;justify-content:center;gap:4px;opacity:0;pointer-events:none;transition:opacity .35s}
 .mobile-menu.open{opacity:1;pointer-events:all}
