@@ -400,6 +400,83 @@ footer{padding:32px 48px;border-top:1px solid var(--border);display:grid;grid-te
   .stat-item:nth-child(3){border-bottom:none}
   .stat-item:nth-child(4){border-right:none;border-bottom:none}
 }
+
+/* ═══ SKILLS GRID ═══ */
+.skills-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.skill-card{
+  padding:24px;background:var(--surface);border:1px solid var(--border);border-radius:6px;
+  position:relative;transition:border-color .3s,transform .3s cubic-bezier(.16,1,.3,1);
+}
+.skill-card:hover{border-color:rgba(149,6,6,.3);transform:translateY(-3px)}
+.skill-level-badge{
+  display:inline-flex;align-items:center;padding:3px 10px;border-radius:20px;
+  font-family:'DM Mono',monospace;font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;
+  background:var(--accent-dim);color:var(--accent-light);border:1px solid rgba(149,6,6,.2);
+  margin-bottom:14px;
+}
+.skill-level-mid{background:rgba(200,150,50,.1);color:rgba(220,170,60,.9);border-color:rgba(200,150,50,.25)}
+.skill-level-basic{background:rgba(80,140,255,.08);color:rgba(100,160,255,.85);border-color:rgba(80,140,255,.2)}
+.skill-icon-wrap{margin-bottom:12px}
+.skill-name{font-family:'Bebas Neue',sans-serif;font-size:1.2rem;letter-spacing:.04em;margin-bottom:12px}
+.skill-bar{height:4px;background:var(--border);border-radius:2px;overflow:hidden}
+.skill-fill{height:100%;background:linear-gradient(90deg,var(--accent),var(--accent-light));border-radius:2px;transition:width 1.2s cubic-bezier(.16,1,.3,1)}
+.skill-fill-mid{background:linear-gradient(90deg,rgba(180,130,30,.7),rgba(220,170,60,.9))}
+.skill-fill-basic{background:linear-gradient(90deg,rgba(60,120,220,.6),rgba(100,160,255,.85))}
+.skill-since{border-color:rgba(92,160,92,.2)}
+.skill-since:hover{border-color:rgba(92,160,92,.4)}
+
+/* ═══ INFLUENCER GRID ═══ */
+.influencer-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.influencer-card{
+  display:flex;flex-direction:column;align-items:center;
+  padding:32px 20px;background:var(--surface);
+  border:1px solid var(--border);border-radius:8px;
+  text-decoration:none;color:var(--white);
+  transition:border-color .3s,transform .4s cubic-bezier(.16,1,.3,1),background .3s;
+  position:relative;overflow:hidden;
+}
+.influencer-card::before{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse 60% 60% at 50% 0%,var(--accent-glow),transparent);
+  opacity:0;transition:opacity .35s;
+}
+.influencer-card:hover{border-color:rgba(149,6,6,.25);transform:translateY(-5px)}
+.influencer-card:hover::before{opacity:1}
+.influencer-avatar{
+  width:72px;height:72px;border-radius:50%;
+  background:var(--accent-dim);border:2px solid rgba(149,6,6,.3);
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Bebas Neue',sans-serif;font-size:2rem;
+  color:var(--accent-light);margin-bottom:16px;
+  transition:border-color .3s,box-shadow .3s;
+}
+.influencer-card:hover .influencer-avatar{border-color:var(--accent-light);box-shadow:0 0 24px rgba(149,6,6,.3)}
+.influencer-name{font-family:'Bebas Neue',sans-serif;font-size:1.3rem;letter-spacing:.04em;margin-bottom:4px}
+.influencer-handle{font-family:'DM Mono',monospace;font-size:.65rem;color:var(--accent-light);letter-spacing:.1em;margin-bottom:12px}
+.influencer-tag{
+  font-family:'DM Mono',monospace;font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;
+  padding:3px 10px;border-radius:20px;background:var(--accent-dim);color:var(--muted);
+  border:1px solid var(--border);
+}
+
+/* ═══ COMPANIES GRID ═══ */
+.companies-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.company-card{
+  padding:28px 20px;background:var(--surface);border:1px solid var(--border);border-radius:8px;
+  text-align:center;transition:border-color .3s,transform .4s cubic-bezier(.16,1,.3,1);
+}
+.company-card:hover{border-color:rgba(149,6,6,.2);transform:translateY(-4px)}
+.company-logo-wrap{height:60px;margin-bottom:14px;display:flex;align-items:center;justify-content:center}
+.company-name{font-family:'Bebas Neue',sans-serif;font-size:1.1rem;letter-spacing:.04em;margin-bottom:4px}
+.company-desc{font-family:'DM Mono',monospace;font-size:.6rem;color:var(--muted);letter-spacing:.1em;text-transform:uppercase}
+
+@media(max-width:900px){
+  .skills-grid{grid-template-columns:repeat(2,1fr)}
+  .influencer-grid{grid-template-columns:1fr}
+  .companies-grid{grid-template-columns:1fr}
+  #skills-section,#clients{padding:60px 20px}
+}
+
 </style>
 </head>
 <body>
@@ -577,7 +654,6 @@ footer{padding:32px 48px;border-top:1px solid var(--border);display:grid;grid-te
     <div class="reel-placeholder" id="reel-placeholder" onclick="playReel()">
       <div class="reel-placeholder-bg"></div>
       <div class="reel-play-btn"><svg width="26" height="26" viewBox="0 0 26 26" fill="none"><path d="M8 5l15 8-15 8V5z" fill="var(--accent-light)"/></svg></div>
-      <span class="reel-cta" data-i18n="reel.play">Assistir Showreel</span>
     </div>
     <iframe class="reel-iframe" id="reel-iframe" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
     <div class="reel-border"></div><div class="reel-glow"></div>
@@ -619,18 +695,18 @@ footer{padding:32px 48px;border-top:1px solid var(--border);display:grid;grid-te
 <section id="about">
   <div class="about-visual reveal">
     <div class="about-img-wrap"><div class="about-img-bg">TA</div><div class="about-frame-line"></div></div>
-    <div class="about-badge"><span class="badge-num">6+</span><span class="badge-label" data-i18n="about.badge">Anos de Edição</span></div>
+    <div class="about-badge"><span class="badge-num">3+</span><span class="badge-label" data-i18n="about.badge">Anos de Edição</span></div>
   </div>
   <div class="about-text">
     <div class="section-label reveal" data-i18n="about.label">Sobre</div>
     <div class="section-title reveal reveal-delay-1"><span data-i18n="about.title1">Edito para</span> <span style="color:var(--accent-light)" data-i18n="about.title2">resultados,</span><br><span data-i18n="about.title3">não prêmios</span></div>
-    <p class="about-body reveal reveal-delay-2" data-i18n="about.p1">Passei anos obcecado com o que faz as pessoas assistirem — e continuarem assistindo. Não cores bonitas nem transições chamativas, mas ritmo, cadência e a lógica emocional de uma história. É isso que trago para cada projeto.</p>
-    <p class="about-body reveal reveal-delay-2" data-i18n="about.p2">Seja um anúncio que converte, um vídeo que retém ou uma série que cresce um canal, trabalho a partir do seu objetivo — e construo a edição que chega lá.</p>
+    <p class="about-body reveal reveal-delay-2" data-i18n="about.p1">Desde 2022 editando vídeos que prendem — não por efeito, mas por ritmo, cadência e a lógica emocional de uma história. Comecei editando por conta própria e fui aperfeiçoando o olhar projeto a projeto, cliente a cliente.</p>
+    <p class="about-body reveal reveal-delay-2" data-i18n="about.p2">Hoje trabalho com marcas, veículos de comunicação e criadores que precisam de mais do que "bonito" — precisam de conteúdo que retém, cresce e converte.</p>
     <div class="strengths">
-      <div class="strength-item reveal reveal-delay-1"><div class="strength-icon">⚡</div><div class="strength-title" data-i18n="str1.title">Engenharia de Hook</div><div class="strength-desc" data-i18n="str1.desc">Os primeiros 3 segundos projetados para parar o scroll</div></div>
-      <div class="strength-item reveal reveal-delay-2"><div class="strength-icon">🎯</div><div class="strength-title" data-i18n="str2.title">Ritmo de Retenção</div><div class="strength-desc" data-i18n="str2.desc">Cortes estratégicos para manter o espectador até o fim</div></div>
-      <div class="strength-item reveal reveal-delay-2"><div class="strength-icon">🎬</div><div class="strength-title" data-i18n="str3.title">Gradação de Cor</div><div class="strength-desc" data-i18n="str3.desc">Grade cinemática que define atmosfera e identidade de marca</div></div>
-      <div class="strength-item reveal reveal-delay-3"><div class="strength-icon">📈</div><div class="strength-title" data-i18n="str4.title">Nativo de Plataforma</div><div class="strength-desc" data-i18n="str4.desc">Otimizado para YouTube, Reels, TikTok e mídia paga</div></div>
+      <div class="strength-item reveal reveal-delay-1"><div class="strength-icon">🎯</div><div class="strength-title">Vídeos que Prendem</div><div class="strength-desc">Hooks e ritmo que seguram o espectador do início ao fim</div></div>
+      <div class="strength-item reveal reveal-delay-2"><div class="strength-icon">🎬</div><div class="strength-title">Edição Cinemática</div><div class="strength-desc">Grade de cor e atmosfera que elevam qualquer conteúdo</div></div>
+      <div class="strength-item reveal reveal-delay-2"><div class="strength-icon">✨</div><div class="strength-title">Animação Básica</div><div class="strength-desc">Motion elements e transições para dar vida ao conteúdo</div></div>
+      <div class="strength-item reveal reveal-delay-3"><div class="strength-icon">📈</div><div class="strength-title">Nativo de Plataforma</div><div class="strength-desc">Otimizado para YouTube, Reels, TikTok e mídia paga</div></div>
     </div>
   </div>
 </section>
@@ -640,15 +716,163 @@ footer{padding:32px 48px;border-top:1px solid var(--border);display:grid;grid-te
 <section id="social-proof">
   <div class="proof-header reveal"><div class="section-label" data-i18n="proof.label">Depoimentos</div><div class="section-title"><span data-i18n="proof.title1">Clientes que</span> <span style="color:var(--accent-light)" data-i18n="proof.title2">cresceram</span></div></div>
   <div class="testimonials">
-    <div class="testimonial-card reveal"><span class="quote-mark">"</span><p class="testimonial-text" data-i18n="t1.text">O Thiago transformou completamente nosso conteúdo. O tempo de exibição quase dobrou em dois meses de parceria. Ele entendeu nossa audiência melhor do que nós mesmos.</p><div class="testimonial-author"><div class="author-avatar">MK</div><div><div class="author-name">Marcus Kim</div><div class="author-role" data-i18n="t1.role">CEO — TechPulse Media</div></div></div></div>
-    <div class="testimonial-card reveal reveal-delay-1"><span class="quote-mark">"</span><p class="testimonial-text" data-i18n="t2.text">Trabalhei com muitos editores. O Thiago é diferente — ele pergunta sobre o objetivo antes de tocar na timeline. Isso muda tudo no resultado final.</p><div class="testimonial-author"><div class="author-avatar">SR</div><div><div class="author-name">Sofia Ramos</div><div class="author-role" data-i18n="t2.role">Fundadora — Verde Café</div></div></div></div>
-    <div class="testimonial-card reveal reveal-delay-2"><span class="quote-mark">"</span><p class="testimonial-text" data-i18n="t3.text">Três dos doze Reels que ele editou passaram de um milhão de views. Não foi sorte — foi consistência. Se você leva crescimento a sério, ele é o editor que você precisa.</p><div class="testimonial-author"><div class="author-avatar">JT</div><div><div class="author-name">Jordan T.</div><div class="author-role" data-i18n="t3.role">Creator — 890K Seguidores</div></div></div></div>
+    <div class="testimonial-card reveal"><span class="quote-mark">"</span><p class="testimonial-text">O Thiago tem um olhar diferente. Cada Reel que ele editou pra mim ganhou muito mais alcance. Ele entende o ritmo que o algoritmo pede sem perder a identidade do conteúdo.</p><div class="testimonial-author"><div class="author-avatar" style="background:rgba(200,100,200,.15);border-color:rgba(200,100,200,.3);color:#e080e0">S</div><div><div class="author-name">Santana</div><div class="author-role"><a href="https://www.instagram.com/santana.xz/" target="_blank" style="color:var(--accent-light);text-decoration:none">@santana.xz</a> — Influencer</div></div></div></div>
+    <div class="testimonial-card reveal reveal-delay-1"><span class="quote-mark">"</span><p class="testimonial-text">Parceria certeira. O Thiago entrega rápido, entende o que precisa sem precisar explicar mil vezes, e o resultado sempre fica melhor do que o esperado. Recomendo sem dúvida.</p><div class="testimonial-author"><div class="author-avatar" style="background:rgba(80,150,255,.1);border-color:rgba(80,150,255,.3);color:#80b0ff">A</div><div><div class="author-name">Aspect</div><div class="author-role"><a href="https://www.instagram.com/euaspect" target="_blank" style="color:var(--accent-light);text-decoration:none">@euaspect</a> — Influencer</div></div></div></div>
+    <div class="testimonial-card reveal reveal-delay-2"><span class="quote-mark">"</span><p class="testimonial-text">Qualidade e agilidade em tudo que o Thiago faz. Os vídeos ficam com aquele acabamento profissional que faz diferença na hora de crescer. É o editor que eu confio.</p><div class="testimonial-author"><div class="author-avatar" style="background:rgba(255,160,60,.1);border-color:rgba(255,160,60,.3);color:#ffb060">O</div><div><div class="author-name">Odemetro</div><div class="author-role"><a href="https://www.instagram.com/odemetruu/" target="_blank" style="color:var(--accent-light);text-decoration:none">@odemetruu</a> — Influencer</div></div></div></div>
   </div>
   <div class="metric-chips reveal reveal-delay-1">
-    <div class="chip"><svg width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M2 8l4-5 4 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span data-i18n="chip1">200M+ Views Gerados</span></div>
-    <div class="chip"><svg width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M2 8l4-5 4 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span data-i18n="chip2">3.2× Aumento de Retenção</span></div>
-    <div class="chip"><svg width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M2 8l4-5 4 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span data-i18n="chip3">120+ Projetos Entregues</span></div>
-    <div class="chip"><svg width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M2 8l4-5 4 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span data-i18n="chip4">48h de Prazo Médio</span></div>
+    <div class="chip"><svg width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M2 8l4-5 4 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span>Desde 2022 Editando</span></div>
+    <div class="chip"><svg width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M2 8l4-5 4 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span>+100 Projetos Entregues</span></div>
+    <div class="chip"><svg width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M2 8l4-5 4 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span>TV Record • Mercado Pago</span></div>
+    <div class="chip"><svg width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M2 8l4-5 4 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span>Final Cut • Premiere • CapCut</span></div>
+  </div>
+</section>
+
+
+<!-- ══ FERRAMENTAS ══ -->
+<section id="skills-section" style="padding:80px 48px;max-width:1280px;margin:0 auto">
+  <div class="section-label reveal">Ferramentas & Habilidades</div>
+  <div class="section-title reveal reveal-delay-1" style="margin-bottom:40px">Com o que trabalho <span style="color:var(--accent-light)">todo dia</span></div>
+  <div class="skills-grid reveal reveal-delay-2">
+    <!-- Avançado -->
+    <div class="skill-card skill-advanced">
+      <div class="skill-level-badge">Avançado</div>
+      <div class="skill-icon-wrap">
+        <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="2" y="2" width="24" height="24" rx="4" fill="var(--accent-dim)" stroke="var(--accent-light)" stroke-width="1.2"/><path d="M8 20l4-12 4 12M10 16h4" stroke="var(--accent-light)" stroke-width="1.4" stroke-linecap="round"/></svg>
+      </div>
+      <div class="skill-name">Final Cut Pro</div>
+      <div class="skill-bar"><div class="skill-fill" style="width:95%"></div></div>
+    </div>
+    <div class="skill-card skill-advanced">
+      <div class="skill-level-badge">Avançado</div>
+      <div class="skill-icon-wrap">
+        <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="2" y="2" width="24" height="24" rx="4" fill="var(--accent-dim)" stroke="var(--accent-light)" stroke-width="1.2"/><circle cx="14" cy="14" r="5" stroke="var(--accent-light)" stroke-width="1.4"/><path d="M14 9V6M14 22v-3M9 14H6M22 14h-3" stroke="var(--accent-light)" stroke-width="1.4" stroke-linecap="round"/></svg>
+      </div>
+      <div class="skill-name">CapCut</div>
+      <div class="skill-bar"><div class="skill-fill" style="width:95%"></div></div>
+    </div>
+    <div class="skill-card skill-advanced">
+      <div class="skill-level-badge">Avançado</div>
+      <div class="skill-icon-wrap">
+        <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="2" y="2" width="24" height="24" rx="4" fill="var(--accent-dim)" stroke="var(--accent-light)" stroke-width="1.2"/><path d="M6 22l6-18 4 10 3-5 3 13" stroke="var(--accent-light)" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <div class="skill-name">Premiere Pro</div>
+      <div class="skill-bar"><div class="skill-fill" style="width:90%"></div></div>
+    </div>
+    <!-- Intermediário -->
+    <div class="skill-card skill-mid">
+      <div class="skill-level-badge skill-level-mid">Intermediário</div>
+      <div class="skill-icon-wrap">
+        <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="2" y="2" width="24" height="24" rx="4" fill="rgba(200,150,50,.1)" stroke="rgba(200,150,50,.7)" stroke-width="1.2"/><path d="M9 19l4-10 2 5 2-3 2 8" stroke="rgba(200,150,50,.9)" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="20" cy="8" r="2" fill="rgba(200,150,50,.7)"/></svg>
+      </div>
+      <div class="skill-name">After Effects</div>
+      <div class="skill-bar"><div class="skill-fill skill-fill-mid" style="width:60%"></div></div>
+    </div>
+    <!-- Básico -->
+    <div class="skill-card skill-basic">
+      <div class="skill-level-badge skill-level-basic">Básico</div>
+      <div class="skill-icon-wrap">
+        <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="2" y="2" width="24" height="24" rx="4" fill="rgba(100,160,255,.08)" stroke="rgba(100,160,255,.5)" stroke-width="1.2"/><path d="M8 14l4 4 8-8" stroke="rgba(100,160,255,.8)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <div class="skill-name">Animação</div>
+      <div class="skill-bar"><div class="skill-fill skill-fill-basic" style="width:35%"></div></div>
+    </div>
+    <!-- Desde -->
+    <div class="skill-card skill-since">
+      <div class="skill-level-badge" style="background:rgba(92,160,92,.15);color:#6ec86e;border-color:rgba(92,160,92,.3)">Desde 2022</div>
+      <div class="skill-icon-wrap">
+        <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="10" stroke="#6ec86e" stroke-width="1.4" fill="rgba(92,160,92,.08)"/><path d="M14 8v6l4 4" stroke="#6ec86e" stroke-width="1.4" stroke-linecap="round"/></svg>
+      </div>
+      <div class="skill-name">Editando</div>
+      <div style="font-size:.72rem;color:var(--muted);margin-top:4px">+3 anos de experiência</div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ══ CLIENTES / INFLUENCERS ══ -->
+<section id="clients" style="padding:80px 48px;background:var(--deep);border-top:1px solid var(--border);border-bottom:1px solid var(--border)">
+  <div class="proof-header reveal" style="text-align:center;margin-bottom:56px">
+    <div class="section-label" style="justify-content:center;margin-bottom:14px"><span style="display:block;width:20px;height:1px;background:var(--accent-light)"></span>Quem confou no trabalho</div>
+    <div class="section-title">Criadores & <span style="color:var(--accent-light)">Marcas</span></div>
+  </div>
+
+  <!-- Influencers -->
+  <div style="max-width:900px;margin:0 auto 64px">
+    <p style="font-family:'DM Mono',monospace;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--accent-light);text-align:center;margin-bottom:32px">Influenciadores</p>
+    <div class="influencer-grid">
+      <a href="https://www.instagram.com/santana.xz/" target="_blank" class="influencer-card reveal">
+        <div class="influencer-avatar">S</div>
+        <div class="influencer-name">Santana</div>
+        <div class="influencer-handle">@santana.xz</div>
+        <div class="influencer-tag">Influencer</div>
+      </a>
+      <a href="https://www.instagram.com/euaspect" target="_blank" class="influencer-card reveal reveal-delay-1">
+        <div class="influencer-avatar">A</div>
+        <div class="influencer-name">Aspect</div>
+        <div class="influencer-handle">@euaspect</div>
+        <div class="influencer-tag">Influencer</div>
+      </a>
+      <a href="https://www.instagram.com/odemetruu/" target="_blank" class="influencer-card reveal reveal-delay-2">
+        <div class="influencer-avatar">O</div>
+        <div class="influencer-name">Odemetro</div>
+        <div class="influencer-handle">@odemetruu</div>
+        <div class="influencer-tag">Influencer</div>
+      </a>
+    </div>
+  </div>
+
+  <!-- Empresas onde trabalhou -->
+  <div style="max-width:900px;margin:0 auto">
+    <p style="font-family:'DM Mono',monospace;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--accent-light);text-align:center;margin-bottom:32px">Empresas</p>
+    <div class="companies-grid">
+      <!-- TV Record -->
+      <div class="company-card reveal">
+        <div class="company-logo-wrap">
+          <svg viewBox="0 0 120 48" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%">
+            <rect width="120" height="48" rx="6" fill="rgba(149,6,6,.08)"/>
+            <!-- Ícone TV + antena estilizado -->
+            <rect x="28" y="16" width="30" height="22" rx="2" stroke="var(--accent-light)" stroke-width="1.5"/>
+            <path d="M36 16L43 8M50 16L43 8" stroke="var(--accent-light)" stroke-width="1.5" stroke-linecap="round"/>
+            <rect x="36" y="38" width="14" height="2" rx="1" fill="var(--accent-light)" opacity=".5"/>
+            <text x="64" y="28" font-family="'DM Mono',monospace" font-size="9" fill="var(--accent-light)" opacity=".9" font-weight="500">RECORD</text>
+            <text x="64" y="38" font-family="'DM Mono',monospace" font-size="7" fill="var(--muted)">TV</text>
+          </svg>
+        </div>
+        <div class="company-name">TV Record</div>
+        <div class="company-desc">Emissora Nacional</div>
+      </div>
+      <!-- Mercado Pago -->
+      <div class="company-card reveal reveal-delay-1">
+        <div class="company-logo-wrap">
+          <svg viewBox="0 0 120 48" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%">
+            <rect width="120" height="48" rx="6" fill="rgba(0,180,80,.05)"/>
+            <circle cx="30" cy="24" r="12" stroke="#00b450" stroke-width="1.5" fill="none" opacity=".7"/>
+            <path d="M25 24l3 3 7-7" stroke="#00b450" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            <text x="50" y="22" font-family="'DM Mono',monospace" font-size="7.5" fill="var(--body)" opacity=".9" font-weight="500">MERCADO</text>
+            <text x="50" y="33" font-family="'DM Mono',monospace" font-size="7.5" fill="#00b450" opacity=".9">PAGO</text>
+          </svg>
+        </div>
+        <div class="company-name">Mercado Pago</div>
+        <div class="company-desc">Fintech</div>
+      </div>
+      <!-- Grupo Ser -->
+      <div class="company-card reveal reveal-delay-2">
+        <div class="company-logo-wrap">
+          <svg viewBox="0 0 120 48" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%">
+            <rect width="120" height="48" rx="6" fill="rgba(80,120,200,.06)"/>
+            <path d="M20 30 Q30 12 40 30 Q50 48 60 30" stroke="rgba(80,120,200,.8)" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+            <circle cx="20" cy="30" r="3" fill="rgba(80,120,200,.7)"/>
+            <circle cx="60" cy="30" r="3" fill="rgba(80,120,200,.7)"/>
+            <text x="70" y="22" font-family="'DM Mono',monospace" font-size="9" fill="var(--body)" opacity=".9" font-weight="500">GRUPO</text>
+            <text x="70" y="34" font-family="'DM Mono',monospace" font-size="9" fill="rgba(80,120,200,.9)">SER</text>
+          </svg>
+        </div>
+        <div class="company-name">Grupo Ser</div>
+        <div class="company-desc">Educação</div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -659,9 +883,9 @@ footer{padding:32px 48px;border-top:1px solid var(--border);display:grid;grid-te
     <div class="section-title reveal reveal-delay-1"><span data-i18n="contact.title1">Pronto para criar algo que</span> <span style="color:var(--accent-light)" data-i18n="contact.title2">performa?</span></div>
     <p class="contact-tagline reveal reveal-delay-2" data-i18n="contact.tagline">Me conta o que você está construindo. Vou te mostrar como a edição pode fazer isso trabalhar muito mais. Sem enrolação — só uma conversa real sobre seus objetivos.</p>
     <div class="contact-methods reveal reveal-delay-2">
-      <a href="mailto:thiago@thiagoalves.co" class="contact-method"><div class="method-icon"><svg width="17" height="17" viewBox="0 0 18 18" fill="none"><path d="M2 4h14v10H2V4zm0 0l7 6 7-6" stroke="var(--accent-light)" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div><div class="method-label">Email</div><div class="method-value">thiago@thiagoalves.co</div></div></a>
-      <a href="https://wa.me/5511999999999" target="_blank" class="contact-method"><div class="method-icon"><svg width="17" height="17" viewBox="0 0 18 18" fill="none"><path d="M9 1.5a7.5 7.5 0 1 0 6.5 11.25L17.5 16.5l-3.75-2a7.5 7.5 0 0 0-4.75 1.5A7.5 7.5 0 0 0 9 1.5z" stroke="var(--accent-light)" stroke-width="1.4" stroke-linejoin="round"/></svg></div><div><div class="method-label">WhatsApp</div><div class="method-value" data-i18n="contact.wa">Fale diretamente comigo</div></div></a>
-      <a href="https://instagram.com/thiagoalves.edit" target="_blank" class="contact-method"><div class="method-icon"><svg width="17" height="17" viewBox="0 0 18 18" fill="none"><rect x="2" y="2" width="14" height="14" rx="4" stroke="var(--accent-light)" stroke-width="1.4"/><circle cx="9" cy="9" r="3" stroke="var(--accent-light)" stroke-width="1.4"/><circle cx="13" cy="5" r=".75" fill="var(--accent-light)"/></svg></div><div><div class="method-label">Instagram</div><div class="method-value">@thiagoalves.edit</div></div></a>
+      <a href="mailto:editarthiago@gmail.com" class="contact-method"><div class="method-icon"><svg width="17" height="17" viewBox="0 0 18 18" fill="none"><path d="M2 4h14v10H2V4zm0 0l7 6 7-6" stroke="var(--accent-light)" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div><div class="method-label">Email</div><div class="method-value">editarthiago@gmail.com</div></div></a>
+      <a href="https://wa.me/5581987398373" target="_blank" class="contact-method"><div class="method-icon"><svg width="17" height="17" viewBox="0 0 18 18" fill="none"><path d="M9 1.5a7.5 7.5 0 1 0 6.5 11.25L17.5 16.5l-3.75-2a7.5 7.5 0 0 0-4.75 1.5A7.5 7.5 0 0 0 9 1.5z" stroke="var(--accent-light)" stroke-width="1.4" stroke-linejoin="round"/></svg></div><div><div class="method-label">WhatsApp</div><div class="method-value" data-i18n="contact.wa">Fale diretamente comigo</div></div></a>
+      <a href="https://www.instagram.com/thiagoalveszx" target="_blank" class="contact-method"><div class="method-icon"><svg width="17" height="17" viewBox="0 0 18 18" fill="none"><rect x="2" y="2" width="14" height="14" rx="4" stroke="var(--accent-light)" stroke-width="1.4"/><circle cx="9" cy="9" r="3" stroke="var(--accent-light)" stroke-width="1.4"/><circle cx="13" cy="5" r=".75" fill="var(--accent-light)"/></svg></div><div><div class="method-label">Instagram</div><div class="method-value">@thiagoalveszx</div></div></a>
     </div>
   </div>
   <div class="contact-form reveal reveal-delay-1">
