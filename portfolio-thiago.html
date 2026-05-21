@@ -401,82 +401,85 @@ footer{padding:32px 48px;border-top:1px solid var(--border);display:grid;grid-te
   .stat-item:nth-child(4){border-right:none;border-bottom:none}
 }
 
-/* ═══ SKILLS GRID ═══ */
+/* ═══ SKILLS ═══ */
+#skills-section{padding:80px 48px;max-width:1280px;margin:0 auto}
 .skills-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.skill-card{
-  padding:24px;background:var(--surface);border:1px solid var(--border);border-radius:6px;
-  position:relative;transition:border-color .3s,transform .3s cubic-bezier(.16,1,.3,1);
-}
+.skill-card{padding:24px;background:var(--surface);border:1px solid var(--border);border-radius:6px;position:relative;transition:border-color .3s,transform .3s cubic-bezier(.16,1,.3,1)}
 .skill-card:hover{border-color:rgba(149,6,6,.3);transform:translateY(-3px)}
-.skill-level-badge{
-  display:inline-flex;align-items:center;padding:3px 10px;border-radius:20px;
-  font-family:'DM Mono',monospace;font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;
-  background:var(--accent-dim);color:var(--accent-light);border:1px solid rgba(149,6,6,.2);
-  margin-bottom:14px;
-}
+.skill-level-badge{display:inline-flex;align-items:center;padding:3px 10px;border-radius:20px;font-family:"DM Mono",monospace;font-size:.57rem;letter-spacing:.12em;text-transform:uppercase;background:var(--accent-dim);color:var(--accent-light);border:1px solid rgba(149,6,6,.2);margin-bottom:14px}
 .skill-level-mid{background:rgba(200,150,50,.1);color:rgba(220,170,60,.9);border-color:rgba(200,150,50,.25)}
 .skill-level-basic{background:rgba(80,140,255,.08);color:rgba(100,160,255,.85);border-color:rgba(80,140,255,.2)}
 .skill-icon-wrap{margin-bottom:12px}
-.skill-name{font-family:'Bebas Neue',sans-serif;font-size:1.2rem;letter-spacing:.04em;margin-bottom:12px}
-.skill-bar{height:4px;background:var(--border);border-radius:2px;overflow:hidden}
-.skill-fill{height:100%;background:linear-gradient(90deg,var(--accent),var(--accent-light));border-radius:2px;transition:width 1.2s cubic-bezier(.16,1,.3,1)}
+.skill-name{font-family:"Bebas Neue",sans-serif;font-size:1.2rem;letter-spacing:.04em;margin-bottom:12px}
+.skill-bar{height:3px;background:var(--border);border-radius:2px;overflow:hidden}
+.skill-fill{height:100%;background:linear-gradient(90deg,var(--accent),var(--accent-light));border-radius:2px;transition:width 1.4s cubic-bezier(.16,1,.3,1) .3s}
 .skill-fill-mid{background:linear-gradient(90deg,rgba(180,130,30,.7),rgba(220,170,60,.9))}
 .skill-fill-basic{background:linear-gradient(90deg,rgba(60,120,220,.6),rgba(100,160,255,.85))}
 .skill-since{border-color:rgba(92,160,92,.2)}
-.skill-since:hover{border-color:rgba(92,160,92,.4)}
 
-/* ═══ INFLUENCER GRID ═══ */
-.influencer-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.influencer-card{
-  display:flex;flex-direction:column;align-items:center;
-  padding:32px 20px;background:var(--surface);
-  border:1px solid var(--border);border-radius:8px;
-  text-decoration:none;color:var(--white);
-  transition:border-color .3s,transform .4s cubic-bezier(.16,1,.3,1),background .3s;
-  position:relative;overflow:hidden;
-}
-.influencer-card::before{
-  content:'';position:absolute;inset:0;
-  background:radial-gradient(ellipse 60% 60% at 50% 0%,var(--accent-glow),transparent);
-  opacity:0;transition:opacity .35s;
-}
-.influencer-card:hover{border-color:rgba(149,6,6,.25);transform:translateY(-5px)}
-.influencer-card:hover::before{opacity:1}
-.influencer-avatar{
-  width:72px;height:72px;border-radius:50%;
-  background:var(--accent-dim);border:2px solid rgba(149,6,6,.3);
-  display:flex;align-items:center;justify-content:center;
-  font-family:'Bebas Neue',sans-serif;font-size:2rem;
-  color:var(--accent-light);margin-bottom:16px;
-  transition:border-color .3s,box-shadow .3s;
-}
-.influencer-card:hover .influencer-avatar{border-color:var(--accent-light);box-shadow:0 0 24px rgba(149,6,6,.3)}
-.influencer-name{font-family:'Bebas Neue',sans-serif;font-size:1.3rem;letter-spacing:.04em;margin-bottom:4px}
-.influencer-handle{font-family:'DM Mono',monospace;font-size:.65rem;color:var(--accent-light);letter-spacing:.1em;margin-bottom:12px}
-.influencer-tag{
-  font-family:'DM Mono',monospace;font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;
-  padding:3px 10px;border-radius:20px;background:var(--accent-dim);color:var(--muted);
-  border:1px solid var(--border);
-}
+/* ═══ CLIENTS ═══ */
+#clients{padding:80px 48px;background:var(--deep);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+#clients > *{max-width:1100px;margin-left:auto;margin-right:auto}
+.clients-subtitle{font-family:"DM Mono",monospace;font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;color:var(--accent-light);text-align:center;margin-bottom:28px;max-width:1100px;margin-left:auto;margin-right:auto}
 
-/* ═══ COMPANIES GRID ═══ */
-.companies-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.company-card{
-  padding:28px 20px;background:var(--surface);border:1px solid var(--border);border-radius:8px;
-  text-align:center;transition:border-color .3s,transform .4s cubic-bezier(.16,1,.3,1);
-}
+/* Instagram cards */
+.influencer-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;max-width:1100px;margin:0 auto}
+.ig-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;overflow:hidden;text-decoration:none;color:var(--white);transition:transform .4s cubic-bezier(.16,1,.3,1),border-color .3s,box-shadow .4s;display:block}
+.ig-card:hover{transform:translateY(-6px);border-color:rgba(149,6,6,.22);box-shadow:0 20px 48px rgba(0,0,0,.4)}
+.ig-card-header{display:flex;align-items:center;gap:12px;padding:16px 16px 12px}
+.ig-avatar{width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:"Bebas Neue",sans-serif;font-size:1.3rem;color:#fff;flex-shrink:0;border:2px solid transparent;box-shadow:0 0 0 2px var(--border)}
+.ig-grad-purple{background:linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045)}
+.ig-grad-blue{background:linear-gradient(135deg,#4facfe,#00f2fe)}
+.ig-grad-orange{background:linear-gradient(135deg,#f7971e,#ffd200)}
+.ig-info{flex:1;min-width:0}
+.ig-username{font-family:"DM Mono",monospace;font-size:.72rem;font-weight:500;letter-spacing:.02em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ig-name{font-size:.75rem;color:var(--muted);margin-top:1px}
+.ig-follow-btn{font-family:"DM Mono",monospace;font-size:.6rem;letter-spacing:.08em;padding:5px 12px;background:var(--accent);color:#fff;border-radius:6px;white-space:nowrap;flex-shrink:0;text-transform:uppercase}
+.ig-preview-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;aspect-ratio:3/1}
+.ig-thumb{aspect-ratio:1;object-fit:cover}
+.ig-card-footer{display:flex;align-items:center;gap:6px;padding:12px 16px;font-family:"DM Mono",monospace;font-size:.62rem;color:var(--muted);border-top:1px solid var(--border)}
+
+/* Company cards */
+.companies-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;max-width:1100px;margin:0 auto}
+.company-card{padding:32px 24px;background:var(--surface);border:1px solid var(--border);border-radius:10px;text-align:center;transition:border-color .3s,transform .4s cubic-bezier(.16,1,.3,1)}
 .company-card:hover{border-color:rgba(149,6,6,.2);transform:translateY(-4px)}
-.company-logo-wrap{height:60px;margin-bottom:14px;display:flex;align-items:center;justify-content:center}
-.company-name{font-family:'Bebas Neue',sans-serif;font-size:1.1rem;letter-spacing:.04em;margin-bottom:4px}
-.company-desc{font-family:'DM Mono',monospace;font-size:.6rem;color:var(--muted);letter-spacing:.1em;text-transform:uppercase}
+.company-logo-wrap{height:64px;margin-bottom:16px;display:flex;align-items:center;justify-content:center}
+.company-name{font-family:"Bebas Neue",sans-serif;font-size:1.15rem;letter-spacing:.04em;margin-bottom:4px}
+.company-desc{font-family:"DM Mono",monospace;font-size:.6rem;color:var(--muted);letter-spacing:.1em;text-transform:uppercase}
 
 @media(max-width:900px){
-  .skills-grid{grid-template-columns:repeat(2,1fr)}
-  .influencer-grid{grid-template-columns:1fr}
-  .companies-grid{grid-template-columns:1fr}
   #skills-section,#clients{padding:60px 20px}
+  .skills-grid{grid-template-columns:repeat(2,1fr)}
+  .influencer-grid,.companies-grid{grid-template-columns:1fr}
 }
 
+/* avatar foto slot */
+.ig-avatar-wrap{position:relative;flex-shrink:0}
+.ig-avatar{width:52px;height:52px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:"Bebas Neue",sans-serif;font-size:1.4rem;color:#fff;position:relative;overflow:hidden;box-shadow:0 0 0 2px rgba(255,255,255,.15),0 0 0 4px rgba(0,0,0,.3)}
+.ig-avatar-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:50%;z-index:2}
+.ig-avatar-fallback{position:relative;z-index:1}
+
+/* selo verificado */
+.ig-username-row{display:flex;align-items:center;gap:5px}
+.ig-username{font-family:"DM Mono",monospace;font-size:.72rem;font-weight:500;letter-spacing:.02em}
+.ig-verified{flex-shrink:0;margin-top:0}
+
+/* company photo slot */
+.company-photo-slot{
+  width:100%;aspect-ratio:16/9;border-radius:8px;overflow:hidden;
+  background:var(--deep);border:1px dashed var(--border);
+  position:relative;display:flex;align-items:center;justify-content:center;
+  margin-bottom:18px;transition:border-color .3s;
+}
+.company-card:hover .company-photo-slot{border-color:rgba(149,6,6,.25)}
+.company-photo{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
+.company-photo-placeholder{
+  display:flex;flex-direction:column;align-items:center;gap:8px;
+  color:var(--muted);font-family:"DM Mono",monospace;font-size:.6rem;
+  letter-spacing:.1em;text-transform:uppercase;opacity:.5;
+}
+/* Remove logo-wrap que não existe mais */
+.company-logo-wrap{display:none}
 </style>
 </head>
 <body>
@@ -654,8 +657,9 @@ footer{padding:32px 48px;border-top:1px solid var(--border);display:grid;grid-te
     <div class="reel-placeholder" id="reel-placeholder" onclick="playReel()">
       <div class="reel-placeholder-bg"></div>
       <div class="reel-play-btn"><svg width="26" height="26" viewBox="0 0 26 26" fill="none"><path d="M8 5l15 8-15 8V5z" fill="var(--accent-light)"/></svg></div>
+      <span class="reel-cta" data-i18n="reel.play">Assistir Showreel</span>
     </div>
-    <iframe class="reel-iframe" id="reel-iframe" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+    <iframe class="reel-iframe" id="reel-iframe" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
     <div class="reel-border"></div><div class="reel-glow"></div>
   </div>
   <div class="stats-bar reveal reveal-delay-2">
@@ -663,30 +667,6 @@ footer{padding:32px 48px;border-top:1px solid var(--border);display:grid;grid-te
     <div class="stat-item"><span class="stat-num" id="sn2">0</span><span class="stat-desc" data-i18n="stats.exp">Experiência profissional</span></div>
     <div class="stat-item"><span class="stat-num" id="sn3">0</span><span class="stat-desc" data-i18n="stats.proj">Projetos entregues</span></div>
     <div class="stat-item"><span class="stat-num" id="sn4">0</span><span class="stat-desc" data-i18n="stats.ret">Aumento médio de retenção</span></div>
-  </div>
-</section>
-<div class="divider"></div>
-
-<!-- PROJETOS -->
-<section id="projects">
-  <div class="projects-header">
-    <div>
-      <div class="section-label reveal" data-i18n="proj.label">Trabalhos Selecionados</div>
-      <div class="section-title reveal reveal-delay-1"><span data-i18n="proj.title1">Projetos que</span> <span style="color:var(--accent-light)" data-i18n="proj.title2">performaram</span></div>
-    </div>
-    <div class="filter-tabs reveal">
-      <button class="filter-btn active" data-filter="all" data-i18n="filter.all">Todos</button>
-      <button class="filter-btn" data-filter="social" data-i18n="filter.social">Social</button>
-      <button class="filter-btn" data-filter="youtube" data-i18n="filter.youtube">YouTube</button>
-      <button class="filter-btn" data-filter="reels" data-i18n="filter.reels">Reels</button>
-    </div>
-  </div>
-  <div class="projects-grid">
-    <div class="project-card reveal" data-category="ads"><div class="project-thumb"><div class="project-thumb-inner thumb-c1">▶</div><div class="project-overlay"><div class="play-icon"><svg width="18" height="18" viewBox="0 0 20 20" fill="none"><path d="M7 4l10 6-10 6V4z" fill="var(--accent-light)"/></svg></div></div></div><div class="project-info"><div class="project-tag" data-i18n="p1.tag">Anúncio de Performance</div><div class="project-title" data-i18n="p1.title">Pulse Activewear — Campanha de Lançamento</div><div class="project-desc" data-i18n="p1.desc">Anúncio de 30s otimizado para retenção no Meta. Ritmo dinâmico, cortes precisos e estrutura hook-first.</div><div class="project-result"><svg width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M2 8l4-5 4 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span data-i18n="p1.result">4.8× ROAS — 2.1M de Alcance</span></div></div></div>
-    <div class="project-card reveal reveal-delay-1" data-category="youtube"><div class="project-thumb"><div class="project-thumb-inner thumb-c2">▶</div><div class="project-overlay"><div class="play-icon"><svg width="18" height="18" viewBox="0 0 20 20" fill="none"><path d="M7 4l10 6-10 6V4z" fill="var(--accent-light)"/></svg></div></div></div><div class="project-info"><div class="project-tag" data-i18n="p2.tag">YouTube — Long Form</div><div class="project-title" data-i18n="p2.title">Creator de Tech — Série Mensal</div><div class="project-desc" data-i18n="p2.desc">Edição de long-form com estrutura por capítulos e ganchos de reengajamento a cada 90 segundos.</div><div class="project-result"><svg width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M2 8l4-5 4 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span data-i18n="p2.result">68% retenção média — era 34%</span></div></div></div>
-    <div class="project-card reveal reveal-delay-1" data-category="reels"><div class="project-thumb"><div class="project-thumb-inner thumb-c3">▶</div><div class="project-overlay"><div class="play-icon"><svg width="18" height="18" viewBox="0 0 20 20" fill="none"><path d="M7 4l10 6-10 6V4z" fill="var(--accent-light)"/></svg></div></div></div><div class="project-info"><div class="project-tag" data-i18n="p3.tag">Reels / TikTok</div><div class="project-title" data-i18n="p3.title">Nomad Finance — Batch Viral</div><div class="project-desc" data-i18n="p3.desc">12 edições verticais criadas para o algoritmo — abertura rápida, conteúdo denso, CTA claro.</div><div class="project-result"><svg width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M2 8l4-5 4 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span data-i18n="p3.result">3 vídeos ultrapassaram 1M de views</span></div></div></div>
-    <div class="project-card reveal reveal-delay-2" data-category="social"><div class="project-thumb"><div class="project-thumb-inner thumb-c4">▶</div><div class="project-overlay"><div class="play-icon"><svg width="18" height="18" viewBox="0 0 20 20" fill="none"><path d="M7 4l10 6-10 6V4z" fill="var(--accent-light)"/></svg></div></div></div><div class="project-info"><div class="project-tag" data-i18n="p4.tag">Social para Marca</div><div class="project-title" data-i18n="p4.title">Verde Café — Filme de Marca</div><div class="project-desc" data-i18n="p4.desc">Filme cinemático para Instagram — grade quente, design de som ambiente, sem narração.</div><div class="project-result"><svg width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M2 8l4-5 4 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span data-i18n="p4.result">340% acima da média de engajamento</span></div></div></div>
-    <div class="project-card reveal reveal-delay-3" data-category="ads"><div class="project-thumb"><div class="project-thumb-inner thumb-c5">▶</div><div class="project-overlay"><div class="play-icon"><svg width="18" height="18" viewBox="0 0 20 20" fill="none"><path d="M7 4l10 6-10 6V4z" fill="var(--accent-light)"/></svg></div></div></div><div class="project-info"><div class="project-tag" data-i18n="p5.tag">Anúncio YouTube</div><div class="project-title" data-i18n="p5.title">Luminary Skincare — Pre-Roll</div><div class="project-desc" data-i18n="p5.desc">Formato duplo: 6s non-skippable + 60s complementar. Hook criado para ganhar o skip, não fugir dele.</div><div class="project-result"><svg width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M2 8l4-5 4 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span data-i18n="p5.result">22% view-through — 3× a média do setor</span></div></div></div>
   </div>
 </section>
 <div class="divider"></div>
@@ -700,14 +680,156 @@ footer{padding:32px 48px;border-top:1px solid var(--border);display:grid;grid-te
   <div class="about-text">
     <div class="section-label reveal" data-i18n="about.label">Sobre</div>
     <div class="section-title reveal reveal-delay-1"><span data-i18n="about.title1">Edito para</span> <span style="color:var(--accent-light)" data-i18n="about.title2">resultados,</span><br><span data-i18n="about.title3">não prêmios</span></div>
-    <p class="about-body reveal reveal-delay-2" data-i18n="about.p1">Desde 2022 editando vídeos que prendem — não por efeito, mas por ritmo, cadência e a lógica emocional de uma história. Comecei editando por conta própria e fui aperfeiçoando o olhar projeto a projeto, cliente a cliente.</p>
-    <p class="about-body reveal reveal-delay-2" data-i18n="about.p2">Hoje trabalho com marcas, veículos de comunicação e criadores que precisam de mais do que "bonito" — precisam de conteúdo que retém, cresce e converte.</p>
+    <p class="about-body reveal reveal-delay-2" data-i18n="about.p1">Passei anos obcecado com o que faz as pessoas assistirem — e continuarem assistindo. Não cores bonitas nem transições chamativas, mas ritmo, cadência e a lógica emocional de uma história. É isso que trago para cada projeto.</p>
+    <p class="about-body reveal reveal-delay-2" data-i18n="about.p2">Seja um anúncio que converte, um vídeo que retém ou uma série que cresce um canal, trabalho a partir do seu objetivo — e construo a edição que chega lá.</p>
     <div class="strengths">
-      <div class="strength-item reveal reveal-delay-1"><div class="strength-icon">🎯</div><div class="strength-title">Vídeos que Prendem</div><div class="strength-desc">Hooks e ritmo que seguram o espectador do início ao fim</div></div>
-      <div class="strength-item reveal reveal-delay-2"><div class="strength-icon">🎬</div><div class="strength-title">Edição Cinemática</div><div class="strength-desc">Grade de cor e atmosfera que elevam qualquer conteúdo</div></div>
-      <div class="strength-item reveal reveal-delay-2"><div class="strength-icon">✨</div><div class="strength-title">Animação Básica</div><div class="strength-desc">Motion elements e transições para dar vida ao conteúdo</div></div>
-      <div class="strength-item reveal reveal-delay-3"><div class="strength-icon">📈</div><div class="strength-title">Nativo de Plataforma</div><div class="strength-desc">Otimizado para YouTube, Reels, TikTok e mídia paga</div></div>
+      <div class="strength-item reveal reveal-delay-1"><div class="strength-icon">⚡</div><div class="strength-title" data-i18n="str1.title">Engenharia de Hook</div><div class="strength-desc" data-i18n="str1.desc">Os primeiros 3 segundos projetados para parar o scroll</div></div>
+      <div class="strength-item reveal reveal-delay-2"><div class="strength-icon">🎯</div><div class="strength-title" data-i18n="str2.title">Ritmo de Retenção</div><div class="strength-desc" data-i18n="str2.desc">Cortes estratégicos para manter o espectador até o fim</div></div>
+      <div class="strength-item reveal reveal-delay-2"><div class="strength-icon">🎬</div><div class="strength-title" data-i18n="str3.title">Gradação de Cor</div><div class="strength-desc" data-i18n="str3.desc">Grade cinemática que define atmosfera e identidade de marca</div></div>
+      <div class="strength-item reveal reveal-delay-3"><div class="strength-icon">📈</div><div class="strength-title" data-i18n="str4.title">Nativo de Plataforma</div><div class="strength-desc" data-i18n="str4.desc">Otimizado para YouTube, Reels, TikTok e mídia paga</div></div>
     </div>
+  </div>
+</section>
+<div class="divider"></div>
+
+
+<!-- ══ FERRAMENTAS ══ -->
+<section id="skills-section">
+  <div class="section-label reveal">Ferramentas & Habilidades</div>
+  <div class="section-title reveal reveal-delay-1" style="margin-bottom:40px">Com o que trabalho <span style="color:var(--accent-light)">todo dia</span></div>
+  <div class="skills-grid reveal reveal-delay-2">
+    <div class="skill-card skill-advanced">
+      <div class="skill-level-badge">Avançado</div>
+      <div class="skill-icon-wrap"><svg width="26" height="26" viewBox="0 0 28 28" fill="none"><rect x="2" y="2" width="24" height="24" rx="4" fill="var(--accent-dim)" stroke="var(--accent-light)" stroke-width="1.2"/><path d="M8 20l4-12 4 12M10 16h4" stroke="var(--accent-light)" stroke-width="1.4" stroke-linecap="round"/></svg></div>
+      <div class="skill-name">Final Cut Pro</div>
+      <div class="skill-bar"><div class="skill-fill" style="width:95%"></div></div>
+    </div>
+    <div class="skill-card skill-advanced">
+      <div class="skill-level-badge">Avançado</div>
+      <div class="skill-icon-wrap"><svg width="26" height="26" viewBox="0 0 28 28" fill="none"><rect x="2" y="2" width="24" height="24" rx="4" fill="var(--accent-dim)" stroke="var(--accent-light)" stroke-width="1.2"/><circle cx="14" cy="14" r="5" stroke="var(--accent-light)" stroke-width="1.4"/><path d="M14 9V6M14 22v-3M9 14H6M22 14h-3" stroke="var(--accent-light)" stroke-width="1.4" stroke-linecap="round"/></svg></div>
+      <div class="skill-name">CapCut</div>
+      <div class="skill-bar"><div class="skill-fill" style="width:95%"></div></div>
+    </div>
+    <div class="skill-card skill-advanced">
+      <div class="skill-level-badge">Avançado</div>
+      <div class="skill-icon-wrap"><svg width="26" height="26" viewBox="0 0 28 28" fill="none"><rect x="2" y="2" width="24" height="24" rx="4" fill="var(--accent-dim)" stroke="var(--accent-light)" stroke-width="1.2"/><path d="M6 22l6-18 4 10 3-5 3 13" stroke="var(--accent-light)" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <div class="skill-name">Premiere Pro</div>
+      <div class="skill-bar"><div class="skill-fill" style="width:90%"></div></div>
+    </div>
+    <div class="skill-card skill-mid">
+      <div class="skill-level-badge skill-level-mid">Intermediário</div>
+      <div class="skill-icon-wrap"><svg width="26" height="26" viewBox="0 0 28 28" fill="none"><rect x="2" y="2" width="24" height="24" rx="4" fill="rgba(200,150,50,.1)" stroke="rgba(200,150,50,.7)" stroke-width="1.2"/><path d="M9 19l4-10 2 5 2-3 2 8" stroke="rgba(200,150,50,.9)" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="20" cy="8" r="2" fill="rgba(200,150,50,.7)"/></svg></div>
+      <div class="skill-name">After Effects</div>
+      <div class="skill-bar"><div class="skill-fill skill-fill-mid" style="width:55%"></div></div>
+    </div>
+    <div class="skill-card skill-basic">
+      <div class="skill-level-badge skill-level-basic">Básico</div>
+      <div class="skill-icon-wrap"><svg width="26" height="26" viewBox="0 0 28 28" fill="none"><rect x="2" y="2" width="24" height="24" rx="4" fill="rgba(100,160,255,.08)" stroke="rgba(100,160,255,.5)" stroke-width="1.2"/><path d="M8 14l4 4 8-8" stroke="rgba(100,160,255,.8)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <div class="skill-name">Animação</div>
+      <div class="skill-bar"><div class="skill-fill skill-fill-basic" style="width:35%"></div></div>
+    </div>
+    <div class="skill-card skill-since">
+      <div class="skill-level-badge" style="background:rgba(92,160,92,.15);color:#6ec86e;border-color:rgba(92,160,92,.3)">Desde 2022</div>
+      <div class="skill-icon-wrap"><svg width="26" height="26" viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="10" stroke="#6ec86e" stroke-width="1.4" fill="rgba(92,160,92,.08)"/><path d="M14 8v6l4 4" stroke="#6ec86e" stroke-width="1.4" stroke-linecap="round"/></svg></div>
+      <div class="skill-name">Editando</div>
+      <div style="font-size:.72rem;color:var(--muted);margin-top:4px">+3 anos de experiência</div>
+    </div>
+  </div>
+</section>
+<div class="divider"></div>
+
+<!-- ══ CRIADORES & MARCAS ══ -->
+<section id="clients">
+  <div class="proof-header reveal" style="text-align:center;margin-bottom:56px">
+    <div class="section-label" style="justify-content:center;"><span></span>Quem confiou no trabalho</div>
+    <div class="section-title">Criadores & <span style="color:var(--accent-light)">Marcas</span></div>
+  </div>
+
+  <p class="clients-subtitle">Criadores</p>
+  <div class="influencer-grid">
+    <a href="https://www.instagram.com/santana.xz/" target="_blank" class="ig-card reveal">
+      <div class="ig-card-header">
+        <div class="ig-avatar-wrap">
+          <div class="ig-avatar ig-grad-purple">
+            <img src="" alt="Santana" class="ig-avatar-img" onerror="this.style.display='none'">
+            <span class="ig-avatar-fallback">S</span>
+          </div>
+        </div>
+        <div class="ig-info"><div class="ig-username-row"><span class="ig-username">santana.xz</span><svg class="ig-verified" width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 12L11 14L15 10M21 12C21 13.1 20.6 14.1 19.9 14.8L18.5 16.4C18.2 16.7 18 17.1 18 17.5V19.5C18 20.6 17.1 21.5 16 21.5H14C13.6 21.5 13.2 21.7 12.9 22L11.7 23.2C11 23.9 9.9 23.9 9.2 23.2L8 22C7.7 21.7 7.3 21.5 6.9 21.5H5C3.9 21.5 3 20.6 3 19.5V17.5C3 17.1 2.8 16.7 2.5 16.4L1.1 14.8C0.4 14.1 0 13.1 0 12C0 10.9 0.4 9.9 1.1 9.2L2.5 7.6C2.8 7.3 3 6.9 3 6.5V4.5C3 3.4 3.9 2.5 5 2.5H6.9C7.3 2.5 7.7 2.3 8 2L9.2 0.8C9.9 0.1 11 0.1 11.7 0.8L12.9 2C13.2 2.3 13.6 2.5 14 2.5H16C17.1 2.5 18 3.4 18 4.5V6.5C18 6.9 18.2 7.3 18.5 7.6L19.9 9.2C20.6 9.9 21 10.9 21 12Z" fill="#0095F6"/><path d="M9 12L11 14L15 10" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="ig-name">Santana</div></div>
+        <div class="ig-follow-btn">Seguir</div>
+      </div>
+      <div class="ig-card-footer"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>@santana.xz</div>
+    </a>
+    <a href="https://www.instagram.com/euaspect" target="_blank" class="ig-card reveal reveal-delay-1">
+      <div class="ig-card-header">
+        <div class="ig-avatar-wrap">
+          <div class="ig-avatar ig-grad-blue">
+            <img src="" alt="Aspect" class="ig-avatar-img" onerror="this.style.display='none'">
+            <span class="ig-avatar-fallback">A</span>
+          </div>
+        </div>
+        <div class="ig-info"><div class="ig-username-row"><span class="ig-username">euaspect</span><svg class="ig-verified" width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 12L11 14L15 10M21 12C21 13.1 20.6 14.1 19.9 14.8L18.5 16.4C18.2 16.7 18 17.1 18 17.5V19.5C18 20.6 17.1 21.5 16 21.5H14C13.6 21.5 13.2 21.7 12.9 22L11.7 23.2C11 23.9 9.9 23.9 9.2 23.2L8 22C7.7 21.7 7.3 21.5 6.9 21.5H5C3.9 21.5 3 20.6 3 19.5V17.5C3 17.1 2.8 16.7 2.5 16.4L1.1 14.8C0.4 14.1 0 13.1 0 12C0 10.9 0.4 9.9 1.1 9.2L2.5 7.6C2.8 7.3 3 6.9 3 6.5V4.5C3 3.4 3.9 2.5 5 2.5H6.9C7.3 2.5 7.7 2.3 8 2L9.2 0.8C9.9 0.1 11 0.1 11.7 0.8L12.9 2C13.2 2.3 13.6 2.5 14 2.5H16C17.1 2.5 18 3.4 18 4.5V6.5C18 6.9 18.2 7.3 18.5 7.6L19.9 9.2C20.6 9.9 21 10.9 21 12Z" fill="#0095F6"/><path d="M9 12L11 14L15 10" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="ig-name">Aspect</div></div>
+        <div class="ig-follow-btn">Seguir</div>
+      </div>
+      <div class="ig-card-footer"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>@euaspect</div>
+    </a>
+    <a href="https://www.instagram.com/odemetruu/" target="_blank" class="ig-card reveal reveal-delay-2">
+      <div class="ig-card-header">
+        <div class="ig-avatar-wrap">
+          <div class="ig-avatar ig-grad-orange">
+            <img src="" alt="Odemetro" class="ig-avatar-img" onerror="this.style.display='none'">
+            <span class="ig-avatar-fallback">O</span>
+          </div>
+        </div>
+        <div class="ig-info"><div class="ig-username-row"><span class="ig-username">odemetruu</span><svg class="ig-verified" width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 12L11 14L15 10M21 12C21 13.1 20.6 14.1 19.9 14.8L18.5 16.4C18.2 16.7 18 17.1 18 17.5V19.5C18 20.6 17.1 21.5 16 21.5H14C13.6 21.5 13.2 21.7 12.9 22L11.7 23.2C11 23.9 9.9 23.9 9.2 23.2L8 22C7.7 21.7 7.3 21.5 6.9 21.5H5C3.9 21.5 3 20.6 3 19.5V17.5C3 17.1 2.8 16.7 2.5 16.4L1.1 14.8C0.4 14.1 0 13.1 0 12C0 10.9 0.4 9.9 1.1 9.2L2.5 7.6C2.8 7.3 3 6.9 3 6.5V4.5C3 3.4 3.9 2.5 5 2.5H6.9C7.3 2.5 7.7 2.3 8 2L9.2 0.8C9.9 0.1 11 0.1 11.7 0.8L12.9 2C13.2 2.3 13.6 2.5 14 2.5H16C17.1 2.5 18 3.4 18 4.5V6.5C18 6.9 18.2 7.3 18.5 7.6L19.9 9.2C20.6 9.9 21 10.9 21 12Z" fill="#0095F6"/><path d="M9 12L11 14L15 10" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="ig-name">Odemetro</div></div>
+        <div class="ig-follow-btn">Seguir</div>
+      </div>
+      <div class="ig-card-footer"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>@odemetruu</div>
+    </a>
+  </div>
+
+  <p class="clients-subtitle" style="margin-top:64px">Empresas</p>
+  <div class="companies-grid">
+
+    <!-- TV Record -->
+    <div class="company-card reveal">
+      <div class="company-photo-slot">
+        <img src="" alt="TV Record" class="company-photo" onerror="this.style.display='none'">
+        <div class="company-photo-placeholder">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><rect x="2" y="2" width="28" height="28" rx="5" stroke="var(--border)" stroke-width="1.5" stroke-dasharray="4 3"/><path d="M11 16h10M16 11v10" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round"/></svg>
+          <span>Adicionar foto</span>
+        </div>
+      </div>
+      <div class="company-name">TV Record</div>
+      <div class="company-desc">Emissora Nacional</div>
+    </div>
+
+    <!-- Mercado Pago -->
+    <div class="company-card reveal reveal-delay-1">
+      <div class="company-photo-slot">
+        <img src="" alt="Mercado Pago" class="company-photo" onerror="this.style.display='none'">
+        <div class="company-photo-placeholder">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><rect x="2" y="2" width="28" height="28" rx="5" stroke="var(--border)" stroke-width="1.5" stroke-dasharray="4 3"/><path d="M11 16h10M16 11v10" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round"/></svg>
+          <span>Adicionar foto</span>
+        </div>
+      </div>
+      <div class="company-name">Mercado Pago</div>
+      <div class="company-desc">Fintech</div>
+    </div>
+
+    <!-- Grupo Ser -->
+    <div class="company-card reveal reveal-delay-2">
+      <div class="company-photo-slot">
+        <img src="" alt="Grupo Ser" class="company-photo" onerror="this.style.display='none'">
+        <div class="company-photo-placeholder">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><rect x="2" y="2" width="28" height="28" rx="5" stroke="var(--border)" stroke-width="1.5" stroke-dasharray="4 3"/><path d="M11 16h10M16 11v10" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round"/></svg>
+          <span>Adicionar foto</span>
+        </div>
+      </div>
+      <div class="company-name">Grupo Ser</div>
+      <div class="company-desc">Educação</div>
+    </div>
+
   </div>
 </section>
 <div class="divider"></div>
@@ -716,163 +838,9 @@ footer{padding:32px 48px;border-top:1px solid var(--border);display:grid;grid-te
 <section id="social-proof">
   <div class="proof-header reveal"><div class="section-label" data-i18n="proof.label">Depoimentos</div><div class="section-title"><span data-i18n="proof.title1">Clientes que</span> <span style="color:var(--accent-light)" data-i18n="proof.title2">cresceram</span></div></div>
   <div class="testimonials">
-    <div class="testimonial-card reveal"><span class="quote-mark">"</span><p class="testimonial-text">O Thiago tem um olhar diferente. Cada Reel que ele editou pra mim ganhou muito mais alcance. Ele entende o ritmo que o algoritmo pede sem perder a identidade do conteúdo.</p><div class="testimonial-author"><div class="author-avatar" style="background:rgba(200,100,200,.15);border-color:rgba(200,100,200,.3);color:#e080e0">S</div><div><div class="author-name">Santana</div><div class="author-role"><a href="https://www.instagram.com/santana.xz/" target="_blank" style="color:var(--accent-light);text-decoration:none">@santana.xz</a> — Influencer</div></div></div></div>
-    <div class="testimonial-card reveal reveal-delay-1"><span class="quote-mark">"</span><p class="testimonial-text">Parceria certeira. O Thiago entrega rápido, entende o que precisa sem precisar explicar mil vezes, e o resultado sempre fica melhor do que o esperado. Recomendo sem dúvida.</p><div class="testimonial-author"><div class="author-avatar" style="background:rgba(80,150,255,.1);border-color:rgba(80,150,255,.3);color:#80b0ff">A</div><div><div class="author-name">Aspect</div><div class="author-role"><a href="https://www.instagram.com/euaspect" target="_blank" style="color:var(--accent-light);text-decoration:none">@euaspect</a> — Influencer</div></div></div></div>
-    <div class="testimonial-card reveal reveal-delay-2"><span class="quote-mark">"</span><p class="testimonial-text">Qualidade e agilidade em tudo que o Thiago faz. Os vídeos ficam com aquele acabamento profissional que faz diferença na hora de crescer. É o editor que eu confio.</p><div class="testimonial-author"><div class="author-avatar" style="background:rgba(255,160,60,.1);border-color:rgba(255,160,60,.3);color:#ffb060">O</div><div><div class="author-name">Odemetro</div><div class="author-role"><a href="https://www.instagram.com/odemetruu/" target="_blank" style="color:var(--accent-light);text-decoration:none">@odemetruu</a> — Influencer</div></div></div></div>
-  </div>
-  <div class="metric-chips reveal reveal-delay-1">
-    <div class="chip"><svg width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M2 8l4-5 4 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span>Desde 2022 Editando</span></div>
-    <div class="chip"><svg width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M2 8l4-5 4 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span>+100 Projetos Entregues</span></div>
-    <div class="chip"><svg width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M2 8l4-5 4 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span>TV Record • Mercado Pago</span></div>
-    <div class="chip"><svg width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M2 8l4-5 4 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span>Final Cut • Premiere • CapCut</span></div>
-  </div>
-</section>
-
-
-<!-- ══ FERRAMENTAS ══ -->
-<section id="skills-section" style="padding:80px 48px;max-width:1280px;margin:0 auto">
-  <div class="section-label reveal">Ferramentas & Habilidades</div>
-  <div class="section-title reveal reveal-delay-1" style="margin-bottom:40px">Com o que trabalho <span style="color:var(--accent-light)">todo dia</span></div>
-  <div class="skills-grid reveal reveal-delay-2">
-    <!-- Avançado -->
-    <div class="skill-card skill-advanced">
-      <div class="skill-level-badge">Avançado</div>
-      <div class="skill-icon-wrap">
-        <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="2" y="2" width="24" height="24" rx="4" fill="var(--accent-dim)" stroke="var(--accent-light)" stroke-width="1.2"/><path d="M8 20l4-12 4 12M10 16h4" stroke="var(--accent-light)" stroke-width="1.4" stroke-linecap="round"/></svg>
-      </div>
-      <div class="skill-name">Final Cut Pro</div>
-      <div class="skill-bar"><div class="skill-fill" style="width:95%"></div></div>
-    </div>
-    <div class="skill-card skill-advanced">
-      <div class="skill-level-badge">Avançado</div>
-      <div class="skill-icon-wrap">
-        <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="2" y="2" width="24" height="24" rx="4" fill="var(--accent-dim)" stroke="var(--accent-light)" stroke-width="1.2"/><circle cx="14" cy="14" r="5" stroke="var(--accent-light)" stroke-width="1.4"/><path d="M14 9V6M14 22v-3M9 14H6M22 14h-3" stroke="var(--accent-light)" stroke-width="1.4" stroke-linecap="round"/></svg>
-      </div>
-      <div class="skill-name">CapCut</div>
-      <div class="skill-bar"><div class="skill-fill" style="width:95%"></div></div>
-    </div>
-    <div class="skill-card skill-advanced">
-      <div class="skill-level-badge">Avançado</div>
-      <div class="skill-icon-wrap">
-        <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="2" y="2" width="24" height="24" rx="4" fill="var(--accent-dim)" stroke="var(--accent-light)" stroke-width="1.2"/><path d="M6 22l6-18 4 10 3-5 3 13" stroke="var(--accent-light)" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </div>
-      <div class="skill-name">Premiere Pro</div>
-      <div class="skill-bar"><div class="skill-fill" style="width:90%"></div></div>
-    </div>
-    <!-- Intermediário -->
-    <div class="skill-card skill-mid">
-      <div class="skill-level-badge skill-level-mid">Intermediário</div>
-      <div class="skill-icon-wrap">
-        <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="2" y="2" width="24" height="24" rx="4" fill="rgba(200,150,50,.1)" stroke="rgba(200,150,50,.7)" stroke-width="1.2"/><path d="M9 19l4-10 2 5 2-3 2 8" stroke="rgba(200,150,50,.9)" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="20" cy="8" r="2" fill="rgba(200,150,50,.7)"/></svg>
-      </div>
-      <div class="skill-name">After Effects</div>
-      <div class="skill-bar"><div class="skill-fill skill-fill-mid" style="width:60%"></div></div>
-    </div>
-    <!-- Básico -->
-    <div class="skill-card skill-basic">
-      <div class="skill-level-badge skill-level-basic">Básico</div>
-      <div class="skill-icon-wrap">
-        <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="2" y="2" width="24" height="24" rx="4" fill="rgba(100,160,255,.08)" stroke="rgba(100,160,255,.5)" stroke-width="1.2"/><path d="M8 14l4 4 8-8" stroke="rgba(100,160,255,.8)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </div>
-      <div class="skill-name">Animação</div>
-      <div class="skill-bar"><div class="skill-fill skill-fill-basic" style="width:35%"></div></div>
-    </div>
-    <!-- Desde -->
-    <div class="skill-card skill-since">
-      <div class="skill-level-badge" style="background:rgba(92,160,92,.15);color:#6ec86e;border-color:rgba(92,160,92,.3)">Desde 2022</div>
-      <div class="skill-icon-wrap">
-        <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="10" stroke="#6ec86e" stroke-width="1.4" fill="rgba(92,160,92,.08)"/><path d="M14 8v6l4 4" stroke="#6ec86e" stroke-width="1.4" stroke-linecap="round"/></svg>
-      </div>
-      <div class="skill-name">Editando</div>
-      <div style="font-size:.72rem;color:var(--muted);margin-top:4px">+3 anos de experiência</div>
-    </div>
-  </div>
-</section>
-
-<div class="divider"></div>
-
-<!-- ══ CLIENTES / INFLUENCERS ══ -->
-<section id="clients" style="padding:80px 48px;background:var(--deep);border-top:1px solid var(--border);border-bottom:1px solid var(--border)">
-  <div class="proof-header reveal" style="text-align:center;margin-bottom:56px">
-    <div class="section-label" style="justify-content:center;margin-bottom:14px"><span style="display:block;width:20px;height:1px;background:var(--accent-light)"></span>Quem confou no trabalho</div>
-    <div class="section-title">Criadores & <span style="color:var(--accent-light)">Marcas</span></div>
-  </div>
-
-  <!-- Influencers -->
-  <div style="max-width:900px;margin:0 auto 64px">
-    <p style="font-family:'DM Mono',monospace;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--accent-light);text-align:center;margin-bottom:32px">Influenciadores</p>
-    <div class="influencer-grid">
-      <a href="https://www.instagram.com/santana.xz/" target="_blank" class="influencer-card reveal">
-        <div class="influencer-avatar">S</div>
-        <div class="influencer-name">Santana</div>
-        <div class="influencer-handle">@santana.xz</div>
-        <div class="influencer-tag">Influencer</div>
-      </a>
-      <a href="https://www.instagram.com/euaspect" target="_blank" class="influencer-card reveal reveal-delay-1">
-        <div class="influencer-avatar">A</div>
-        <div class="influencer-name">Aspect</div>
-        <div class="influencer-handle">@euaspect</div>
-        <div class="influencer-tag">Influencer</div>
-      </a>
-      <a href="https://www.instagram.com/odemetruu/" target="_blank" class="influencer-card reveal reveal-delay-2">
-        <div class="influencer-avatar">O</div>
-        <div class="influencer-name">Odemetro</div>
-        <div class="influencer-handle">@odemetruu</div>
-        <div class="influencer-tag">Influencer</div>
-      </a>
-    </div>
-  </div>
-
-  <!-- Empresas onde trabalhou -->
-  <div style="max-width:900px;margin:0 auto">
-    <p style="font-family:'DM Mono',monospace;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--accent-light);text-align:center;margin-bottom:32px">Empresas</p>
-    <div class="companies-grid">
-      <!-- TV Record -->
-      <div class="company-card reveal">
-        <div class="company-logo-wrap">
-          <svg viewBox="0 0 120 48" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%">
-            <rect width="120" height="48" rx="6" fill="rgba(149,6,6,.08)"/>
-            <!-- Ícone TV + antena estilizado -->
-            <rect x="28" y="16" width="30" height="22" rx="2" stroke="var(--accent-light)" stroke-width="1.5"/>
-            <path d="M36 16L43 8M50 16L43 8" stroke="var(--accent-light)" stroke-width="1.5" stroke-linecap="round"/>
-            <rect x="36" y="38" width="14" height="2" rx="1" fill="var(--accent-light)" opacity=".5"/>
-            <text x="64" y="28" font-family="'DM Mono',monospace" font-size="9" fill="var(--accent-light)" opacity=".9" font-weight="500">RECORD</text>
-            <text x="64" y="38" font-family="'DM Mono',monospace" font-size="7" fill="var(--muted)">TV</text>
-          </svg>
-        </div>
-        <div class="company-name">TV Record</div>
-        <div class="company-desc">Emissora Nacional</div>
-      </div>
-      <!-- Mercado Pago -->
-      <div class="company-card reveal reveal-delay-1">
-        <div class="company-logo-wrap">
-          <svg viewBox="0 0 120 48" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%">
-            <rect width="120" height="48" rx="6" fill="rgba(0,180,80,.05)"/>
-            <circle cx="30" cy="24" r="12" stroke="#00b450" stroke-width="1.5" fill="none" opacity=".7"/>
-            <path d="M25 24l3 3 7-7" stroke="#00b450" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-            <text x="50" y="22" font-family="'DM Mono',monospace" font-size="7.5" fill="var(--body)" opacity=".9" font-weight="500">MERCADO</text>
-            <text x="50" y="33" font-family="'DM Mono',monospace" font-size="7.5" fill="#00b450" opacity=".9">PAGO</text>
-          </svg>
-        </div>
-        <div class="company-name">Mercado Pago</div>
-        <div class="company-desc">Fintech</div>
-      </div>
-      <!-- Grupo Ser -->
-      <div class="company-card reveal reveal-delay-2">
-        <div class="company-logo-wrap">
-          <svg viewBox="0 0 120 48" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%">
-            <rect width="120" height="48" rx="6" fill="rgba(80,120,200,.06)"/>
-            <path d="M20 30 Q30 12 40 30 Q50 48 60 30" stroke="rgba(80,120,200,.8)" stroke-width="1.6" fill="none" stroke-linecap="round"/>
-            <circle cx="20" cy="30" r="3" fill="rgba(80,120,200,.7)"/>
-            <circle cx="60" cy="30" r="3" fill="rgba(80,120,200,.7)"/>
-            <text x="70" y="22" font-family="'DM Mono',monospace" font-size="9" fill="var(--body)" opacity=".9" font-weight="500">GRUPO</text>
-            <text x="70" y="34" font-family="'DM Mono',monospace" font-size="9" fill="rgba(80,120,200,.9)">SER</text>
-          </svg>
-        </div>
-        <div class="company-name">Grupo Ser</div>
-        <div class="company-desc">Educação</div>
-      </div>
-    </div>
+    <div class="testimonial-card reveal"><span class="quote-mark">"</span><p class="testimonial-text">O Thiago tem um olhar diferente. Cada Reel que ele editou pra mim ganhou muito mais alcance. Ele entende o ritmo que o algoritmo pede sem perder a identidade do conteúdo.</p><div class="testimonial-author"><div class="author-avatar" style="background:rgba(131,58,180,.15);border-color:rgba(131,58,180,.4);color:#c084fc">S</div><div><div class="author-name">Santana</div><div class="author-role"><a href="https://www.instagram.com/santana.xz/" target="_blank" style="color:var(--accent-light);text-decoration:none">@santana.xz</a> · Influencer</div></div></div></div>
+    <div class="testimonial-card reveal reveal-delay-1"><span class="quote-mark">"</span><p class="testimonial-text">Parceria certeira. O Thiago entrega rápido, entende o que precisa sem explicar mil vezes, e o resultado sempre fica melhor do que o esperado.</p><div class="testimonial-author"><div class="author-avatar" style="background:rgba(79,172,254,.1);border-color:rgba(79,172,254,.35);color:#7dd3fc">A</div><div><div class="author-name">Aspect</div><div class="author-role"><a href="https://www.instagram.com/euaspect" target="_blank" style="color:var(--accent-light);text-decoration:none">@euaspect</a> · Influencer</div></div></div></div>
+    <div class="testimonial-card reveal reveal-delay-2"><span class="quote-mark">"</span><p class="testimonial-text">Qualidade e agilidade em tudo que o Thiago faz. Os vídeos ficam com aquele acabamento profissional que faz diferença na hora de crescer.</p><div class="testimonial-author"><div class="author-avatar" style="background:rgba(247,151,30,.1);border-color:rgba(247,151,30,.35);color:#fbbf24">O</div><div><div class="author-name">Odemetro</div><div class="author-role"><a href="https://www.instagram.com/odemetruu/" target="_blank" style="color:var(--accent-light);text-decoration:none">@odemetruu</a> · Influencer</div></div></div></div>
   </div>
 </section>
 
@@ -883,9 +851,9 @@ footer{padding:32px 48px;border-top:1px solid var(--border);display:grid;grid-te
     <div class="section-title reveal reveal-delay-1"><span data-i18n="contact.title1">Pronto para criar algo que</span> <span style="color:var(--accent-light)" data-i18n="contact.title2">performa?</span></div>
     <p class="contact-tagline reveal reveal-delay-2" data-i18n="contact.tagline">Me conta o que você está construindo. Vou te mostrar como a edição pode fazer isso trabalhar muito mais. Sem enrolação — só uma conversa real sobre seus objetivos.</p>
     <div class="contact-methods reveal reveal-delay-2">
-      <a href="mailto:editarthiago@gmail.com" class="contact-method"><div class="method-icon"><svg width="17" height="17" viewBox="0 0 18 18" fill="none"><path d="M2 4h14v10H2V4zm0 0l7 6 7-6" stroke="var(--accent-light)" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div><div class="method-label">Email</div><div class="method-value">editarthiago@gmail.com</div></div></a>
-      <a href="https://wa.me/5581987398373" target="_blank" class="contact-method"><div class="method-icon"><svg width="17" height="17" viewBox="0 0 18 18" fill="none"><path d="M9 1.5a7.5 7.5 0 1 0 6.5 11.25L17.5 16.5l-3.75-2a7.5 7.5 0 0 0-4.75 1.5A7.5 7.5 0 0 0 9 1.5z" stroke="var(--accent-light)" stroke-width="1.4" stroke-linejoin="round"/></svg></div><div><div class="method-label">WhatsApp</div><div class="method-value" data-i18n="contact.wa">Fale diretamente comigo</div></div></a>
-      <a href="https://www.instagram.com/thiagoalveszx" target="_blank" class="contact-method"><div class="method-icon"><svg width="17" height="17" viewBox="0 0 18 18" fill="none"><rect x="2" y="2" width="14" height="14" rx="4" stroke="var(--accent-light)" stroke-width="1.4"/><circle cx="9" cy="9" r="3" stroke="var(--accent-light)" stroke-width="1.4"/><circle cx="13" cy="5" r=".75" fill="var(--accent-light)"/></svg></div><div><div class="method-label">Instagram</div><div class="method-value">@thiagoalveszx</div></div></a>
+      <a href="mailto:thiago@thiagoalves.co" class="contact-method"><div class="method-icon"><svg width="17" height="17" viewBox="0 0 18 18" fill="none"><path d="M2 4h14v10H2V4zm0 0l7 6 7-6" stroke="var(--accent-light)" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div><div class="method-label">Email</div><div class="method-value">thiago@thiagoalves.co</div></div></a>
+      <a href="https://wa.me/5511999999999" target="_blank" class="contact-method"><div class="method-icon"><svg width="17" height="17" viewBox="0 0 18 18" fill="none"><path d="M9 1.5a7.5 7.5 0 1 0 6.5 11.25L17.5 16.5l-3.75-2a7.5 7.5 0 0 0-4.75 1.5A7.5 7.5 0 0 0 9 1.5z" stroke="var(--accent-light)" stroke-width="1.4" stroke-linejoin="round"/></svg></div><div><div class="method-label">WhatsApp</div><div class="method-value" data-i18n="contact.wa">Fale diretamente comigo</div></div></a>
+      <a href="https://instagram.com/thiagoalves.edit" target="_blank" class="contact-method"><div class="method-icon"><svg width="17" height="17" viewBox="0 0 18 18" fill="none"><rect x="2" y="2" width="14" height="14" rx="4" stroke="var(--accent-light)" stroke-width="1.4"/><circle cx="9" cy="9" r="3" stroke="var(--accent-light)" stroke-width="1.4"/><circle cx="13" cy="5" r=".75" fill="var(--accent-light)"/></svg></div><div><div class="method-label">Instagram</div><div class="method-value">@thiagoalves.edit</div></div></a>
     </div>
   </div>
   <div class="contact-form reveal reveal-delay-1">
@@ -993,7 +961,9 @@ document.querySelectorAll('.filter-btn').forEach(btn=>btn.addEventListener('clic
 function playReel(){
   const ph=document.getElementById('reel-placeholder'),ifr=document.getElementById('reel-iframe');
   /* ▼ Substitua pela URL real do showreel do Thiago ▼ */
-  ifr.src='https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&rel=0&modestbranding=1';
+  /* Substitua 'SEU_VIDEO_ID' pelo ID real do vídeo do Thiago no YouTube */
+  const videoId = 'SEU_VIDEO_ID';
+  ifr.src=`https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1&playsinline=1`;
   ifr.classList.add('active');ph.classList.add('hidden');
 }
 
@@ -1014,9 +984,9 @@ function animCount(el,target,suffix){
   const tm=setInterval(()=>{s+=inc;if(s>=target){s=target;clearInterval(tm)}el.textContent=dec?s.toFixed(1)+suffix:Math.floor(s)+suffix},22);
 }
 const so=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){
-  animCount(document.getElementById('sn1'),200,'M+');
-  setTimeout(()=>animCount(document.getElementById('sn2'),6,'a'),120);
-  setTimeout(()=>animCount(document.getElementById('sn3'),120,'+'),240);
+  animCount(document.getElementById('sn1'),100,'M+');
+  setTimeout(()=>animCount(document.getElementById('sn2'),3,'a'),120);
+  setTimeout(()=>animCount(document.getElementById('sn3'),100,'+'),240);
   setTimeout(()=>animCount(document.getElementById('sn4'),3.2,'×'),360);
   so.disconnect();
 }})},{threshold:.5});
