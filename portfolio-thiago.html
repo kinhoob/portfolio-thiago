@@ -480,6 +480,32 @@ footer{padding:32px 48px;border-top:1px solid var(--border);display:grid;grid-te
 }
 /* Remove logo-wrap que não existe mais */
 .company-logo-wrap{display:none}
+
+/* ig stats row */
+.ig-stats-row{
+  display:flex;align-items:center;gap:0;
+  padding:10px 16px;border-top:1px solid var(--border);
+  background:var(--surface2);
+}
+.ig-stat{display:flex;flex-direction:column;align-items:center;flex:1;gap:2px}
+.ig-stat-num{
+  font-family:"Bebas Neue",sans-serif;font-size:1.1rem;letter-spacing:.04em;
+  color:var(--white);line-height:1;
+}
+.ig-stat-label{
+  font-family:"DM Mono",monospace;font-size:.52rem;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--muted);
+}
+.ig-stat-sep{width:1px;height:28px;background:var(--border);flex-shrink:0;margin:0 4px}
+
+/* avatar: garantir que a img cubra bem */
+.ig-avatar{position:relative;overflow:hidden}
+.ig-avatar-img{
+  position:absolute;inset:0;width:100%;height:100%;
+  object-fit:cover;border-radius:50%;z-index:2;
+  display:block;
+}
+.ig-avatar-fallback{position:relative;z-index:1}
 </style>
 </head>
 <body>
@@ -751,12 +777,17 @@ footer{padding:32px 48px;border-top:1px solid var(--border);display:grid;grid-te
       <div class="ig-card-header">
         <div class="ig-avatar-wrap">
           <div class="ig-avatar ig-grad-purple">
-            <img src="" alt="Santana" class="ig-avatar-img" onerror="this.style.display='none'">
+            <img src="perfilsantana.jpg">
             <span class="ig-avatar-fallback">S</span>
           </div>
         </div>
         <div class="ig-info"><div class="ig-username-row"><span class="ig-username">santana.xz</span><svg class="ig-verified" width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 12L11 14L15 10M21 12C21 13.1 20.6 14.1 19.9 14.8L18.5 16.4C18.2 16.7 18 17.1 18 17.5V19.5C18 20.6 17.1 21.5 16 21.5H14C13.6 21.5 13.2 21.7 12.9 22L11.7 23.2C11 23.9 9.9 23.9 9.2 23.2L8 22C7.7 21.7 7.3 21.5 6.9 21.5H5C3.9 21.5 3 20.6 3 19.5V17.5C3 17.1 2.8 16.7 2.5 16.4L1.1 14.8C0.4 14.1 0 13.1 0 12C0 10.9 0.4 9.9 1.1 9.2L2.5 7.6C2.8 7.3 3 6.9 3 6.5V4.5C3 3.4 3.9 2.5 5 2.5H6.9C7.3 2.5 7.7 2.3 8 2L9.2 0.8C9.9 0.1 11 0.1 11.7 0.8L12.9 2C13.2 2.3 13.6 2.5 14 2.5H16C17.1 2.5 18 3.4 18 4.5V6.5C18 6.9 18.2 7.3 18.5 7.6L19.9 9.2C20.6 9.9 21 10.9 21 12Z" fill="#0095F6"/><path d="M9 12L11 14L15 10" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="ig-name">Santana</div></div>
         <div class="ig-follow-btn">Seguir</div>
+      </div>
+      <div class="ig-stats-row">
+        <div class="ig-stat"><span class="ig-stat-num" data-followers="santana">1,3M</span><span class="ig-stat-label">seguidores</span></div>
+        <div class="ig-stat-sep"></div>
+        <div class="ig-stat"><span class="ig-stat-num">∞</span><span class="ig-stat-label">conteúdo editado</span></div>
       </div>
       <div class="ig-card-footer"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>@santana.xz</div>
     </a>
@@ -764,12 +795,17 @@ footer{padding:32px 48px;border-top:1px solid var(--border);display:grid;grid-te
       <div class="ig-card-header">
         <div class="ig-avatar-wrap">
           <div class="ig-avatar ig-grad-blue">
-            <img src="" alt="Aspect" class="ig-avatar-img" onerror="this.style.display='none'">
+            <img src="perfilaspect.jpg">
             <span class="ig-avatar-fallback">A</span>
           </div>
         </div>
         <div class="ig-info"><div class="ig-username-row"><span class="ig-username">euaspect</span><svg class="ig-verified" width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 12L11 14L15 10M21 12C21 13.1 20.6 14.1 19.9 14.8L18.5 16.4C18.2 16.7 18 17.1 18 17.5V19.5C18 20.6 17.1 21.5 16 21.5H14C13.6 21.5 13.2 21.7 12.9 22L11.7 23.2C11 23.9 9.9 23.9 9.2 23.2L8 22C7.7 21.7 7.3 21.5 6.9 21.5H5C3.9 21.5 3 20.6 3 19.5V17.5C3 17.1 2.8 16.7 2.5 16.4L1.1 14.8C0.4 14.1 0 13.1 0 12C0 10.9 0.4 9.9 1.1 9.2L2.5 7.6C2.8 7.3 3 6.9 3 6.5V4.5C3 3.4 3.9 2.5 5 2.5H6.9C7.3 2.5 7.7 2.3 8 2L9.2 0.8C9.9 0.1 11 0.1 11.7 0.8L12.9 2C13.2 2.3 13.6 2.5 14 2.5H16C17.1 2.5 18 3.4 18 4.5V6.5C18 6.9 18.2 7.3 18.5 7.6L19.9 9.2C20.6 9.9 21 10.9 21 12Z" fill="#0095F6"/><path d="M9 12L11 14L15 10" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="ig-name">Aspect</div></div>
         <div class="ig-follow-btn">Seguir</div>
+      </div>
+      <div class="ig-stats-row">
+        <div class="ig-stat"><span class="ig-stat-num" data-followers="aspect">1,8M</span><span class="ig-stat-label">seguidores</span></div>
+        <div class="ig-stat-sep"></div>
+        <div class="ig-stat"><span class="ig-stat-num">∞</span><span class="ig-stat-label">conteúdo editado</span></div>
       </div>
       <div class="ig-card-footer"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>@euaspect</div>
     </a>
@@ -777,12 +813,17 @@ footer{padding:32px 48px;border-top:1px solid var(--border);display:grid;grid-te
       <div class="ig-card-header">
         <div class="ig-avatar-wrap">
           <div class="ig-avatar ig-grad-orange">
-            <img src="" alt="Odemetro" class="ig-avatar-img" onerror="this.style.display='none'">
+            <img src="perfilodemetro.jpg">
             <span class="ig-avatar-fallback">O</span>
           </div>
         </div>
         <div class="ig-info"><div class="ig-username-row"><span class="ig-username">odemetruu</span><svg class="ig-verified" width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 12L11 14L15 10M21 12C21 13.1 20.6 14.1 19.9 14.8L18.5 16.4C18.2 16.7 18 17.1 18 17.5V19.5C18 20.6 17.1 21.5 16 21.5H14C13.6 21.5 13.2 21.7 12.9 22L11.7 23.2C11 23.9 9.9 23.9 9.2 23.2L8 22C7.7 21.7 7.3 21.5 6.9 21.5H5C3.9 21.5 3 20.6 3 19.5V17.5C3 17.1 2.8 16.7 2.5 16.4L1.1 14.8C0.4 14.1 0 13.1 0 12C0 10.9 0.4 9.9 1.1 9.2L2.5 7.6C2.8 7.3 3 6.9 3 6.5V4.5C3 3.4 3.9 2.5 5 2.5H6.9C7.3 2.5 7.7 2.3 8 2L9.2 0.8C9.9 0.1 11 0.1 11.7 0.8L12.9 2C13.2 2.3 13.6 2.5 14 2.5H16C17.1 2.5 18 3.4 18 4.5V6.5C18 6.9 18.2 7.3 18.5 7.6L19.9 9.2C20.6 9.9 21 10.9 21 12Z" fill="#0095F6"/><path d="M9 12L11 14L15 10" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="ig-name">Odemetro</div></div>
         <div class="ig-follow-btn">Seguir</div>
+      </div>
+      <div class="ig-stats-row">
+        <div class="ig-stat"><span class="ig-stat-num" data-followers="odemetro">1,2M</span><span class="ig-stat-label">seguidores</span></div>
+        <div class="ig-stat-sep"></div>
+        <div class="ig-stat"><span class="ig-stat-num">∞</span><span class="ig-stat-label">conteúdo editado</span></div>
       </div>
       <div class="ig-card-footer"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>@odemetruu</div>
     </a>
@@ -994,6 +1035,46 @@ const sb=document.querySelector('.stats-bar');if(sb)so.observe(sb);
 
 
 applyT('pt');
+
+/* Buscar contagem de seguidores via API pública */
+(function fetchFollowers(){
+  const profiles = [
+    {key:'santana', user:'santana.xz'},
+    {key:'aspect',  user:'euaspect'},
+    {key:'odemetro',user:'odemetruu'},
+  ];
+  
+  /* Valores hardcoded como fallback — atualize manualmente se mudar */
+  const fallback = {santana:'—', aspect:'—', odemetro:'—'};
+  
+  function fmt(n){
+    if(n>=1000000) return (n/1000000).toFixed(1).replace('.0','')+'M';
+    if(n>=1000) return (n/1000).toFixed(1).replace('.0','')+'K';
+    return n.toString();
+  }
+  
+  function setCount(key, val){
+    const el = document.querySelector(`[data-followers="${key}"]`);
+    if(el) el.textContent = val;
+  }
+  
+  profiles.forEach(p => {
+    /* Tenta API pública do Instagram (funciona sem auth para contas públicas) */
+    fetch(`https://www.instagram.com/${p.user}/?__a=1&__d=dis`, {
+      headers:{'Accept':'application/json'},
+      signal: AbortSignal.timeout(6000)
+    })
+    .then(r => r.json())
+    .then(d => {
+      const count = d?.graphql?.user?.edge_followed_by?.count
+                 || d?.data?.user?.edge_followed_by?.count;
+      if(count) setCount(p.key, fmt(count));
+      else setCount(p.key, fallback[p.key]);
+    })
+    .catch(() => setCount(p.key, fallback[p.key]));
+  });
+})();
+
 
 /* ═══════════════ LIQUID JS ═══════════════ */
 
