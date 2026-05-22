@@ -502,7 +502,7 @@ footer{padding:32px 48px;border-top:1px solid var(--border);display:grid;grid-te
 .ig-avatar{position:relative;overflow:hidden}
 .ig-avatar-img{
   position:absolute;inset:0;width:100%;height:100%;
-  object-fit:cover;border-radius:50%;z-index:2;
+  object-fit:cover;object-position:center top;border-radius:50%;z-index:2;
   display:block;
 }
 .ig-avatar-fallback{position:relative;z-index:1}
@@ -777,7 +777,7 @@ footer{padding:32px 48px;border-top:1px solid var(--border);display:grid;grid-te
       <div class="ig-card-header">
         <div class="ig-avatar-wrap">
           <div class="ig-avatar ig-grad-purple">
-            <img src="perfilsantana.jpg">
+            <img src="perfilsantana.jpg" class="ig-avatar-img" alt="Santana">
             <span class="ig-avatar-fallback">S</span>
           </div>
         </div>
@@ -787,7 +787,7 @@ footer{padding:32px 48px;border-top:1px solid var(--border);display:grid;grid-te
       <div class="ig-stats-row">
         <div class="ig-stat"><span class="ig-stat-num" data-followers="santana">1,3M</span><span class="ig-stat-label">seguidores</span></div>
         <div class="ig-stat-sep"></div>
-        <div class="ig-stat"><span class="ig-stat-num">∞</span><span class="ig-stat-label">conteúdo editado</span></div>
+        <div class="ig-stat"><span class="ig-stat-num">+50</span><span class="ig-stat-label">conteúdo editado</span></div>
       </div>
       <div class="ig-card-footer"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>@santana.xz</div>
     </a>
@@ -795,7 +795,7 @@ footer{padding:32px 48px;border-top:1px solid var(--border);display:grid;grid-te
       <div class="ig-card-header">
         <div class="ig-avatar-wrap">
           <div class="ig-avatar ig-grad-blue">
-            <img src="perfilaspect.jpg">
+            <img src="perfilaspect.jpg" class="ig-avatar-img" alt="Aspect">
             <span class="ig-avatar-fallback">A</span>
           </div>
         </div>
@@ -805,7 +805,7 @@ footer{padding:32px 48px;border-top:1px solid var(--border);display:grid;grid-te
       <div class="ig-stats-row">
         <div class="ig-stat"><span class="ig-stat-num" data-followers="aspect">1,8M</span><span class="ig-stat-label">seguidores</span></div>
         <div class="ig-stat-sep"></div>
-        <div class="ig-stat"><span class="ig-stat-num">∞</span><span class="ig-stat-label">conteúdo editado</span></div>
+        <div class="ig-stat"><span class="ig-stat-num">+30</span><span class="ig-stat-label">conteúdo editado</span></div>
       </div>
       <div class="ig-card-footer"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>@euaspect</div>
     </a>
@@ -813,7 +813,7 @@ footer{padding:32px 48px;border-top:1px solid var(--border);display:grid;grid-te
       <div class="ig-card-header">
         <div class="ig-avatar-wrap">
           <div class="ig-avatar ig-grad-orange">
-            <img src="perfilodemetro.jpg">
+            <img src="perfilodemetro.jpg" class="ig-avatar-img" alt="Odemetro">
             <span class="ig-avatar-fallback">O</span>
           </div>
         </div>
@@ -821,9 +821,9 @@ footer{padding:32px 48px;border-top:1px solid var(--border);display:grid;grid-te
         <div class="ig-follow-btn">Seguir</div>
       </div>
       <div class="ig-stats-row">
-        <div class="ig-stat"><span class="ig-stat-num" data-followers="odemetro">1,2M</span><span class="ig-stat-label">seguidores</span></div>
+        <div class="ig-stat"><span class="ig-stat-num" data-followers="odemetro">1,4M</span><span class="ig-stat-label">seguidores</span></div>
         <div class="ig-stat-sep"></div>
-        <div class="ig-stat"><span class="ig-stat-num">∞</span><span class="ig-stat-label">conteúdo editado</span></div>
+        <div class="ig-stat"><span class="ig-stat-num">+30</span><span class="ig-stat-label">conteúdo editado</span></div>
       </div>
       <div class="ig-card-footer"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>@odemetruu</div>
     </a>
@@ -879,9 +879,9 @@ footer{padding:32px 48px;border-top:1px solid var(--border);display:grid;grid-te
 <section id="social-proof">
   <div class="proof-header reveal"><div class="section-label" data-i18n="proof.label">Depoimentos</div><div class="section-title"><span data-i18n="proof.title1">Clientes que</span> <span style="color:var(--accent-light)" data-i18n="proof.title2">cresceram</span></div></div>
   <div class="testimonials">
-    <div class="testimonial-card reveal"><span class="quote-mark">"</span><p class="testimonial-text">O Thiago tem um olhar diferente. Cada Reel que ele editou pra mim ganhou muito mais alcance. Ele entende o ritmo que o algoritmo pede sem perder a identidade do conteúdo.</p><div class="testimonial-author"><div class="author-avatar" style="background:rgba(131,58,180,.15);border-color:rgba(131,58,180,.4);color:#c084fc">S</div><div><div class="author-name">Santana</div><div class="author-role"><a href="https://www.instagram.com/santana.xz/" target="_blank" style="color:var(--accent-light);text-decoration:none">@santana.xz</a> · Influencer</div></div></div></div>
-    <div class="testimonial-card reveal reveal-delay-1"><span class="quote-mark">"</span><p class="testimonial-text">Parceria certeira. O Thiago entrega rápido, entende o que precisa sem explicar mil vezes, e o resultado sempre fica melhor do que o esperado.</p><div class="testimonial-author"><div class="author-avatar" style="background:rgba(79,172,254,.1);border-color:rgba(79,172,254,.35);color:#7dd3fc">A</div><div><div class="author-name">Aspect</div><div class="author-role"><a href="https://www.instagram.com/euaspect" target="_blank" style="color:var(--accent-light);text-decoration:none">@euaspect</a> · Influencer</div></div></div></div>
-    <div class="testimonial-card reveal reveal-delay-2"><span class="quote-mark">"</span><p class="testimonial-text">Qualidade e agilidade em tudo que o Thiago faz. Os vídeos ficam com aquele acabamento profissional que faz diferença na hora de crescer.</p><div class="testimonial-author"><div class="author-avatar" style="background:rgba(247,151,30,.1);border-color:rgba(247,151,30,.35);color:#fbbf24">O</div><div><div class="author-name">Odemetro</div><div class="author-role"><a href="https://www.instagram.com/odemetruu/" target="_blank" style="color:var(--accent-light);text-decoration:none">@odemetruu</a> · Influencer</div></div></div></div>
+    <div class="testimonial-card reveal"><span class="quote-mark">"</span><p class="testimonial-text">O Thiago tem um olhar diferente. Cada Reel que ele editou pra mim ganhou muito mais alcance. Ele entende o ritmo que o algoritmo pede sem perder a identidade do conteúdo.</p><div class="testimonial-author"><div class="author-avatar" style="background:rgba(131,58,180,.15);border-color:rgba(131,58,180,.4);color:#c084fc;overflow:hidden;padding:0"><img src="perfilsantana.jpg" style="width:100%;height:100%;object-fit:cover;object-position:center top;border-radius:50%;display:block"></div><div><div class="author-name">Santana</div><div class="author-role"><a href="https://www.instagram.com/santana.xz/" target="_blank" style="color:var(--accent-light);text-decoration:none">@santana.xz</a> · Influencer</div></div></div></div>
+    <div class="testimonial-card reveal reveal-delay-1"><span class="quote-mark">"</span><p class="testimonial-text">Parceria certeira. O Thiago entrega rápido, entende o que precisa sem explicar mil vezes, e o resultado sempre fica melhor do que o esperado.</p><div class="testimonial-author"><div class="author-avatar" style="background:rgba(79,172,254,.1);border-color:rgba(79,172,254,.35);color:#7dd3fc;overflow:hidden;padding:0"><img src="perfilaspect.jpg" style="width:100%;height:100%;object-fit:cover;object-position:center top;border-radius:50%;display:block"></div><div><div class="author-name">Aspect</div><div class="author-role"><a href="https://www.instagram.com/euaspect" target="_blank" style="color:var(--accent-light);text-decoration:none">@euaspect</a> · Influencer</div></div></div></div>
+    <div class="testimonial-card reveal reveal-delay-2"><span class="quote-mark">"</span><p class="testimonial-text">Qualidade e agilidade em tudo que o Thiago faz. Os vídeos ficam com aquele acabamento profissional que faz diferença na hora de crescer.</p><div class="testimonial-author"><div class="author-avatar" style="background:rgba(247,151,30,.1);border-color:rgba(247,151,30,.35);color:#fbbf24;overflow:hidden;padding:0"><img src="perfilodemetro.jpg" style="width:100%;height:100%;object-fit:cover;object-position:center top;border-radius:50%;display:block"></div><div><div class="author-name">Odemetro</div><div class="author-role"><a href="https://www.instagram.com/odemetruu/" target="_blank" style="color:var(--accent-light);text-decoration:none">@odemetruu</a> · Influencer</div></div></div></div>
   </div>
 </section>
 
@@ -1045,7 +1045,7 @@ applyT('pt');
   ];
   
   /* Valores hardcoded como fallback — atualize manualmente se mudar */
-  const fallback = {santana:'—', aspect:'—', odemetro:'—'};
+  const fallback = {santana:'1,3M', aspect:'1,8M', odemetro:'1,4M'};
   
   function fmt(n){
     if(n>=1000000) return (n/1000000).toFixed(1).replace('.0','')+'M';
