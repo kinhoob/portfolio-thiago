@@ -198,7 +198,7 @@ section{position:relative;z-index:2}
 .thumb-c5{background:linear-gradient(135deg,#151018,#221828);color:rgba(140,90,180,.2)}
 
 /* SOBRE */
-#about{padding:96px 48px;display:grid;grid-template-columns:1fr;gap:48px;align-items:center;max-width:860px;margin:0 auto}
+#about{padding:96px 48px;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
 .about-visual{position:relative}
 .about-img-wrap{aspect-ratio:4/5;background:var(--surface);border-radius:5px;overflow:hidden;border:1px solid var(--border);position:relative;display:flex;align-items:center;justify-content:center}
 .about-img-bg{width:100%;height:100%;background:linear-gradient(160deg,var(--deep) 0%,var(--surface2) 50%,var(--deep) 100%);display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue',sans-serif;font-size:7rem;color:var(--accent-dim);letter-spacing:.02em}
@@ -230,22 +230,30 @@ section{position:relative;z-index:2}
 .quote-mark{font-family:'Bebas Neue',sans-serif;font-size:4.5rem;line-height:1;color:var(--accent-dim);margin-bottom:-18px;display:block}
 .testimonial-text{font-size:.92rem;color:var(--body);line-height:1.75;margin-bottom:26px;font-style:italic}
 .testimonial-author{display:flex;align-items:center;gap:13px}
-.author-avatar{width:38px;height:38px;border-radius:50%;background:var(--accent-dim);border:1px solid rgba(149,6,6,.25);display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue',sans-serif;font-size:.9rem;color:var(--accent-light);flex-shrink:0}
+.author-avatar{width:50px;height:50px;border-radius:50%;background:var(--accent-dim);border:2px solid rgba(149,6,6,.25);display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue',sans-serif;font-size:.9rem;color:var(--accent-light);flex-shrink:0;position:relative;overflow:hidden}
 .author-name{font-size:.84rem;font-weight:500;color:var(--white)}
 .author-role{font-family:'DM Mono',monospace;font-size:.62rem;color:var(--muted);letter-spacing:.06em;margin-top:2px}
 .metric-chips{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:56px}
 .chip{display:flex;align-items:center;gap:7px;padding:9px 18px;background:var(--accent-dim);border:1px solid rgba(149,6,6,.22);border-radius:100px;font-family:'DM Mono',monospace;font-size:.64rem;letter-spacing:.08em;color:var(--accent-light)}
 
 /* CONTATO */
-#contact{padding:112px 48px;display:flex;flex-direction:column;align-items:center;text-align:center;max-width:780px;margin:0 auto}
+#contact{padding:112px 48px;display:grid;grid-template-columns:1fr 1fr;gap:90px;align-items:start;max-width:1280px;margin:0 auto}
 .contact-left .section-title{margin-bottom:22px}
-.contact-tagline{font-size:1rem;color:var(--body);line-height:1.75;max-width:540px;margin:0 auto 52px}
-.contact-methods{display:flex;flex-direction:column;gap:14px;width:100%}
-.contact-method{display:flex;align-items:center;gap:18px;padding:20px 28px;background:var(--surface);border:1px solid var(--border);border-radius:5px;text-decoration:none;color:var(--white);transition:border-color .3s,transform .3s cubic-bezier(.16,1,.3,1),background .3s}
+.contact-tagline{font-size:1rem;color:var(--body);line-height:1.75;max-width:430px;margin-bottom:44px}
+.contact-methods{display:flex;flex-direction:column;gap:12px}
+.contact-method{display:flex;align-items:center;gap:15px;padding:16px 20px;background:var(--surface);border:1px solid var(--border);border-radius:5px;text-decoration:none;color:var(--white);transition:border-color .3s,transform .3s cubic-bezier(.16,1,.3,1),background .3s}
 .contact-method:hover{border-color:rgba(149,6,6,.3);transform:translateX(6px);background:var(--accent-dim)}
-.method-icon{width:42px;height:42px;background:var(--accent-dim);border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.method-label{font-family:'DM Mono',monospace;font-size:.62rem;color:var(--muted);letter-spacing:.1em;text-transform:uppercase;margin-bottom:3px}
-.method-value{font-size:.94rem;font-weight:500}
+.method-icon{width:36px;height:36px;background:var(--accent-dim);border-radius:5px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.method-label{font-family:'DM Mono',monospace;font-size:.62rem;color:var(--muted);letter-spacing:.1em;text-transform:uppercase;margin-bottom:2px}
+.method-value{font-size:.86rem}
+.form-group{margin-bottom:16px}
+.form-label{display:block;font-family:'DM Mono',monospace;font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:7px}
+.form-input,.form-textarea{width:100%;background:var(--surface);border:1px solid var(--border);border-radius:3px;color:var(--white);font-family:'DM Sans',sans-serif;font-size:.94rem;padding:12px 15px;outline:none;transition:border-color .3s,box-shadow .3s;cursor:none}
+.form-input:focus,.form-textarea:focus{border-color:rgba(149,6,6,.5);box-shadow:0 0 0 3px rgba(149,6,6,.06)}
+.form-textarea{resize:vertical;min-height:130px}
+.form-input::placeholder,.form-textarea::placeholder{color:var(--muted)}
+.form-submit{width:100%;padding:16px;background:var(--accent);color:#f5f0f0;font-family:'DM Mono',monospace;font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;font-weight:500;border:none;border-radius:3px;cursor:none;margin-top:6px;transition:transform .3s cubic-bezier(.16,1,.3,1),box-shadow .3s,background .3s}
+.form-submit:hover{transform:translateY(-2px);box-shadow:0 12px 32px rgba(149,6,6,.4);background:var(--accent-light)}
 
 /* FOOTER */
 footer{padding:32px 48px;border-top:1px solid var(--border);display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:16px;position:relative;z-index:2}
@@ -419,7 +427,7 @@ footer{padding:32px 48px;border-top:1px solid var(--border);display:grid;grid-te
 .ig-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;overflow:hidden;text-decoration:none;color:var(--white);transition:transform .4s cubic-bezier(.16,1,.3,1),border-color .3s,box-shadow .4s;display:block}
 .ig-card:hover{transform:translateY(-6px);border-color:rgba(149,6,6,.22);box-shadow:0 20px 48px rgba(0,0,0,.4)}
 .ig-card-header{display:flex;align-items:center;gap:12px;padding:16px 16px 12px}
-.ig-avatar{width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:"Bebas Neue",sans-serif;font-size:1.3rem;color:#fff;flex-shrink:0;border:2px solid transparent;box-shadow:0 0 0 2px var(--border)}
+/* ig-avatar definido abaixo */
 .ig-grad-purple{background:linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045)}
 .ig-grad-blue{background:linear-gradient(135deg,#4facfe,#00f2fe)}
 .ig-grad-orange{background:linear-gradient(135deg,#f7971e,#ffd200)}
@@ -447,8 +455,8 @@ footer{padding:32px 48px;border-top:1px solid var(--border);display:grid;grid-te
 
 /* avatar foto slot */
 .ig-avatar-wrap{position:relative;flex-shrink:0}
-.ig-avatar{width:52px;height:52px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:"Bebas Neue",sans-serif;font-size:1.4rem;color:#fff;position:relative;overflow:hidden;box-shadow:0 0 0 2px rgba(255,255,255,.15),0 0 0 4px rgba(0,0,0,.3)}
-.ig-avatar-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:50%;z-index:2}
+.ig-avatar{width:62px;height:62px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:"Bebas Neue",sans-serif;font-size:1.5rem;color:#fff;flex-shrink:0;position:relative;overflow:hidden;box-shadow:0 0 0 3px var(--accent-dim),0 0 0 5px rgba(255,255,255,.06)}
+/* ig-avatar-img definido abaixo */
 .ig-avatar-fallback{position:relative;z-index:1}
 
 /* selo verificado */
@@ -490,66 +498,31 @@ footer{padding:32px 48px;border-top:1px solid var(--border);display:grid;grid-te
 }
 .ig-stat-sep{width:1px;height:28px;background:var(--border);flex-shrink:0;margin:0 4px}
 
-/* avatar: garantir que a img cubra bem */
-.ig-avatar{position:relative;overflow:hidden}
-.ig-avatar-img{
-  position:absolute;inset:0;width:100%;height:100%;
-  object-fit:cover;object-position:center top;border-radius:50%;z-index:2;
-  display:block;
-}
+.ig-avatar-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;border-radius:50%;z-index:2;display:block}
 .ig-avatar-fallback{position:relative;z-index:1}
 
-/* ═══ PROJECTS VIDEO GRID ═══ */
-#projects{padding:80px 48px;max-width:1280px;margin:0 auto}
-.projects-video-grid{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:28px;
-}
-.project-video-card{
-  background:var(--surface);border:1px solid var(--border);
-  border-radius:10px;overflow:hidden;
-  transition:transform .4s cubic-bezier(.16,1,.3,1),box-shadow .4s,border-color .3s;
-}
-.project-video-card:hover{
-  transform:translateY(-6px);
-  box-shadow:0 24px 60px var(--shadow-card);
-  border-color:rgba(149,6,6,.2);
-}
-.project-video-wrapper{
-  position:relative;width:100%;aspect-ratio:16/9;
-  background:var(--deep);overflow:hidden;
-}
-.project-video-wrapper iframe{
-  position:absolute;inset:0;width:100%;height:100%;border:none;display:block;
-}
-.project-img-wrapper{cursor:default}
-.project-img-overlay{
-  position:absolute;inset:0;
-  background:linear-gradient(180deg,transparent 50%,rgba(0,0,0,.7) 100%);
-  display:flex;align-items:flex-end;padding:14px;
-  opacity:0;transition:opacity .3s;
-}
-.project-video-card:hover .project-img-overlay{opacity:1}
-.project-img-tag-pill{
-  font-family:'DM Mono',monospace;font-size:.6rem;letter-spacing:.12em;
-  text-transform:uppercase;padding:4px 12px;
-  background:var(--accent);color:#fff;border-radius:20px;
-}
-.project-video-info{padding:20px 22px}
-.project-video-tag{
-  font-family:'DM Mono',monospace;font-size:.58rem;letter-spacing:.18em;
-  text-transform:uppercase;color:var(--accent-light);margin-bottom:6px;
-}
-.project-video-title{
-  font-family:'Bebas Neue',sans-serif;font-size:1.2rem;letter-spacing:.04em;margin-bottom:6px;
-}
-.project-video-desc{font-size:.82rem;color:var(--muted);line-height:1.6}
+/* Quando company-photo carrega, esconder placeholder */
+.company-photo-slot .company-photo:not([src=""]):not([src]){display:block}
+.company-photo-slot:has(.company-photo[src]:not([src=""])) .company-photo-placeholder{display:none}
+/* object-fit das fotos de empresa */
+.company-photo{width:100%;height:100%;object-fit:cover;object-position:center;position:absolute;inset:0;display:block}
 
-@media(max-width:900px){
-  .projects-video-grid{grid-template-columns:1fr}
-  #projects{padding:60px 20px}
-}
+
+/* ═══ PROJECTS VIDEO GRID ═══ */
+.projects-video-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:28px}
+.project-video-card{background:var(--surface);border:1px solid var(--border);border-radius:10px;overflow:hidden;transition:transform .4s cubic-bezier(.16,1,.3,1),box-shadow .4s,border-color .3s}
+.project-video-card:hover{transform:translateY(-6px);box-shadow:0 24px 60px var(--shadow-card);border-color:rgba(149,6,6,.2)}
+.project-video-wrapper{position:relative;width:100%;aspect-ratio:16/9;background:var(--deep);overflow:hidden}
+.project-video-wrapper iframe{position:absolute;inset:0;width:100%;height:100%;border:none;display:block}
+.project-img-wrapper{cursor:default}
+.project-img-overlay{position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(0,0,0,.7) 100%);display:flex;align-items:flex-end;padding:14px;opacity:0;transition:opacity .3s}
+.project-video-card:hover .project-img-overlay{opacity:1}
+.project-img-tag-pill{font-family:'DM Mono',monospace;font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;padding:4px 12px;background:var(--accent);color:#fff;border-radius:20px}
+.project-video-info{padding:20px 22px}
+.project-video-tag{font-family:'DM Mono',monospace;font-size:.58rem;letter-spacing:.18em;text-transform:uppercase;color:var(--accent-light);margin-bottom:6px}
+.project-video-title{font-family:'Bebas Neue',sans-serif;font-size:1.2rem;letter-spacing:.04em;margin-bottom:6px}
+.project-video-desc{font-size:.82rem;color:var(--muted);line-height:1.6}
+@media(max-width:900px){.projects-video-grid{grid-template-columns:1fr}}
 
 </style>
 </head>
@@ -695,7 +668,7 @@ footer{padding:32px 48px;border-top:1px solid var(--border);display:grid;grid-te
     <span data-i18n="hero.h1c">o olhar e</span> <span class="accent" data-i18n="hero.h1d">gera</span><br>
     <span data-i18n="hero.h1e">crescimento</span>
   </h1>
-  <p class="hero-sub" data-i18n="hero.sub">Crio vídeos que conquistam atenção e a convertem para marcas e criadores que precisam de mais do que um conteúdo "bonito".</p>
+  <p class="hero-sub" data-i18n="hero.sub">Crio vídeos que conquistam atenção e a convertem — para marcas e criadores que precisam de mais do que um conteúdo "bonito".</p>
   <div class="hero-ctas">
     <a href="#contact" class="btn-primary">
       <div class="liquid-fill"></div>
@@ -705,7 +678,7 @@ footer{padding:32px 48px;border-top:1px solid var(--border);display:grid;grid-te
     <a href="#projects" class="btn-secondary"><span data-i18n="hero.cta2">Ver Projetos</span></a>
   </div>
   <div class="hero-scroll"><div class="scroll-line"></div><span class="scroll-text" data-i18n="hero.scroll">Rolar</span></div>
-  <div class="hero-status"><div class="status-dot"></div><span data-i18n="hero.status">Online, respondo em até 24h</span></div>
+  <div class="hero-status"><div class="status-dot"></div><span data-i18n="hero.status">Online — respondo em até 24h</span></div>
 </section>
 <div class="liquid-divider" aria-hidden="true">
   <svg viewBox="0 0 1440 48" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
@@ -719,115 +692,40 @@ footer{padding:32px 48px;border-top:1px solid var(--border);display:grid;grid-te
     </path>
   </svg>
 </div>
-
-<section id="showreel" style="padding:64px 48px;display:flex;flex-direction:column;align-items:center">
-  <div class="stats-bar reveal">
+<section id="showreel">
+  <div class="showreel-header reveal">
+    <div class="section-label" data-i18n="reel.label">Showreel 2026</div>
+    <div class="section-title" data-i18n="reel.title">Veja o trabalho em movimento</div>
+  </div>
+  <div class="reel-wrapper reveal reveal-delay-1">
+    <div class="reel-placeholder" id="reel-placeholder" onclick="playReel()">
+      <div class="reel-placeholder-bg"></div>
+      <div class="reel-play-btn"><svg width="26" height="26" viewBox="0 0 26 26" fill="none"><path d="M8 5l15 8-15 8V5z" fill="var(--accent-light)"/></svg></div>
+      <span class="reel-cta" data-i18n="reel.play">Assistir Showreel</span>
+    </div>
+    <iframe class="reel-iframe" id="reel-iframe" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
+    <div class="reel-border"></div><div class="reel-glow"></div>
+  </div>
+  <div class="stats-bar reveal reveal-delay-2">
     <div class="stat-item"><span class="stat-num" id="sn1">0</span><span class="stat-desc" data-i18n="stats.views">Visualizações geradas</span></div>
     <div class="stat-item"><span class="stat-num" id="sn2">0</span><span class="stat-desc" data-i18n="stats.exp">Experiência profissional</span></div>
     <div class="stat-item"><span class="stat-num" id="sn3">0</span><span class="stat-desc" data-i18n="stats.proj">Projetos entregues</span></div>
     <div class="stat-item"><span class="stat-num" id="sn4">0</span><span class="stat-desc" data-i18n="stats.ret">Aumento médio de retenção</span></div>
   </div>
 </section>
-
-<div class="divider"></div>
-
-<!-- PROJETOS -->
-<section id="projects" style="padding:80px 48px;max-width:1280px;margin:0 auto">
-  <div class="section-label reveal">Portfólio</div>
-  <div class="section-title reveal reveal-delay-1" style="margin-bottom:12px">
-    Trabalhos que <span style="color:var(--accent-light)">performaram</span>
-  </div>
-  <p style="font-size:.9rem;color:var(--muted);margin-bottom:48px;font-family:'DM Mono',monospace;font-size:.68rem;letter-spacing:.06em" class="reveal reveal-delay-2">Vídeos reais editados para criadores reais</p>
-
-  <div class="projects-video-grid reveal reveal-delay-2">
-
-    <!-- Vídeo 1 -->
-    <div class="project-video-card">
-      <div class="project-video-wrapper">
-        <iframe
-          src="https://www.youtube.com/embed/MXs665ZSKeQ?rel=0&modestbranding=1"
-          title="Projeto 1 — Thiago Alves Editor"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-          loading="lazy">
-        </iframe>
-      </div>
-      <div class="project-video-info">
-        <div class="project-video-tag">YouTube</div>
-        <div class="project-video-title">Edição para Creator</div>
-        <div class="project-video-desc">Ritmo, pacing e hook nos primeiros 3 segundos.</div>
-      </div>
-    </div>
-
-    <!-- Vídeo 2 -->
-    <div class="project-video-card">
-      <div class="project-video-wrapper">
-        <iframe
-          src="https://www.youtube.com/embed/qy8shmH8G9M?rel=0&modestbranding=1"
-          title="Projeto 2 — Thiago Alves Editor"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-          loading="lazy">
-        </iframe>
-      </div>
-      <div class="project-video-info">
-        <div class="project-video-tag">YouTube</div>
-        <div class="project-video-title">Edição para Creator</div>
-        <div class="project-video-desc">Edição cinemática com grade de cor e cortes precisos.</div>
-      </div>
-    </div>
-
-    <!-- Thumbnail Odemetro -->
-    <div class="project-video-card">
-      <div class="project-video-wrapper project-img-wrapper">
-        <img src="thumbodemetro.jpeg" alt="Thumbnail — Odemetro" style="width:100%;height:100%;object-fit:cover;display:block">
-        <div class="project-img-overlay">
-          <div class="project-img-tag-pill">Thumbnail</div>
-        </div>
-      </div>
-      <div class="project-video-info">
-        <div class="project-video-tag">Design</div>
-        <div class="project-video-title">Thumbnail — @odemetruu</div>
-        <div class="project-video-desc">Criação de thumbnail para vídeo do creator Odemetro.</div>
-      </div>
-    </div>
-
-    <!-- Banner Aspect -->
-    <div class="project-video-card">
-      <div class="project-video-wrapper project-img-wrapper">
-        <img src="banneraspect.jpeg" alt="Banner — Aspect" style="width:100%;height:100%;object-fit:cover;display:block">
-        <div class="project-img-overlay">
-          <div class="project-img-tag-pill">Banner</div>
-        </div>
-      </div>
-      <div class="project-video-info">
-        <div class="project-video-tag">Design</div>
-        <div class="project-video-title">Banner — @euaspect</div>
-        <div class="project-video-desc">Arte de banner para o perfil do creator Aspect.</div>
-      </div>
-    </div>
-
-  </div>
-</section>
-
 <div class="divider"></div>
 
 <!-- SOBRE -->
 <section id="about">
   <div class="about-visual reveal">
-    <div class="about-img-wrap" style="overflow:hidden;position:relative">
-      <img src="perfilthiago.jpeg" alt="Thiago Alves"
-           style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;position:absolute;inset:0">
-      <div class="about-img-bg" style="opacity:0">TA</div>
-      <div class="about-frame-line"></div>
-    </div>
+    <div class="about-img-wrap"><div class="about-img-bg">TA</div><div class="about-frame-line"></div></div>
     <div class="about-badge"><span class="badge-num">3+</span><span class="badge-label" data-i18n="about.badge">Anos de Edição</span></div>
   </div>
   <div class="about-text">
     <div class="section-label reveal" data-i18n="about.label">Sobre</div>
     <div class="section-title reveal reveal-delay-1"><span data-i18n="about.title1">Edito para</span> <span style="color:var(--accent-light)" data-i18n="about.title2">resultados,</span><br><span data-i18n="about.title3">não prêmios</span></div>
-    <p class="about-body reveal reveal-delay-2" data-i18n="about.p1">Passei anos obcecado com o que faz as pessoas assistirem e continuarem assistindo. Não cores bonitas nem transições chamativas, mas ritmo, cadência e a lógica emocional de uma história. É isso que trago para cada projeto.</p>
-    <p class="about-body reveal reveal-delay-2" data-i18n="about.p2">Seja um anúncio que converte, um vídeo que retém ou uma série que cresce um canal, trabalho a partir do seu objetivo e construo a edição que chega lá.</p>
+    <p class="about-body reveal reveal-delay-2" data-i18n="about.p1">Passei anos obcecado com o que faz as pessoas assistirem — e continuarem assistindo. Não cores bonitas nem transições chamativas, mas ritmo, cadência e a lógica emocional de uma história. É isso que trago para cada projeto.</p>
+    <p class="about-body reveal reveal-delay-2" data-i18n="about.p2">Seja um anúncio que converte, um vídeo que retém ou uma série que cresce um canal, trabalho a partir do seu objetivo — e construo a edição que chega lá.</p>
     <div class="strengths">
       <div class="strength-item reveal reveal-delay-1"><div class="strength-icon">⚡</div><div class="strength-title" data-i18n="str1.title">Engenharia de Hook</div><div class="strength-desc" data-i18n="str1.desc">Os primeiros 3 segundos projetados para parar o scroll</div></div>
       <div class="strength-item reveal reveal-delay-2"><div class="strength-icon">🎯</div><div class="strength-title" data-i18n="str2.title">Ritmo de Retenção</div><div class="strength-desc" data-i18n="str2.desc">Cortes estratégicos para manter o espectador até o fim</div></div>
@@ -868,12 +766,6 @@ footer{padding:32px 48px;border-top:1px solid var(--border);display:grid;grid-te
       <div class="skill-name">After Effects</div>
       <div class="skill-bar"><div class="skill-fill skill-fill-mid" style="width:55%"></div></div>
     </div>
-    <div class="skill-card skill-advanced">
-      <div class="skill-level-badge">Avançado</div>
-      <div class="skill-icon-wrap"><svg width="26" height="26" viewBox="0 0 28 28" fill="none"><rect x="2" y="2" width="24" height="24" rx="4" fill="var(--accent-dim)" stroke="var(--accent-light)" stroke-width="1.2"/><rect x="5" y="8" width="18" height="12" rx="2" stroke="var(--accent-light)" stroke-width="1.2" fill="none"/><path d="M5 13h18" stroke="var(--accent-light)" stroke-width="1" opacity=".4"/><circle cx="9" cy="11" r="1.5" fill="var(--accent-light)" opacity=".7"/></svg></div>
-      <div class="skill-name">Criação de Thumbs</div>
-      <div class="skill-bar"><div class="skill-fill" style="width:90%"></div></div>
-    </div>
     <div class="skill-card skill-basic">
       <div class="skill-level-badge skill-level-basic">Básico</div>
       <div class="skill-icon-wrap"><svg width="26" height="26" viewBox="0 0 28 28" fill="none"><rect x="2" y="2" width="24" height="24" rx="4" fill="rgba(100,160,255,.08)" stroke="rgba(100,160,255,.5)" stroke-width="1.2"/><path d="M8 14l4 4 8-8" stroke="rgba(100,160,255,.8)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
@@ -903,7 +795,7 @@ footer{padding:32px 48px;border-top:1px solid var(--border);display:grid;grid-te
       <div class="ig-card-header">
         <div class="ig-avatar-wrap">
           <div class="ig-avatar ig-grad-purple">
-            <img src="perfilsantana.jpg" class="ig-avatar-img" alt="Santana">
+            <img src="https://instagram.frec7-1.fna.fbcdn.net/v/t51.82787-19/671748517_18451870231107847_963537508124380030_n.jpg?stp=dst-jpg_s150x150_tt6&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLmRqYW5nby4xMDgwLmMyIn0&_nc_ht=instagram.frec7-1.fna.fbcdn.net&_nc_cat=1&_nc_oc=Q6cZ2gHQl-WfoN6JdTP_fmzX9-cgKfPmPVoi-1t31uw4O_laIdgds594udhpbvSrkKab1M2sQ5dtzLqe5QqI3czYT_ix&_nc_ohc=7avRCgPwKYoQ7kNvwFyuMdA&_nc_gid=HicDnUKU-ja5_m9T26S9Xg&edm=AP4sbd4BAAAA&ccb=7-5&oh=00_Af6X9LI0zpXtQlZGsMK1tP2r4imvh7vNZ5c_bsC3g4u53g&oe=6A151131&_nc_sid=7a9f4b" referrerpolicy="no-referrer" class="ig-avatar-img" alt="Santana" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;border-radius:50%;display:block;z-index:2">
             <span class="ig-avatar-fallback">S</span>
           </div>
         </div>
@@ -913,7 +805,7 @@ footer{padding:32px 48px;border-top:1px solid var(--border);display:grid;grid-te
       <div class="ig-stats-row">
         <div class="ig-stat"><span class="ig-stat-num" data-followers="santana">1,3M</span><span class="ig-stat-label">seguidores</span></div>
         <div class="ig-stat-sep"></div>
-        <div class="ig-stat"><span class="ig-stat-num">+50</span><span class="ig-stat-label">conteúdo editado</span></div>
+        <div class="ig-stat"><span class="ig-stat-num">∞</span><span class="ig-stat-label">conteúdo editado</span></div>
       </div>
       <div class="ig-card-footer"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>@santana.xz</div>
     </a>
@@ -921,7 +813,7 @@ footer{padding:32px 48px;border-top:1px solid var(--border);display:grid;grid-te
       <div class="ig-card-header">
         <div class="ig-avatar-wrap">
           <div class="ig-avatar ig-grad-blue">
-            <img src="perfilaspect.jpg" class="ig-avatar-img" alt="Aspect">
+            <img src="https://instagram.frec7-1.fna.fbcdn.net/v/t51.2885-19/459543673_1407306916767753_3946808189705715866_n.jpg?stp=dst-jpg_s150x150_tt6&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLmRqYW5nby4xMDgwLmMyIn0&_nc_ht=instagram.frec7-1.fna.fbcdn.net&_nc_cat=1&_nc_oc=Q6cZ2gHu5FqZdNiE4olWtSzNu8wjxBAbl6KuiepTHz_gbXwZVC2qCoVUzVZpXJCPE2hsGYBdZKIU0Rvl9AQASGWbZNRP&_nc_ohc=6amDmrHauRgQ7kNvwHfOUlJ&_nc_gid=snEzdrHDO3AhPZAtS5todA&edm=AP4sbd4BAAAA&ccb=7-5&oh=00_Af7Cyg3y9kzLZGUleuWmoHW5i_KSKr3RQZ-1s96YM_tmMg&oe=6A152025&_nc_sid=7a9f4b" referrerpolicy="no-referrer" class="ig-avatar-img" alt="Aspect" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;border-radius:50%;display:block;z-index:2">
             <span class="ig-avatar-fallback">A</span>
           </div>
         </div>
@@ -929,9 +821,9 @@ footer{padding:32px 48px;border-top:1px solid var(--border);display:grid;grid-te
         <div class="ig-follow-btn">Seguir</div>
       </div>
       <div class="ig-stats-row">
-        <div class="ig-stat"><span class="ig-stat-num" data-followers="aspect">1,9M</span><span class="ig-stat-label">seguidores</span></div>
+        <div class="ig-stat"><span class="ig-stat-num" data-followers="aspect">1,8M</span><span class="ig-stat-label">seguidores</span></div>
         <div class="ig-stat-sep"></div>
-        <div class="ig-stat"><span class="ig-stat-num">+30</span><span class="ig-stat-label">conteúdo editado</span></div>
+        <div class="ig-stat"><span class="ig-stat-num">∞</span><span class="ig-stat-label">conteúdo editado</span></div>
       </div>
       <div class="ig-card-footer"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>@euaspect</div>
     </a>
@@ -939,7 +831,7 @@ footer{padding:32px 48px;border-top:1px solid var(--border);display:grid;grid-te
       <div class="ig-card-header">
         <div class="ig-avatar-wrap">
           <div class="ig-avatar ig-grad-orange">
-            <img src="perfilodemetro.jpg" class="ig-avatar-img" alt="Odemetro">
+            <img src="https://instagram.frec7-1.fna.fbcdn.net/v/t51.2885-19/453786128_517934994134770_1826812641540946224_n.jpg?stp=dst-jpg_s150x150_tt6&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLmRqYW5nby4xMDgwLmMyIn0&_nc_ht=instagram.frec7-1.fna.fbcdn.net&_nc_cat=1&_nc_oc=Q6cZ2gEP3Xp0z2e75S2DB8tAdsdbk12BcpsDx7WA3ylr2OLduZnDuvoruIJvlUiEHXHdZVG7hIXQdpSqlh3SturvBpYZ&_nc_ohc=TPgG-TMkf98Q7kNvwH3CZx_&_nc_gid=fIarqT2lbWkgXstpiVBeZw&edm=AP4sbd4BAAAA&ccb=7-5&oh=00_Af51XkaUkwf4xiYVVy3u_on52353F1qowJO1fUynxrAfyw&oe=6A153230&_nc_sid=7a9f4b" referrerpolicy="no-referrer" class="ig-avatar-img" alt="Odemetro" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;border-radius:50%;display:block;z-index:2">
             <span class="ig-avatar-fallback">O</span>
           </div>
         </div>
@@ -947,9 +839,9 @@ footer{padding:32px 48px;border-top:1px solid var(--border);display:grid;grid-te
         <div class="ig-follow-btn">Seguir</div>
       </div>
       <div class="ig-stats-row">
-        <div class="ig-stat"><span class="ig-stat-num" data-followers="odemetro">1,4M</span><span class="ig-stat-label">seguidores</span></div>
+        <div class="ig-stat"><span class="ig-stat-num" data-followers="odemetro">1,2M</span><span class="ig-stat-label">seguidores</span></div>
         <div class="ig-stat-sep"></div>
-        <div class="ig-stat"><span class="ig-stat-num">+30</span><span class="ig-stat-label">conteúdo editado</span></div>
+        <div class="ig-stat"><span class="ig-stat-num">∞</span><span class="ig-stat-label">conteúdo editado</span></div>
       </div>
       <div class="ig-card-footer"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>@odemetruu</div>
     </a>
@@ -961,7 +853,11 @@ footer{padding:32px 48px;border-top:1px solid var(--border);display:grid;grid-te
     <!-- TV Record -->
     <div class="company-card reveal">
       <div class="company-photo-slot">
-        <img src="https://static.wikia.nocookie.net/tvpediabrasil/images/5/5c/Record2023.jpg/revision/latest/scale-to-width-down/1200?cb=20231107005245&path-prefix=pt-br" alt="TV Record" class="company-photo" onerror="this.style.display='none'">
+        <img src="https://static.wikia.nocookie.net/tvpediabrasil/images/5/5c/Record2023.jpg/revision/latest/scale-to-width-down/1200?cb=20231107005245&path-prefix=pt-br" referrerpolicy="no-referrer" alt="TV Record" class="company-photo" style="width:100%;height:100%;object-fit:cover;object-position:center;position:absolute;inset:0;display:block" onerror="this.parentElement.querySelector('.company-photo-placeholder').style.display='flex';this.style.display='none'">
+        <div class="company-photo-placeholder">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><rect x="2" y="2" width="28" height="28" rx="5" stroke="var(--border)" stroke-width="1.5" stroke-dasharray="4 3"/><path d="M11 16h10M16 11v10" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round"/></svg>
+          <span>Adicionar foto</span>
+        </div>
       </div>
       <div class="company-name">TV Record</div>
       <div class="company-desc">Emissora Nacional</div>
@@ -970,7 +866,11 @@ footer{padding:32px 48px;border-top:1px solid var(--border);display:grid;grid-te
     <!-- Mercado Pago -->
     <div class="company-card reveal reveal-delay-1">
       <div class="company-photo-slot">
-        <img src="https://startse-uploader.s3.us-east-2.amazonaws.com/medium_i394232_47b4705d01.webp" alt="Mercado Pago" class="company-photo" onerror="this.style.display='none'">
+        <img src="https://startse-uploader.s3.us-east-2.amazonaws.com/medium_i394232_47b4705d01.webp" referrerpolicy="no-referrer" alt="Mercado Pago" class="company-photo" style="width:100%;height:100%;object-fit:cover;object-position:center;position:absolute;inset:0;display:block" onerror="this.parentElement.querySelector('.company-photo-placeholder').style.display='flex';this.style.display='none'">
+        <div class="company-photo-placeholder">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><rect x="2" y="2" width="28" height="28" rx="5" stroke="var(--border)" stroke-width="1.5" stroke-dasharray="4 3"/><path d="M11 16h10M16 11v10" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round"/></svg>
+          <span>Adicionar foto</span>
+        </div>
       </div>
       <div class="company-name">Mercado Pago</div>
       <div class="company-desc">Fintech</div>
@@ -979,7 +879,11 @@ footer{padding:32px 48px;border-top:1px solid var(--border);display:grid;grid-te
     <!-- Grupo Ser -->
     <div class="company-card reveal reveal-delay-2">
       <div class="company-photo-slot">
-        <img src="https://ufscaesquerda.com/wp-content/uploads/2021/03/ser-educacional.jpg" alt="Grupo Ser" class="company-photo" onerror="this.style.display='none'">
+        <img src="https://ufscaesquerda.com/wp-content/uploads/2021/03/ser-educacional.jpg" referrerpolicy="no-referrer" alt="Grupo Ser" class="company-photo" style="width:100%;height:100%;object-fit:cover;object-position:center;position:absolute;inset:0;display:block" onerror="this.parentElement.querySelector('.company-photo-placeholder').style.display='flex';this.style.display='none'">
+        <div class="company-photo-placeholder">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><rect x="2" y="2" width="28" height="28" rx="5" stroke="var(--border)" stroke-width="1.5" stroke-dasharray="4 3"/><path d="M11 16h10M16 11v10" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round"/></svg>
+          <span>Adicionar foto</span>
+        </div>
       </div>
       <div class="company-name">Grupo Ser</div>
       <div class="company-desc">Educação</div>
@@ -993,41 +897,29 @@ footer{padding:32px 48px;border-top:1px solid var(--border);display:grid;grid-te
 <section id="social-proof">
   <div class="proof-header reveal"><div class="section-label" data-i18n="proof.label">Depoimentos</div><div class="section-title"><span data-i18n="proof.title1">Clientes que</span> <span style="color:var(--accent-light)" data-i18n="proof.title2">cresceram</span></div></div>
   <div class="testimonials">
-    <div class="testimonial-card reveal"><span class="quote-mark">"</span><p class="testimonial-text">O Thiago tem um olhar que poucos editores têm. Cada Reel que ele entregou cresceu de forma consistente, sem abrir mão da identidade do conteúdo. É o tipo de parceria que faz diferença no longo prazo.</p><div class="testimonial-author"><div class="author-avatar" style="background:rgba(131,58,180,.15);border-color:rgba(131,58,180,.4);color:#c084fc;overflow:hidden;padding:0"><img src="perfilsantana.jpg" style="width:100%;height:100%;object-fit:cover;object-position:center top;border-radius:50%;display:block"></div><div><div class="author-name">Santana</div><div class="author-role"><a href="https://www.instagram.com/santana.xz/" target="_blank" style="color:var(--accent-light);text-decoration:none">@santana.xz</a> · Influencer</div></div></div></div>
-    <div class="testimonial-card reveal reveal-delay-1"><span class="quote-mark">"</span><p class="testimonial-text">Rapidez, qualidade e bom senso criativo. O Thiago capta o que precisa na primeira conversa e entrega sempre acima do esperado. Trabalhar com ele é simples e os resultados são concretos.</p><div class="testimonial-author"><div class="author-avatar" style="background:rgba(79,172,254,.1);border-color:rgba(79,172,254,.35);color:#7dd3fc;overflow:hidden;padding:0"><img src="perfilaspect.jpg" style="width:100%;height:100%;object-fit:cover;object-position:center top;border-radius:50%;display:block"></div><div><div class="author-name">Aspect</div><div class="author-role"><a href="https://www.instagram.com/euaspect" target="_blank" style="color:var(--accent-light);text-decoration:none">@euaspect</a> · Influencer</div></div></div></div>
-    <div class="testimonial-card reveal reveal-delay-2"><span class="quote-mark">"</span><p class="testimonial-text">O acabamento que o Thiago coloca nos vídeos é outro nível. Não é só edição bonita, é edição que retém e cresce. Desde que comecei a trabalhar com ele, percebi a diferença nos números.</p><div class="testimonial-author"><div class="author-avatar" style="background:rgba(247,151,30,.1);border-color:rgba(247,151,30,.35);color:#fbbf24;overflow:hidden;padding:0"><img src="perfilodemetro.jpg" style="width:100%;height:100%;object-fit:cover;object-position:center top;border-radius:50%;display:block"></div><div><div class="author-name">Odemetro</div><div class="author-role"><a href="https://www.instagram.com/odemetruu/" target="_blank" style="color:var(--accent-light);text-decoration:none">@odemetruu</a> · Influencer</div></div></div></div>
+    <div class="testimonial-card reveal"><span class="quote-mark">"</span><p class="testimonial-text">O Thiago tem um olhar diferente. Cada Reel que ele editou pra mim ganhou muito mais alcance. Ele entende o ritmo que o algoritmo pede sem perder a identidade do conteúdo.</p><div class="testimonial-author"><div class="author-avatar" style="background:rgba(131,58,180,.15);border-color:rgba(131,58,180,.4);overflow:hidden;padding:0"><img src="https://instagram.frec7-1.fna.fbcdn.net/v/t51.82787-19/671748517_18451870231107847_963537508124380030_n.jpg?stp=dst-jpg_s150x150_tt6&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLmRqYW5nby4xMDgwLmMyIn0&_nc_ht=instagram.frec7-1.fna.fbcdn.net&_nc_cat=1&_nc_oc=Q6cZ2gHQl-WfoN6JdTP_fmzX9-cgKfPmPVoi-1t31uw4O_laIdgds594udhpbvSrkKab1M2sQ5dtzLqe5QqI3czYT_ix&_nc_ohc=7avRCgPwKYoQ7kNvwFyuMdA&_nc_gid=HicDnUKU-ja5_m9T26S9Xg&edm=AP4sbd4BAAAA&ccb=7-5&oh=00_Af6X9LI0zpXtQlZGsMK1tP2r4imvh7vNZ5c_bsC3g4u53g&oe=6A151131&_nc_sid=7a9f4b" referrerpolicy="no-referrer" style="width:100%;height:100%;object-fit:cover;object-position:center top;border-radius:50%;display:block" alt="Santana"></div><div><div class="author-name">Santana</div><div class="author-role"><a href="https://www.instagram.com/santana.xz/" target="_blank" style="color:var(--accent-light);text-decoration:none">@santana.xz</a> · Influencer</div></div></div></div>
+    <div class="testimonial-card reveal reveal-delay-1"><span class="quote-mark">"</span><p class="testimonial-text">Parceria certeira. O Thiago entrega rápido, entende o que precisa sem explicar mil vezes, e o resultado sempre fica melhor do que o esperado.</p><div class="testimonial-author"><div class="author-avatar" style="background:rgba(79,172,254,.1);border-color:rgba(79,172,254,.35);overflow:hidden;padding:0"><img src="https://instagram.frec7-1.fna.fbcdn.net/v/t51.2885-19/459543673_1407306916767753_3946808189705715866_n.jpg?stp=dst-jpg_s150x150_tt6&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLmRqYW5nby4xMDgwLmMyIn0&_nc_ht=instagram.frec7-1.fna.fbcdn.net&_nc_cat=1&_nc_oc=Q6cZ2gHu5FqZdNiE4olWtSzNu8wjxBAbl6KuiepTHz_gbXwZVC2qCoVUzVZpXJCPE2hsGYBdZKIU0Rvl9AQASGWbZNRP&_nc_ohc=6amDmrHauRgQ7kNvwHfOUlJ&_nc_gid=snEzdrHDO3AhPZAtS5todA&edm=AP4sbd4BAAAA&ccb=7-5&oh=00_Af7Cyg3y9kzLZGUleuWmoHW5i_KSKr3RQZ-1s96YM_tmMg&oe=6A152025&_nc_sid=7a9f4b" referrerpolicy="no-referrer" style="width:100%;height:100%;object-fit:cover;object-position:center top;border-radius:50%;display:block" alt="Aspect"></div><div><div class="author-name">Aspect</div><div class="author-role"><a href="https://www.instagram.com/euaspect" target="_blank" style="color:var(--accent-light);text-decoration:none">@euaspect</a> · Influencer</div></div></div></div>
+    <div class="testimonial-card reveal reveal-delay-2"><span class="quote-mark">"</span><p class="testimonial-text">Qualidade e agilidade em tudo que o Thiago faz. Os vídeos ficam com aquele acabamento profissional que faz diferença na hora de crescer.</p><div class="testimonial-author"><div class="author-avatar" style="background:rgba(247,151,30,.1);border-color:rgba(247,151,30,.35);overflow:hidden;padding:0"><img src="https://instagram.frec7-1.fna.fbcdn.net/v/t51.2885-19/453786128_517934994134770_1826812641540946224_n.jpg?stp=dst-jpg_s150x150_tt6&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLmRqYW5nby4xMDgwLmMyIn0&_nc_ht=instagram.frec7-1.fna.fbcdn.net&_nc_cat=1&_nc_oc=Q6cZ2gEP3Xp0z2e75S2DB8tAdsdbk12BcpsDx7WA3ylr2OLduZnDuvoruIJvlUiEHXHdZVG7hIXQdpSqlh3SturvBpYZ&_nc_ohc=TPgG-TMkf98Q7kNvwH3CZx_&_nc_gid=fIarqT2lbWkgXstpiVBeZw&edm=AP4sbd4BAAAA&ccb=7-5&oh=00_Af51XkaUkwf4xiYVVy3u_on52353F1qowJO1fUynxrAfyw&oe=6A153230&_nc_sid=7a9f4b" referrerpolicy="no-referrer" style="width:100%;height:100%;object-fit:cover;object-position:center top;border-radius:50%;display:block" alt="Odemetro"></div><div><div class="author-name">Odemetro</div><div class="author-role"><a href="https://www.instagram.com/odemetruu/" target="_blank" style="color:var(--accent-light);text-decoration:none">@odemetruu</a> · Influencer</div></div></div></div>
   </div>
 </section>
 
 <!-- CONTATO -->
 <section id="contact">
-  <div class="contact-left" style="width:100%">
-    <div class="section-label reveal" style="justify-content:center" data-i18n="contact.label">Vamos Trabalhar</div>
+  <div class="contact-left">
+    <div class="section-label reveal" data-i18n="contact.label">Vamos Trabalhar</div>
     <div class="section-title reveal reveal-delay-1"><span data-i18n="contact.title1">Pronto para criar algo que</span> <span style="color:var(--accent-light)" data-i18n="contact.title2">performa?</span></div>
-    <p class="contact-tagline reveal reveal-delay-2" data-i18n="contact.tagline">Me conta o que você está construindo. Vou te mostrar como a edição pode fazer isso trabalhar muito mais. Sem enrolação, só uma conversa real sobre seus objetivos.</p>
+    <p class="contact-tagline reveal reveal-delay-2" data-i18n="contact.tagline">Me conta o que você está construindo. Vou te mostrar como a edição pode fazer isso trabalhar muito mais. Sem enrolação — só uma conversa real sobre seus objetivos.</p>
     <div class="contact-methods reveal reveal-delay-2">
-      <a href="https://instagram.com/thiagoalveszx" target="_blank" class="contact-method">
-        <div class="method-icon"><svg width="20" height="20" viewBox="0 0 18 18" fill="none"><rect x="2" y="2" width="14" height="14" rx="4" stroke="var(--accent-light)" stroke-width="1.4"/><circle cx="9" cy="9" r="3" stroke="var(--accent-light)" stroke-width="1.4"/><circle cx="13" cy="5" r=".75" fill="var(--accent-light)"/></svg></div>
-        <div>
-          <div class="method-label">Instagram</div>
-          <div class="method-value">@thiagoalveszx</div>
-        </div>
-      </a>
-      <a href="https://wa.me/5581987398373" target="_blank" class="contact-method">
-        <div class="method-icon"><svg width="20" height="20" viewBox="0 0 18 18" fill="none"><path d="M9 1.5a7.5 7.5 0 1 0 6.5 11.25L17.5 16.5l-3.75-2a7.5 7.5 0 0 0-4.75 1.5A7.5 7.5 0 0 0 9 1.5z" stroke="var(--accent-light)" stroke-width="1.4" stroke-linejoin="round"/></svg></div>
-        <div>
-          <div class="method-label">WhatsApp</div>
-          <div class="method-value">+55 (81) 98739-8373</div>
-        </div>
-      </a>
-      <a href="mailto:editarthiago@gmail.com" class="contact-method">
-        <div class="method-icon"><svg width="20" height="20" viewBox="0 0 18 18" fill="none"><path d="M2 4h14v10H2V4zm0 0l7 6 7-6" stroke="var(--accent-light)" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-        <div>
-          <div class="method-label">E-mail</div>
-          <div class="method-value">editarthiago@gmail.com</div>
-        </div>
-      </a>
+      <a href="mailto:thiago@thiagoalves.co" class="contact-method"><div class="method-icon"><svg width="17" height="17" viewBox="0 0 18 18" fill="none"><path d="M2 4h14v10H2V4zm0 0l7 6 7-6" stroke="var(--accent-light)" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div><div class="method-label">Email</div><div class="method-value">thiago@thiagoalves.co</div></div></a>
+      <a href="https://wa.me/5511999999999" target="_blank" class="contact-method"><div class="method-icon"><svg width="17" height="17" viewBox="0 0 18 18" fill="none"><path d="M9 1.5a7.5 7.5 0 1 0 6.5 11.25L17.5 16.5l-3.75-2a7.5 7.5 0 0 0-4.75 1.5A7.5 7.5 0 0 0 9 1.5z" stroke="var(--accent-light)" stroke-width="1.4" stroke-linejoin="round"/></svg></div><div><div class="method-label">WhatsApp</div><div class="method-value" data-i18n="contact.wa">Fale diretamente comigo</div></div></a>
+      <a href="https://instagram.com/thiagoalves.edit" target="_blank" class="contact-method"><div class="method-icon"><svg width="17" height="17" viewBox="0 0 18 18" fill="none"><rect x="2" y="2" width="14" height="14" rx="4" stroke="var(--accent-light)" stroke-width="1.4"/><circle cx="9" cy="9" r="3" stroke="var(--accent-light)" stroke-width="1.4"/><circle cx="13" cy="5" r=".75" fill="var(--accent-light)"/></svg></div><div><div class="method-label">Instagram</div><div class="method-value">@thiagoalves.edit</div></div></a>
     </div>
+  </div>
+  <div class="contact-form reveal reveal-delay-1">
+    <div class="form-group"><label class="form-label" data-i18n="form.name">Seu Nome</label><input type="text" class="form-input" data-i18n-ph="form.name_ph" placeholder="ex: João Silva"></div>
+    <div class="form-group"><label class="form-label" data-i18n="form.email">E-mail</label><input type="email" class="form-input" placeholder="voce@empresa.com"></div>
+    <div class="form-group"><label class="form-label" data-i18n="form.msg_label">O que você precisa?</label><textarea class="form-textarea" data-i18n-ph="form.msg_ph" placeholder="Me conta sobre o projeto — plataforma, objetivo, prazo. Quanto mais específico, melhor."></textarea></div>
+    <button class="form-submit" onclick="handleSubmit(this)" data-i18n="form.submit">Enviar Mensagem →</button>
   </div>
 </section>
 
@@ -1041,7 +933,7 @@ footer{padding:32px 48px;border-top:1px solid var(--border);display:grid;grid-te
   
 <script>
 const T={
-  pt:{'nav.home':'Início','nav.projects':'Projetos','nav.about':'Sobre','nav.contact':'Contato','hero.eyebrow':'DISPONÍVEL PARA PROJETOS','hero.h1a':'Edição que','hero.h1b':'prende','hero.h1c':'o olhar e','hero.h1d':'gera','hero.h1e':'crescimento','hero.sub':'Crio vídeos que conquistam atenção e a convertem para marcas e criadores que precisam de mais do que um conteúdo "bonito".','hero.cta1':'Trabalhar Comigo','hero.cta2':'Ver Projetos','hero.scroll':'Rolar','hero.status':'Online — respondo em até 24h','reel.label':'Showreel 2026','reel.title':'Veja o trabalho em movimento','reel.play':'Assistir Showreel','stats.views':'Visualizações geradas','stats.exp':'Experiência profissional','stats.proj':'Projetos entregues','stats.ret':'Aumento médio de retenção','proj.label':'Trabalhos Selecionados','proj.title1':'Projetos que','proj.title2':'performaram','filter.all':'Todos','filter.ads':'Anúncios','filter.social':'Social','filter.youtube':'YouTube','filter.reels':'Reels','p1.tag':'Anúncio de Performance','p1.title':'Pulse Activewear — Campanha de Lançamento','p1.desc':'Anúncio de 30s otimizado para retenção no Meta. Ritmo dinâmico, cortes precisos e estrutura hook-first.','p1.result':'4.8× ROAS — 2.1M de Alcance','p2.tag':'YouTube — Long Form','p2.title':'Creator de Tech — Série Mensal','p2.desc':'Edição de long-form com estrutura por capítulos e ganchos de reengajamento a cada 90 segundos.','p2.result':'68% retenção média — era 34%','p3.tag':'Reels / TikTok','p3.title':'Nomad Finance — Batch Viral','p3.desc':'12 edições verticais criadas para o algoritmo — abertura rápida, conteúdo denso, CTA claro.','p3.result':'3 vídeos ultrapassaram 1M de views','p4.tag':'Social para Marca','p4.title':'Verde Café — Filme de Marca','p4.desc':'Filme cinemático para Instagram — grade quente, design de som ambiente, sem narração.','p4.result':'340% acima da média de engajamento','p5.tag':'Anúncio YouTube','p5.title':'Luminary Skincare — Pre-Roll','p5.desc':'Formato duplo: 6s non-skippable + 60s complementar. Hook criado para ganhar o skip, não fugir dele.','p5.result':'22% view-through — 3× a média do setor','about.label':'Sobre','about.title1':'Edito para','about.title2':'resultados,','about.title3':'não prêmios','about.badge':'Anos de Edição','about.p1':'Passei anos obcecado com o que faz as pessoas assistirem e continuarem assistindo. Não cores bonitas nem transições chamativas, mas ritmo, cadência e a lógica emocional de uma história. É isso que trago para cada projeto.','about.p2':'Seja um anúncio que converte, um vídeo que retém ou uma série que cresce um canal, trabalho a partir do seu objetivo e construo a edição que chega lá.','str1.title':'Engenharia de Hook','str1.desc':'Os primeiros 3 segundos projetados para parar o scroll','str2.title':'Ritmo de Retenção','str2.desc':'Cortes estratégicos para manter o espectador até o fim','str3.title':'Gradação de Cor','str3.desc':'Grade cinemática que define atmosfera e identidade de marca','str4.title':'Nativo de Plataforma','str4.desc':'Otimizado para YouTube, Reels, TikTok e mídia paga','proof.label':'Depoimentos','proof.title1':'Clientes que','proof.title2':'cresceram','t1.text':'O Thiago transformou completamente nosso conteúdo. O tempo de exibição quase dobrou em dois meses de parceria. Ele entendeu nossa audiência melhor do que nós mesmos.','t1.role':'CEO — TechPulse Media','t2.text':'Trabalhei com muitos editores. O Thiago é diferente — ele pergunta sobre o objetivo antes de tocar na timeline. Isso muda tudo no resultado final.','t2.role':'Fundadora — Verde Café','t3.text':'Três dos doze Reels que ele editou passaram de um milhão de views. Não foi sorte — foi consistência. Se você leva crescimento a sério, ele é o editor que você precisa.','t3.role':'Creator — 890K Seguidores','chip1':'200M+ Views Gerados','chip2':'3.2× Aumento de Retenção','chip3':'120+ Projetos Entregues','chip4':'48h de Prazo Médio','contact.label':'Vamos Trabalhar','contact.title1':'Pronto para criar algo que','contact.title2':'performa?','contact.tagline':'Me conta o que você está construindo. Vou te mostrar como a edição pode fazer isso trabalhar muito mais. Sem enrolação, só uma conversa real sobre seus objetivos.','contact.wa':'Fale diretamente comigo','form.name':'Seu Nome','form.email':'E-mail','form.msg_label':'O que você precisa?','form.submit':'Enviar Mensagem →','footer.copy':'© 2026 Thiago Alves — Editor de Vídeo. Todos os direitos reservados.'},
+  pt:{'nav.home':'Início','nav.projects':'Projetos','nav.about':'Sobre','nav.contact':'Contato','hero.eyebrow':'DISPONÍVEL PARA PROJETOS','hero.h1a':'Edição que','hero.h1b':'prende','hero.h1c':'o olhar e','hero.h1d':'gera','hero.h1e':'crescimento','hero.sub':'Crio vídeos que conquistam atenção e a convertem — para marcas e criadores que precisam de mais do que um conteúdo "bonito".','hero.cta1':'Trabalhar Comigo','hero.cta2':'Ver Projetos','hero.scroll':'Rolar','hero.status':'Online — respondo em até 24h','reel.label':'Showreel 2026','reel.title':'Veja o trabalho em movimento','reel.play':'Assistir Showreel','stats.views':'Visualizações geradas','stats.exp':'Experiência profissional','stats.proj':'Projetos entregues','stats.ret':'Aumento médio de retenção','proj.label':'Trabalhos Selecionados','proj.title1':'Projetos que','proj.title2':'performaram','filter.all':'Todos','filter.ads':'Anúncios','filter.social':'Social','filter.youtube':'YouTube','filter.reels':'Reels','p1.tag':'Anúncio de Performance','p1.title':'Pulse Activewear — Campanha de Lançamento','p1.desc':'Anúncio de 30s otimizado para retenção no Meta. Ritmo dinâmico, cortes precisos e estrutura hook-first.','p1.result':'4.8× ROAS — 2.1M de Alcance','p2.tag':'YouTube — Long Form','p2.title':'Creator de Tech — Série Mensal','p2.desc':'Edição de long-form com estrutura por capítulos e ganchos de reengajamento a cada 90 segundos.','p2.result':'68% retenção média — era 34%','p3.tag':'Reels / TikTok','p3.title':'Nomad Finance — Batch Viral','p3.desc':'12 edições verticais criadas para o algoritmo — abertura rápida, conteúdo denso, CTA claro.','p3.result':'3 vídeos ultrapassaram 1M de views','p4.tag':'Social para Marca','p4.title':'Verde Café — Filme de Marca','p4.desc':'Filme cinemático para Instagram — grade quente, design de som ambiente, sem narração.','p4.result':'340% acima da média de engajamento','p5.tag':'Anúncio YouTube','p5.title':'Luminary Skincare — Pre-Roll','p5.desc':'Formato duplo: 6s non-skippable + 60s complementar. Hook criado para ganhar o skip, não fugir dele.','p5.result':'22% view-through — 3× a média do setor','about.label':'Sobre','about.title1':'Edito para','about.title2':'resultados,','about.title3':'não prêmios','about.badge':'Anos de Edição','about.p1':'Passei anos obcecado com o que faz as pessoas assistirem — e continuarem assistindo. Não cores bonitas nem transições chamativas, mas ritmo, cadência e a lógica emocional de uma história. É isso que trago para cada projeto.','about.p2':'Seja um anúncio que converte, um vídeo que retém ou uma série que cresce um canal, trabalho a partir do seu objetivo — e construo a edição que chega lá.','str1.title':'Engenharia de Hook','str1.desc':'Os primeiros 3 segundos projetados para parar o scroll','str2.title':'Ritmo de Retenção','str2.desc':'Cortes estratégicos para manter o espectador até o fim','str3.title':'Gradação de Cor','str3.desc':'Grade cinemática que define atmosfera e identidade de marca','str4.title':'Nativo de Plataforma','str4.desc':'Otimizado para YouTube, Reels, TikTok e mídia paga','proof.label':'Depoimentos','proof.title1':'Clientes que','proof.title2':'cresceram','t1.text':'O Thiago transformou completamente nosso conteúdo. O tempo de exibição quase dobrou em dois meses de parceria. Ele entendeu nossa audiência melhor do que nós mesmos.','t1.role':'CEO — TechPulse Media','t2.text':'Trabalhei com muitos editores. O Thiago é diferente — ele pergunta sobre o objetivo antes de tocar na timeline. Isso muda tudo no resultado final.','t2.role':'Fundadora — Verde Café','t3.text':'Três dos doze Reels que ele editou passaram de um milhão de views. Não foi sorte — foi consistência. Se você leva crescimento a sério, ele é o editor que você precisa.','t3.role':'Creator — 890K Seguidores','chip1':'200M+ Views Gerados','chip2':'3.2× Aumento de Retenção','chip3':'120+ Projetos Entregues','chip4':'48h de Prazo Médio','contact.label':'Vamos Trabalhar','contact.title1':'Pronto para criar algo que','contact.title2':'performa?','contact.tagline':'Me conta o que você está construindo. Vou te mostrar como a edição pode fazer isso trabalhar muito mais. Sem enrolação — só uma conversa real sobre seus objetivos.','contact.wa':'Fale diretamente comigo','form.name':'Seu Nome','form.name_ph':'ex: João Silva','form.email':'E-mail','form.msg_label':'O que você precisa?','form.msg_ph':'Me conta sobre o projeto — plataforma, objetivo, prazo. Quanto mais específico, melhor.','form.submit':'Enviar Mensagem →','footer.copy':'© 2026 Thiago Alves — Editor de Vídeo. Todos os direitos reservados.'},
   es:{'nav.home':'Inicio','nav.projects':'Proyectos','nav.about':'Sobre mí','nav.contact':'Contacto','hero.eyebrow':'DISPONIBLE PARA PROYECTOS','hero.h1a':'Edición que','hero.h1b':'captura','hero.h1c':'la atención y','hero.h1d':'genera','hero.h1e':'crecimiento','hero.sub':'Creo videos que conquistan la atención y la convierten — para marcas y creadores que necesitan más que contenido "bonito".','hero.cta1':'Trabajar Conmigo','hero.cta2':'Ver Proyectos','hero.scroll':'Bajar','hero.status':'Online — respondo en 24h','reel.label':'Showreel 2026','reel.title':'Mira el trabajo en movimiento','reel.play':'Ver Showreel','stats.views':'Visualizaciones generadas','stats.exp':'Experiencia profesional','stats.proj':'Proyectos entregados','stats.ret':'Aumento medio de retención','proj.label':'Trabajos Seleccionados','proj.title1':'Proyectos que','proj.title2':'funcionaron','filter.all':'Todos','filter.ads':'Anuncios','filter.social':'Social','filter.youtube':'YouTube','filter.reels':'Reels','p1.tag':'Anuncio de Rendimiento','p1.title':'Pulse Activewear — Campaña de Lanzamiento','p1.desc':'Anuncio de 30s optimizado para retención en Meta. Ritmo dinámico, cortes precisos y estructura hook-first.','p1.result':'4.8× ROAS — 2.1M de Alcance','p2.tag':'YouTube — Long Form','p2.title':'Creator de Tech — Serie Mensual','p2.desc':'Edición de long-form con estructura por capítulos y ganchos estratégicos cada 90 segundos.','p2.result':'68% retención media — era 34%','p3.tag':'Reels / TikTok','p3.title':'Nomad Finance — Batch Viral','p3.desc':'12 ediciones verticales para el algoritmo — apertura rápida, contenido denso, CTA claro.','p3.result':'3 videos superaron 1M de views','p4.tag':'Social para Marca','p4.title':'Verde Café — Película de Marca','p4.desc':'Película cinemática para Instagram — gradación cálida, diseño de sonido, sin narración.','p4.result':'340% sobre la media de engagement','p5.tag':'Anuncio YouTube','p5.title':'Luminary Skincare — Pre-Roll','p5.desc':'Formato doble: 6s non-skippable + 60s complementario. Hook para merecer el skip, no evitarlo.','p5.result':'22% view-through — 3× la media del sector','about.label':'Sobre mí','about.title1':'Edito para','about.title2':'resultados,','about.title3':'no premios','about.badge':'Años de Edición','about.p1':'Pasé años obsesionado con lo que hace que la gente vea — y siga viendo. No colores bonitos ni transiciones llamativas, sino ritmo, cadencia y la lógica emocional de una historia.','about.p2':'Ya sea un anuncio que convierte, un video que retiene o una serie que hace crecer un canal, trabajo desde tu objetivo — y construyo la edición que llega ahí.','str1.title':'Ingeniería de Hook','str1.desc':'Los primeros 3 segundos diseñados para detener el scroll','str2.title':'Ritmo de Retención','str2.desc':'Cortes estratégicos para mantener al espectador hasta el final','str3.title':'Gradación de Color','str3.desc':'Grado cinematográfico que define ambiente e identidad de marca','str4.title':'Nativo de Plataforma','str4.desc':'Optimizado para YouTube, Reels, TikTok y paid media','proof.label':'Testimonios','proof.title1':'Clientes que','proof.title2':'crecieron','t1.text':'Thiago transformó completamente nuestro contenido. El tiempo de visualización casi se duplicó en dos meses. Entendió a nuestra audiencia mejor que nosotros mismos.','t1.role':'CEO — TechPulse Media','t2.text':'He trabajado con muchos editores. Thiago es diferente — pregunta sobre el objetivo antes de tocar la línea de tiempo. Eso lo cambia todo.','t2.role':'Fundadora — Verde Café','t3.text':'Tres de los doce Reels que editó superaron el millón de views. No fue suerte — fue consistencia.','t3.role':'Creator — 890K Seguidores','chip1':'200M+ Views Generados','chip2':'3.2× Aumento de Retención','chip3':'120+ Proyectos Entregados','chip4':'48h de Plazo Medio','contact.label':'Trabajemos Juntos','contact.title1':'¿Listo para crear algo que','contact.title2':'funcione?','contact.tagline':'Cuéntame qué estás construyendo. Te mostraré cómo la edición puede hacer que trabaje mucho más. Sin rodeos — solo una conversación real sobre tus objetivos.','contact.wa':'Escríbeme directamente','form.name':'Tu Nombre','form.name_ph':'ej: María García','form.email':'Correo electrónico','form.msg_label':'¿Qué necesitas?','form.msg_ph':'Cuéntame sobre el proyecto — plataforma, objetivo, plazo. Cuanto más específico, mejor.','form.submit':'Enviar Mensaje →','footer.copy':'© 2026 Thiago Alves — Editor de Video. Todos los derechos reservados.'},
   en:{'nav.home':'Home','nav.projects':'Projects','nav.about':'About','nav.contact':'Contact','hero.eyebrow':'AVAILABLE FOR PROJECTS','hero.h1a':'Editing that','hero.h1b':'stops','hero.h1c':'the scroll &','hero.h1d':'drives','hero.h1e':'real growth','hero.sub':'I craft videos that earn attention and convert it — for brands and creators who need more than just "nice-looking" content.','hero.cta1':'Work With Me','hero.cta2':'View Projects','hero.scroll':'Scroll','hero.status':'Online — reply within 24h','reel.label':'Showreel 2026','reel.title':'See the work in motion','reel.play':'Watch Showreel','stats.views':'Views generated','stats.exp':'Professional experience','stats.proj':'Projects delivered','stats.ret':'Avg. retention lift','proj.label':'Selected Work','proj.title1':'Projects that','proj.title2':'performed','filter.all':'All','filter.ads':'Ads','filter.social':'Social','filter.youtube':'YouTube','filter.reels':'Reels','p1.tag':'Performance Ad','p1.title':'Pulse Activewear — Launch Campaign','p1.desc':'Retention-optimized 30s ad built for Meta. Dynamic pacing, bold cuts, and hook-first structure.','p1.result':'4.8× ROAS — 2.1M Reach','p2.tag':'YouTube Long-Form','p2.title':'Tech Creator — Monthly Series','p2.desc':'Long-form editing with chapter-based structure and strategic re-engagement hooks every 90 seconds.','p2.result':'68% avg retention — up from 34%','p3.tag':'Reels / TikTok','p3.title':'Nomad Finance — Viral Batch','p3.desc':'Batch of 12 vertical edits for the algorithm — fast open, value-dense body, clear CTA.','p3.result':'3 videos hit 1M+ views','p4.tag':'Brand Social','p4.title':'Verde Coffee — Brand Story','p4.desc':'Cinematic brand film for Instagram — warm color grade, ambient sound design, no voiceover.','p4.result':'340% engagement above benchmark','p5.tag':'YouTube Ad','p5.title':'Luminary Skincare — Pre-Roll','p5.desc':'6s non-skippable + 60s companion. Hook designed to earn the skip, not avoid it.','p5.result':'22% view-through — 3× industry avg','about.label':'About','about.title1':'I edit for','about.title2':'outcomes,','about.title3':'not awards','about.badge':'Years Cutting','about.p1':'I spent years obsessing over what makes people watch — and keep watching. Not pretty colors or fancy transitions, but pacing, rhythm, and the emotional logic of a story.','about.p2':'Whether you need an ad that converts, a video that retains, or a series that grows a channel, I work backward from your goal — then build the edit that gets you there.','str1.title':'Hook Engineering','str1.desc':'First 3 seconds designed to stop the scroll cold','str2.title':'Retention Pacing','str2.desc':'Strategic cuts to keep viewers engaged to the end','str3.title':'Color Grading','str3.desc':'Cinematic grade that shapes mood and brand feel','str4.title':'Platform Native','str4.desc':'Optimized for YouTube, Reels, TikTok, and paid','proof.label':'Testimonials','proof.title1':'Clients who','proof.title2':'grew','t1.text':'Thiago completely transformed our content. Our watch time nearly doubled within two months. He understood our audience better than we did.','t1.role':'CEO — TechPulse Media','t2.text':'I\'ve worked with a lot of editors. Thiago is different — he asks about the goal before touching the timeline. That changes everything.','t2.role':'Founder — Verde Coffee','t3.text':'Three of the twelve Reels he edited hit a million views. Not once — consistently. If you\'re serious about growth, he\'s the editor you need.','t3.role':'Creator — 890K Followers','chip1':'200M+ Views Generated','chip2':'Avg. 3.2× Retention Lift','chip3':'120+ Projects Delivered','chip4':'48h Average Turnaround','contact.label':'Let\'s Work','contact.title1':'Ready to make something that','contact.title2':'performs?','contact.tagline':'Tell me what you\'re building. I\'ll show you how editing can make it work harder. No fluff — just a real conversation about your goals.','contact.wa':'Message me directly','form.name':'Your Name','form.name_ph':'e.g. Sarah Chen','form.email':'Email Address','form.msg_label':'What do you need?','form.msg_ph':'Tell me about the project — platform, goal, timeline. The more specific, the better.','form.submit':'Send Message →','footer.copy':'© 2026 Thiago Alves — Video Editor. All rights reserved.'}
 };
@@ -1162,7 +1054,30 @@ const sb=document.querySelector('.stats-bar');if(sb)so.observe(sb);
 
 applyT('pt');
 
-/* seguidores fixos no HTML */
+/* Buscar contagem de seguidores via API pública */
+(function fetchFollowers(){
+  const profiles = [
+    {key:'santana', user:'santana.xz'},
+    {key:'aspect',  user:'euaspect'},
+    {key:'odemetro',user:'odemetruu'},
+  ];
+  
+  /* Valores hardcoded como fallback — atualize manualmente se mudar */
+  const fallback = {santana:'1,3M', aspect:'1,8M', odemetro:'1,4M'};
+  
+  function fmt(n){
+    if(n>=1000000) return (n/1000000).toFixed(1).replace('.0','')+'M';
+    if(n>=1000) return (n/1000).toFixed(1).replace('.0','')+'K';
+    return n.toString();
+  }
+  
+  function setCount(key, val){
+    const el = document.querySelector(`[data-followers="${key}"]`);
+    if(el) el.textContent = val;
+  }
+  
+  /* seguidores definidos diretamente no HTML — não sobrescrever */
+})();
 
 
 /* ═══════════════ LIQUID JS ═══════════════ */
