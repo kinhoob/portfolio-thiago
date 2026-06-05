@@ -203,7 +203,7 @@ section{position:relative;z-index:2}
 .about-img-wrap{aspect-ratio:4/5;background:var(--surface);border-radius:5px;overflow:hidden;border:1px solid var(--border);position:relative;display:flex;align-items:center;justify-content:center}
 .about-img-bg{width:100%;height:100%;background:linear-gradient(160deg,var(--deep) 0%,var(--surface2) 50%,var(--deep) 100%);display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue',sans-serif;font-size:7rem;color:var(--accent-dim);letter-spacing:.02em}
 .about-img-wrap::after{content:'';position:absolute;inset:0;pointer-events:none;background:repeating-linear-gradient(0deg,rgba(149,6,6,.025) 0,rgba(149,6,6,.025) 1px,transparent 1px,transparent 4px)}
-.about-badge{position:absolute;bottom:32px;right:-24px;background:var(--accent);color:#f5f0f0;padding:18px 22px;border-radius:5px;text-align:center;min-width:116px}
+.about-badge{position:absolute;bottom:32px;right:-24px;background:var(--accent);color:#f5f0f0;padding:18px 22px;border-radius:5px;text-align:center;min-width:116px;z-index:10}
 .badge-num{font-family:'Bebas Neue',sans-serif;font-size:2.5rem;display:block;line-height:1}
 .badge-label{font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;font-family:'DM Mono',monospace;margin-top:4px;display:block}
 .about-frame-line{position:absolute;top:-14px;left:-14px;width:72px;height:72px;border-top:1.5px solid var(--accent);border-left:1.5px solid var(--accent);border-radius:2px}
@@ -230,7 +230,7 @@ section{position:relative;z-index:2}
 .quote-mark{font-family:'Bebas Neue',sans-serif;font-size:4.5rem;line-height:1;color:var(--accent-dim);margin-bottom:-18px;display:block}
 .testimonial-text{font-size:.92rem;color:var(--body);line-height:1.75;margin-bottom:26px;font-style:italic}
 .testimonial-author{display:flex;align-items:center;gap:13px}
-.author-avatar{width:50px;height:50px;border-radius:50%;background:var(--accent-dim);border:2px solid rgba(149,6,6,.25);display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue',sans-serif;font-size:.9rem;color:var(--accent-light);flex-shrink:0;position:relative;overflow:hidden}
+.author-avatar{width:52px;height:52px;border-radius:50%;background:var(--accent-dim);border:2px solid rgba(149,6,6,.25);flex-shrink:0;position:relative;overflow:hidden;display:block}
 .author-name{font-size:.84rem;font-weight:500;color:var(--white)}
 .author-role{font-family:'DM Mono',monospace;font-size:.62rem;color:var(--muted);letter-spacing:.06em;margin-top:2px}
 .metric-chips{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:56px}
@@ -455,7 +455,7 @@ footer{padding:32px 48px;border-top:1px solid var(--border);display:grid;grid-te
 
 /* avatar foto slot */
 .ig-avatar-wrap{position:relative;flex-shrink:0}
-.ig-avatar{width:62px;height:62px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:"Bebas Neue",sans-serif;font-size:1.5rem;color:#fff;flex-shrink:0;position:relative;overflow:hidden;box-shadow:0 0 0 3px var(--accent-dim),0 0 0 5px rgba(255,255,255,.06)}
+.ig-avatar{width:64px;height:64px;border-radius:50%;position:relative;overflow:hidden;flex-shrink:0;box-shadow:0 0 0 3px var(--accent-dim),0 0 0 6px rgba(255,255,255,.06);display:flex;align-items:center;justify-content:center}
 /* ig-avatar-img definido abaixo */
 .ig-avatar-fallback{position:relative;z-index:1}
 
@@ -498,7 +498,7 @@ footer{padding:32px 48px;border-top:1px solid var(--border);display:grid;grid-te
 }
 .ig-stat-sep{width:1px;height:28px;background:var(--border);flex-shrink:0;margin:0 4px}
 
-.ig-avatar-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;border-radius:50%;z-index:2;display:block}
+.ig-avatar-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;border-radius:0;z-index:2;display:block}
 .ig-avatar-fallback{position:relative;z-index:1}
 
 /* Quando company-photo carrega, esconder placeholder */
@@ -715,10 +715,89 @@ footer{padding:32px 48px;border-top:1px solid var(--border);display:grid;grid-te
 </section>
 <div class="divider"></div>
 
-<!-- SOBRE -->
+<!-- PROJETOS -->
+<section id="projects" style="padding:80px 48px;max-width:1280px;margin:0 auto">
+  <div class="section-label reveal">Portfólio</div>
+  <div class="section-title reveal reveal-delay-1" style="margin-bottom:12px">Trabalhos que <span style="color:var(--accent-light)">performaram</span></div>
+  <p class="reveal reveal-delay-2" style="font-family:'DM Mono',monospace;font-size:.68rem;letter-spacing:.06em;color:var(--muted);margin-bottom:48px">Vídeos e artes reais entregues para criadores reais</p>
+
+  <div class="projects-video-grid">
+
+    <!-- Vídeo 1 -->
+    <div class="project-video-card reveal">
+      <div class="project-video-wrapper">
+        <iframe
+          src="https://www.youtube.com/embed/MXs665ZSKeQ?rel=0&modestbranding=1"
+          title="Projeto — Thiago Alves Editor"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen loading="lazy">
+        </iframe>
+      </div>
+      <div class="project-video-info">
+        <div class="project-video-tag">YouTube</div>
+        <div class="project-video-title">Edição para Creator</div>
+        <div class="project-video-desc">Ritmo, pacing e hook nos primeiros 3 segundos.</div>
+      </div>
+    </div>
+
+    <!-- Vídeo 2 -->
+    <div class="project-video-card reveal reveal-delay-1">
+      <div class="project-video-wrapper">
+        <iframe
+          src="https://www.youtube.com/embed/qy8shmH8G9M?rel=0&modestbranding=1"
+          title="Projeto — Thiago Alves Editor"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen loading="lazy">
+        </iframe>
+      </div>
+      <div class="project-video-info">
+        <div class="project-video-tag">YouTube</div>
+        <div class="project-video-title">Edição para Creator</div>
+        <div class="project-video-desc">Edição cinemática com grade de cor e cortes precisos.</div>
+      </div>
+    </div>
+
+    <!-- Thumbnail Odemetro -->
+    <div class="project-video-card reveal reveal-delay-2">
+      <div class="project-video-wrapper project-img-wrapper">
+        <img src="assets/img/thumbodemetro.jpeg" alt="Thumbnail — Odemetro" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block">
+        <div class="project-img-overlay">
+          <div class="project-img-tag-pill">Thumbnail</div>
+        </div>
+      </div>
+      <div class="project-video-info">
+        <div class="project-video-tag">Design</div>
+        <div class="project-video-title">Thumbnail — @odemetruu</div>
+        <div class="project-video-desc">Criação de thumbnail para vídeo do creator Odemetro.</div>
+      </div>
+    </div>
+
+    <!-- Banner Aspect -->
+    <div class="project-video-card reveal reveal-delay-3">
+      <div class="project-video-wrapper project-img-wrapper">
+        <img src="assets/img/banneraspect.jpeg" alt="Banner — Aspect" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block">
+        <div class="project-img-overlay">
+          <div class="project-img-tag-pill">Banner</div>
+        </div>
+      </div>
+      <div class="project-video-info">
+        <div class="project-video-tag">Design</div>
+        <div class="project-video-title">Banner — @euaspect</div>
+        <div class="project-video-desc">Arte de banner para o perfil do creator Aspect.</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
 <section id="about">
   <div class="about-visual reveal">
-    <div class="about-img-wrap"><div class="about-img-bg">TA</div><div class="about-frame-line"></div></div>
+    <div class="about-img-wrap" style="position:relative;overflow:hidden">
+      <img src="assets/img/perfilthiago.jpeg" alt="Thiago Alves" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;display:block;z-index:1">
+      <div class="about-img-bg" style="opacity:0">TA</div>
+      <div class="about-frame-line"></div>
+    </div>
     <div class="about-badge"><span class="badge-num">3+</span><span class="badge-label" data-i18n="about.badge">Anos de Edição</span></div>
   </div>
   <div class="about-text">
@@ -795,7 +874,7 @@ footer{padding:32px 48px;border-top:1px solid var(--border);display:grid;grid-te
       <div class="ig-card-header">
         <div class="ig-avatar-wrap">
           <div class="ig-avatar ig-grad-purple">
-            <img src="https://instagram.frec7-1.fna.fbcdn.net/v/t51.82787-19/671748517_18451870231107847_963537508124380030_n.jpg?stp=dst-jpg_s150x150_tt6&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLmRqYW5nby4xMDgwLmMyIn0&_nc_ht=instagram.frec7-1.fna.fbcdn.net&_nc_cat=1&_nc_oc=Q6cZ2gHQl-WfoN6JdTP_fmzX9-cgKfPmPVoi-1t31uw4O_laIdgds594udhpbvSrkKab1M2sQ5dtzLqe5QqI3czYT_ix&_nc_ohc=7avRCgPwKYoQ7kNvwFyuMdA&_nc_gid=HicDnUKU-ja5_m9T26S9Xg&edm=AP4sbd4BAAAA&ccb=7-5&oh=00_Af6X9LI0zpXtQlZGsMK1tP2r4imvh7vNZ5c_bsC3g4u53g&oe=6A151131&_nc_sid=7a9f4b" referrerpolicy="no-referrer" class="ig-avatar-img" alt="Santana" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;border-radius:50%;display:block;z-index:2">
+            <img src="assets/img/perfilsantana.jpg" referrerpolicy="no-referrer" class="ig-avatar-img" alt="Santana" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;border-radius:50%;display:block;z-index:2">
             <span class="ig-avatar-fallback">S</span>
           </div>
         </div>
@@ -805,7 +884,7 @@ footer{padding:32px 48px;border-top:1px solid var(--border);display:grid;grid-te
       <div class="ig-stats-row">
         <div class="ig-stat"><span class="ig-stat-num" data-followers="santana">1,3M</span><span class="ig-stat-label">seguidores</span></div>
         <div class="ig-stat-sep"></div>
-        <div class="ig-stat"><span class="ig-stat-num">∞</span><span class="ig-stat-label">conteúdo editado</span></div>
+        <div class="ig-stat"><span class="ig-stat-num">50+</span><span class="ig-stat-label">conteúdo editado</span></div>
       </div>
       <div class="ig-card-footer"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>@santana.xz</div>
     </a>
@@ -813,7 +892,7 @@ footer{padding:32px 48px;border-top:1px solid var(--border);display:grid;grid-te
       <div class="ig-card-header">
         <div class="ig-avatar-wrap">
           <div class="ig-avatar ig-grad-blue">
-            <img src="https://instagram.frec7-1.fna.fbcdn.net/v/t51.2885-19/459543673_1407306916767753_3946808189705715866_n.jpg?stp=dst-jpg_s150x150_tt6&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLmRqYW5nby4xMDgwLmMyIn0&_nc_ht=instagram.frec7-1.fna.fbcdn.net&_nc_cat=1&_nc_oc=Q6cZ2gHu5FqZdNiE4olWtSzNu8wjxBAbl6KuiepTHz_gbXwZVC2qCoVUzVZpXJCPE2hsGYBdZKIU0Rvl9AQASGWbZNRP&_nc_ohc=6amDmrHauRgQ7kNvwHfOUlJ&_nc_gid=snEzdrHDO3AhPZAtS5todA&edm=AP4sbd4BAAAA&ccb=7-5&oh=00_Af7Cyg3y9kzLZGUleuWmoHW5i_KSKr3RQZ-1s96YM_tmMg&oe=6A152025&_nc_sid=7a9f4b" referrerpolicy="no-referrer" class="ig-avatar-img" alt="Aspect" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;border-radius:50%;display:block;z-index:2">
+            <img src="assets/img/perfilaspect.jpg" referrerpolicy="no-referrer" class="ig-avatar-img" alt="Aspect" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;border-radius:50%;display:block;z-index:2">
             <span class="ig-avatar-fallback">A</span>
           </div>
         </div>
@@ -823,7 +902,7 @@ footer{padding:32px 48px;border-top:1px solid var(--border);display:grid;grid-te
       <div class="ig-stats-row">
         <div class="ig-stat"><span class="ig-stat-num" data-followers="aspect">1,8M</span><span class="ig-stat-label">seguidores</span></div>
         <div class="ig-stat-sep"></div>
-        <div class="ig-stat"><span class="ig-stat-num">∞</span><span class="ig-stat-label">conteúdo editado</span></div>
+        <div class="ig-stat"><span class="ig-stat-num">30+</span><span class="ig-stat-label">conteúdo editado</span></div>
       </div>
       <div class="ig-card-footer"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>@euaspect</div>
     </a>
@@ -831,7 +910,7 @@ footer{padding:32px 48px;border-top:1px solid var(--border);display:grid;grid-te
       <div class="ig-card-header">
         <div class="ig-avatar-wrap">
           <div class="ig-avatar ig-grad-orange">
-            <img src="https://instagram.frec7-1.fna.fbcdn.net/v/t51.2885-19/453786128_517934994134770_1826812641540946224_n.jpg?stp=dst-jpg_s150x150_tt6&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLmRqYW5nby4xMDgwLmMyIn0&_nc_ht=instagram.frec7-1.fna.fbcdn.net&_nc_cat=1&_nc_oc=Q6cZ2gEP3Xp0z2e75S2DB8tAdsdbk12BcpsDx7WA3ylr2OLduZnDuvoruIJvlUiEHXHdZVG7hIXQdpSqlh3SturvBpYZ&_nc_ohc=TPgG-TMkf98Q7kNvwH3CZx_&_nc_gid=fIarqT2lbWkgXstpiVBeZw&edm=AP4sbd4BAAAA&ccb=7-5&oh=00_Af51XkaUkwf4xiYVVy3u_on52353F1qowJO1fUynxrAfyw&oe=6A153230&_nc_sid=7a9f4b" referrerpolicy="no-referrer" class="ig-avatar-img" alt="Odemetro" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;border-radius:50%;display:block;z-index:2">
+            <img src="assets/img/perfilodemetro.jpg" referrerpolicy="no-referrer" class="ig-avatar-img" alt="Odemetro" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;border-radius:50%;display:block;z-index:2">
             <span class="ig-avatar-fallback">O</span>
           </div>
         </div>
@@ -839,9 +918,9 @@ footer{padding:32px 48px;border-top:1px solid var(--border);display:grid;grid-te
         <div class="ig-follow-btn">Seguir</div>
       </div>
       <div class="ig-stats-row">
-        <div class="ig-stat"><span class="ig-stat-num" data-followers="odemetro">1,2M</span><span class="ig-stat-label">seguidores</span></div>
+        <div class="ig-stat"><span class="ig-stat-num" data-followers="odemetro">1,4M</span><span class="ig-stat-label">seguidores</span></div>
         <div class="ig-stat-sep"></div>
-        <div class="ig-stat"><span class="ig-stat-num">∞</span><span class="ig-stat-label">conteúdo editado</span></div>
+        <div class="ig-stat"><span class="ig-stat-num">30+</span><span class="ig-stat-label">conteúdo editado</span></div>
       </div>
       <div class="ig-card-footer"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>@odemetruu</div>
     </a>
@@ -897,9 +976,9 @@ footer{padding:32px 48px;border-top:1px solid var(--border);display:grid;grid-te
 <section id="social-proof">
   <div class="proof-header reveal"><div class="section-label" data-i18n="proof.label">Depoimentos</div><div class="section-title"><span data-i18n="proof.title1">Clientes que</span> <span style="color:var(--accent-light)" data-i18n="proof.title2">cresceram</span></div></div>
   <div class="testimonials">
-    <div class="testimonial-card reveal"><span class="quote-mark">"</span><p class="testimonial-text">O Thiago tem um olhar diferente. Cada Reel que ele editou pra mim ganhou muito mais alcance. Ele entende o ritmo que o algoritmo pede sem perder a identidade do conteúdo.</p><div class="testimonial-author"><div class="author-avatar" style="background:rgba(131,58,180,.15);border-color:rgba(131,58,180,.4);overflow:hidden;padding:0"><img src="https://instagram.frec7-1.fna.fbcdn.net/v/t51.82787-19/671748517_18451870231107847_963537508124380030_n.jpg?stp=dst-jpg_s150x150_tt6&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLmRqYW5nby4xMDgwLmMyIn0&_nc_ht=instagram.frec7-1.fna.fbcdn.net&_nc_cat=1&_nc_oc=Q6cZ2gHQl-WfoN6JdTP_fmzX9-cgKfPmPVoi-1t31uw4O_laIdgds594udhpbvSrkKab1M2sQ5dtzLqe5QqI3czYT_ix&_nc_ohc=7avRCgPwKYoQ7kNvwFyuMdA&_nc_gid=HicDnUKU-ja5_m9T26S9Xg&edm=AP4sbd4BAAAA&ccb=7-5&oh=00_Af6X9LI0zpXtQlZGsMK1tP2r4imvh7vNZ5c_bsC3g4u53g&oe=6A151131&_nc_sid=7a9f4b" referrerpolicy="no-referrer" style="width:100%;height:100%;object-fit:cover;object-position:center top;border-radius:50%;display:block" alt="Santana"></div><div><div class="author-name">Santana</div><div class="author-role"><a href="https://www.instagram.com/santana.xz/" target="_blank" style="color:var(--accent-light);text-decoration:none">@santana.xz</a> · Influencer</div></div></div></div>
-    <div class="testimonial-card reveal reveal-delay-1"><span class="quote-mark">"</span><p class="testimonial-text">Parceria certeira. O Thiago entrega rápido, entende o que precisa sem explicar mil vezes, e o resultado sempre fica melhor do que o esperado.</p><div class="testimonial-author"><div class="author-avatar" style="background:rgba(79,172,254,.1);border-color:rgba(79,172,254,.35);overflow:hidden;padding:0"><img src="https://instagram.frec7-1.fna.fbcdn.net/v/t51.2885-19/459543673_1407306916767753_3946808189705715866_n.jpg?stp=dst-jpg_s150x150_tt6&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLmRqYW5nby4xMDgwLmMyIn0&_nc_ht=instagram.frec7-1.fna.fbcdn.net&_nc_cat=1&_nc_oc=Q6cZ2gHu5FqZdNiE4olWtSzNu8wjxBAbl6KuiepTHz_gbXwZVC2qCoVUzVZpXJCPE2hsGYBdZKIU0Rvl9AQASGWbZNRP&_nc_ohc=6amDmrHauRgQ7kNvwHfOUlJ&_nc_gid=snEzdrHDO3AhPZAtS5todA&edm=AP4sbd4BAAAA&ccb=7-5&oh=00_Af7Cyg3y9kzLZGUleuWmoHW5i_KSKr3RQZ-1s96YM_tmMg&oe=6A152025&_nc_sid=7a9f4b" referrerpolicy="no-referrer" style="width:100%;height:100%;object-fit:cover;object-position:center top;border-radius:50%;display:block" alt="Aspect"></div><div><div class="author-name">Aspect</div><div class="author-role"><a href="https://www.instagram.com/euaspect" target="_blank" style="color:var(--accent-light);text-decoration:none">@euaspect</a> · Influencer</div></div></div></div>
-    <div class="testimonial-card reveal reveal-delay-2"><span class="quote-mark">"</span><p class="testimonial-text">Qualidade e agilidade em tudo que o Thiago faz. Os vídeos ficam com aquele acabamento profissional que faz diferença na hora de crescer.</p><div class="testimonial-author"><div class="author-avatar" style="background:rgba(247,151,30,.1);border-color:rgba(247,151,30,.35);overflow:hidden;padding:0"><img src="https://instagram.frec7-1.fna.fbcdn.net/v/t51.2885-19/453786128_517934994134770_1826812641540946224_n.jpg?stp=dst-jpg_s150x150_tt6&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLmRqYW5nby4xMDgwLmMyIn0&_nc_ht=instagram.frec7-1.fna.fbcdn.net&_nc_cat=1&_nc_oc=Q6cZ2gEP3Xp0z2e75S2DB8tAdsdbk12BcpsDx7WA3ylr2OLduZnDuvoruIJvlUiEHXHdZVG7hIXQdpSqlh3SturvBpYZ&_nc_ohc=TPgG-TMkf98Q7kNvwH3CZx_&_nc_gid=fIarqT2lbWkgXstpiVBeZw&edm=AP4sbd4BAAAA&ccb=7-5&oh=00_Af51XkaUkwf4xiYVVy3u_on52353F1qowJO1fUynxrAfyw&oe=6A153230&_nc_sid=7a9f4b" referrerpolicy="no-referrer" style="width:100%;height:100%;object-fit:cover;object-position:center top;border-radius:50%;display:block" alt="Odemetro"></div><div><div class="author-name">Odemetro</div><div class="author-role"><a href="https://www.instagram.com/odemetruu/" target="_blank" style="color:var(--accent-light);text-decoration:none">@odemetruu</a> · Influencer</div></div></div></div>
+    <div class="testimonial-card reveal"><span class="quote-mark">"</span><p class="testimonial-text">O Thiago tem um olhar diferente. Cada Reel que ele editou pra mim ganhou muito mais alcance. Ele entende o ritmo que o algoritmo pede sem perder a identidade do conteúdo.</p><div class="testimonial-author"><div class="author-avatar" style="background:rgba(131,58,180,.15);border-color:rgba(131,58,180,.4);overflow:hidden;padding:0"><img src="assets/img/perfilsantana.jpg" referrerpolicy="no-referrer" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;display:block;border-radius:0" alt="Santana"></div><div><div class="author-name">Santana</div><div class="author-role"><a href="https://www.instagram.com/santana.xz/" target="_blank" style="color:var(--accent-light);text-decoration:none">@santana.xz</a> · Influencer</div></div></div></div>
+    <div class="testimonial-card reveal reveal-delay-1"><span class="quote-mark">"</span><p class="testimonial-text">Parceria certeira. O Thiago entrega rápido, entende o que precisa sem explicar mil vezes, e o resultado sempre fica melhor do que o esperado.</p><div class="testimonial-author"><div class="author-avatar" style="background:rgba(79,172,254,.1);border-color:rgba(79,172,254,.35);overflow:hidden;padding:0"><img src="assets/img/perfilaspect.jpg" referrerpolicy="no-referrer" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;display:block;border-radius:0" alt="Aspect"></div><div><div class="author-name">Aspect</div><div class="author-role"><a href="https://www.instagram.com/euaspect" target="_blank" style="color:var(--accent-light);text-decoration:none">@euaspect</a> · Influencer</div></div></div></div>
+    <div class="testimonial-card reveal reveal-delay-2"><span class="quote-mark">"</span><p class="testimonial-text">Qualidade e agilidade em tudo que o Thiago faz. Os vídeos ficam com aquele acabamento profissional que faz diferença na hora de crescer.</p><div class="testimonial-author"><div class="author-avatar" style="background:rgba(247,151,30,.1);border-color:rgba(247,151,30,.35);overflow:hidden;padding:0"><img src="assets/img/perfilodemetro.jpg" referrerpolicy="no-referrer" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;display:block;border-radius:0" alt="Odemetro"></div><div><div class="author-name">Odemetro</div><div class="author-role"><a href="https://www.instagram.com/odemetruu/" target="_blank" style="color:var(--accent-light);text-decoration:none">@odemetruu</a> · Influencer</div></div></div></div>
   </div>
 </section>
 
@@ -910,9 +989,9 @@ footer{padding:32px 48px;border-top:1px solid var(--border);display:grid;grid-te
     <div class="section-title reveal reveal-delay-1"><span data-i18n="contact.title1">Pronto para criar algo que</span> <span style="color:var(--accent-light)" data-i18n="contact.title2">performa?</span></div>
     <p class="contact-tagline reveal reveal-delay-2" data-i18n="contact.tagline">Me conta o que você está construindo. Vou te mostrar como a edição pode fazer isso trabalhar muito mais. Sem enrolação — só uma conversa real sobre seus objetivos.</p>
     <div class="contact-methods reveal reveal-delay-2">
-      <a href="mailto:thiago@thiagoalves.co" class="contact-method"><div class="method-icon"><svg width="17" height="17" viewBox="0 0 18 18" fill="none"><path d="M2 4h14v10H2V4zm0 0l7 6 7-6" stroke="var(--accent-light)" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div><div class="method-label">Email</div><div class="method-value">thiago@thiagoalves.co</div></div></a>
-      <a href="https://wa.me/5511999999999" target="_blank" class="contact-method"><div class="method-icon"><svg width="17" height="17" viewBox="0 0 18 18" fill="none"><path d="M9 1.5a7.5 7.5 0 1 0 6.5 11.25L17.5 16.5l-3.75-2a7.5 7.5 0 0 0-4.75 1.5A7.5 7.5 0 0 0 9 1.5z" stroke="var(--accent-light)" stroke-width="1.4" stroke-linejoin="round"/></svg></div><div><div class="method-label">WhatsApp</div><div class="method-value" data-i18n="contact.wa">Fale diretamente comigo</div></div></a>
-      <a href="https://instagram.com/thiagoalves.edit" target="_blank" class="contact-method"><div class="method-icon"><svg width="17" height="17" viewBox="0 0 18 18" fill="none"><rect x="2" y="2" width="14" height="14" rx="4" stroke="var(--accent-light)" stroke-width="1.4"/><circle cx="9" cy="9" r="3" stroke="var(--accent-light)" stroke-width="1.4"/><circle cx="13" cy="5" r=".75" fill="var(--accent-light)"/></svg></div><div><div class="method-label">Instagram</div><div class="method-value">@thiagoalves.edit</div></div></a>
+      <a href="mailto:editarthiago@gmail.com" class="contact-method"><div class="method-icon"><svg width="17" height="17" viewBox="0 0 18 18" fill="none"><path d="M2 4h14v10H2V4zm0 0l7 6 7-6" stroke="var(--accent-light)" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div><div class="method-label">Email</div><div class="method-value">editarthiago@gmail.com</div></div></a>
+      <a href="https://wa.me/5581987398373" target="_blank" class="contact-method"><div class="method-icon"><svg width="17" height="17" viewBox="0 0 18 18" fill="none"><path d="M9 1.5a7.5 7.5 0 1 0 6.5 11.25L17.5 16.5l-3.75-2a7.5 7.5 0 0 0-4.75 1.5A7.5 7.5 0 0 0 9 1.5z" stroke="var(--accent-light)" stroke-width="1.4" stroke-linejoin="round"/></svg></div><div><div class="method-label">WhatsApp</div><div class="method-value">+55 (81) 98739-8373</div></div></a>
+      <a href="https://www.instagram.com/thiagoalveszx" target="_blank" class="contact-method"><div class="method-icon"><svg width="17" height="17" viewBox="0 0 18 18" fill="none"><rect x="2" y="2" width="14" height="14" rx="4" stroke="var(--accent-light)" stroke-width="1.4"/><circle cx="9" cy="9" r="3" stroke="var(--accent-light)" stroke-width="1.4"/><circle cx="13" cy="5" r=".75" fill="var(--accent-light)"/></svg></div><div><div class="method-label">Instagram</div><div class="method-value">@thiagoalveszx</div></div></a>
     </div>
   </div>
   <div class="contact-form reveal reveal-delay-1">
